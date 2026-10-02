@@ -162,9 +162,26 @@
   transition: color .18s, border-color .18s;
 }
 .wtab.on { color: var(--acid); border-bottom-color: var(--acid); }
-.win-body { padding: 16px 18px; min-height: 260px; }
-.panel { display: flex; flex-direction: column; gap: 14px; }
-.panel[hidden] { display: none; }
+.win-body {
+  position: relative;
+  height: 286px; /* locked to Site tab height */
+  overflow: hidden;
+}
+.panel {
+  position: absolute;
+  inset: 0;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease;
+}
+.panel.active {
+  opacity: 1;
+  pointer-events: auto;
+}
 
 /* site panel */
 .site-hero {

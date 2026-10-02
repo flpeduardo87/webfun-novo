@@ -71,7 +71,7 @@ export default function ServiceWindow() {
         {/* Panels */}
         <div className="win-body">
           {/* SITE */}
-          <div className="panel" hidden={active !== 0}>
+          <div className={`panel${active === 0 ? ' active' : ''}`}>
             <div className="site-hero">
               <div className="sh-copy">
                 <div className="sh-tag">Sua marca</div>
@@ -122,7 +122,7 @@ export default function ServiceWindow() {
           </div>
 
           {/* LOJA */}
-          <div className="panel" hidden={active !== 1}>
+          <div className={`panel${active === 1 ? ' active' : ''}`}>
             <div className="loja-hd">
               <h4>Sua loja online</h4>
               <div className="cart-pill">
@@ -154,7 +154,7 @@ export default function ServiceWindow() {
           </div>
 
           {/* SISTEMAS */}
-          <div className="panel" hidden={active !== 2}>
+          <div className={`panel${active === 2 ? ' active' : ''}`}>
             <div className="stats3">
               <div className="st"><small>PEDIDOS</small><b>48</b><div className="tr">↑ 12%</div></div>
               <div className="st hi"><small>RECEITA</small><b>R$12,4k</b><div className="tr">↑ 8%</div></div>
@@ -186,7 +186,7 @@ export default function ServiceWindow() {
           </div>
 
           {/* IA */}
-          <div className="panel" hidden={active !== 3}>
+          <div className={`panel${active === 3 ? ' active' : ''}`}>
             <div className="ia-lede">Seu negócio trabalhando <em>enquanto você dorme.</em></div>
             <div className="ia-flow">
               {[
