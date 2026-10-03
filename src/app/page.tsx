@@ -1,9 +1,10 @@
 import './site.css';
-import { Camera, MessageCircle, Briefcase } from 'lucide-react';
+import { Camera, MessageCircle, Briefcase, ArrowRight } from 'lucide-react';
 import ServiceWindow from '@/components/ServiceWindow';
 import BudgetSection from '@/components/BudgetSection';
 import ProjectsSection from '@/components/ProjectsSection';
 import FAQSection from '@/components/FAQSection';
+import ThemeToggle from '@/components/ThemeToggle';
 
 export default function Home() {
   return (
@@ -20,7 +21,10 @@ export default function Home() {
           <li><a href="#">Projetos</a></li>
           <li><a href="#">Contato</a></li>
         </ul>
-        <a href="#orcamento" className="nav-cta">Começar projeto</a>
+        <div className="nav-right">
+          <ThemeToggle />
+          <a href="#orcamento" className="nav-cta">Começar projeto</a>
+        </div>
       </nav>
 
       {/* HERO */}
@@ -40,7 +44,7 @@ export default function Home() {
               </p>
               <div className="hero-actions">
                 <a href="#orcamento" className="btn-p">
-                  Falar sobre meu projeto<i className="ic">→</i>
+                  Falar sobre meu projeto<ArrowRight size={15} strokeWidth={2} />
                 </a>
                 <a href="#" className="btn-g">Ver projetos</a>
               </div>
