@@ -31,7 +31,7 @@ export default function Home() {
                 <a href="#orcamento" className="btn-p">
                   Falar sobre meu projeto<ArrowRight size={15} strokeWidth={2} />
                 </a>
-                <a href="#" className="btn-g">Ver projetos</a>
+                <a href="/projetos" className="btn-g">Ver projetos</a>
               </div>
               <div className="proof">
                 <div className="proof-avs">
