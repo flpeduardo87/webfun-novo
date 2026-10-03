@@ -1,5 +1,5 @@
 import './site.css';
-import { Instagram, MessageCircle, Linkedin } from 'lucide-react';
+import { Camera, MessageCircle, Briefcase } from 'lucide-react';
 import ServiceWindow from '@/components/ServiceWindow';
 import BudgetSection from '@/components/BudgetSection';
 import ProjectsSection from '@/components/ProjectsSection';
@@ -216,9 +216,9 @@ export default function Home() {
               </a>
               <p className="footer-tagline">Tecnologia e design para<br />negócios que querem crescer.</p>
               <div className="footer-socials">
-                <a href="#" className="fsoc" aria-label="Instagram"><Instagram size={16} strokeWidth={1.8} /></a>
+                <a href="#" className="fsoc" aria-label="Instagram"><Camera size={16} strokeWidth={1.8} /></a>
                 <a href="#" className="fsoc" aria-label="WhatsApp"><MessageCircle size={16} strokeWidth={1.8} /></a>
-                <a href="#" className="fsoc" aria-label="LinkedIn"><Linkedin size={16} strokeWidth={1.8} /></a>
+                <a href="#" className="fsoc" aria-label="LinkedIn"><Briefcase size={16} strokeWidth={1.8} /></a>
               </div>
             </div>
             <div className="footer-cols">
