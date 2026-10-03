@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { ChevronDown, X, Menu, ArrowRight, Globe, ShoppingCart, Zap, Settings, Bot } from 'lucide-react';
+import { ChevronDown, X, Menu, ArrowRight, Globe, ShoppingCart, Zap, Settings, Bot, Smartphone } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 
 const SERVICES = [
@@ -34,6 +34,12 @@ const SERVICES = [
     name: 'Automação & IA',
     desc: 'Fluxos inteligentes que economizam tempo',
     href: '/servicos/automacao-ia',
+  },
+  {
+    Icon: Smartphone,
+    name: 'Aplicativo',
+    desc: 'PWA e apps nativos para iOS e Android',
+    href: '/servicos/aplicativo',
   },
 ];
 

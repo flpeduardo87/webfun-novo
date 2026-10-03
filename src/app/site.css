@@ -213,6 +213,7 @@
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   .np-links, .np-right .nav-cta { display: none; }
+  .np-right { margin-left: auto; }
   .np-burger { display: flex; }
   .np-pill { padding: 0 8px 0 14px; }
   .np-mega { display: none; }
