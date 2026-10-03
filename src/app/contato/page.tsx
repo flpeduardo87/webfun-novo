@@ -75,7 +75,7 @@ export default function ContatoPage() {
                   <div className="ct-contact-icon"><MapPin size={16} strokeWidth={1.8} /></div>
                   <div>
                     <div className="ct-contact-label">Localização</div>
-                    <div className="ct-contact-val">Florianópolis, SC — Brasil</div>
+                    <div className="ct-contact-val">Canoinhas, SC — Brasil</div>
                   </div>
                 </div>
               </div>
@@ -144,13 +144,13 @@ export default function ContatoPage() {
                 <div className="fcol-title">Contato</div>
                 <a href="mailto:agenciawebfun@gmail.com">agenciawebfun@gmail.com</a>
                 <a href="https://wa.me/5547997618824">WhatsApp</a>
-                <a href="#">Florianópolis, SC</a>
+                <a href="#">Canoinhas, SC</a>
               </div>
             </div>
           </div>
           <div className="footer-bottom">
             <span>© 2025 Webfun. Todos os direitos reservados.</span>
-            <span className="footer-credits">Feito com cuidado em Florianópolis</span>
+            <span className="footer-credits">Feito com cuidado em Canoinhas</span>
           </div>
         </div>
       </footer>

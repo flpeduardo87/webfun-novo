@@ -49,8 +49,8 @@ const faqs = [
     a: 'Os 30 dias de suporte cobrem ajustes pequenos. Para mudanças maiores ou novas funcionalidades, fazemos um escopo rápido e propomos um valor justo.',
   },
   {
-    q: 'Vocês trabalham com clientes fora de Florianópolis?',
-    a: 'Sim. Atendemos em todo o Brasil e no exterior. O processo é 100% remoto e funciona muito bem assim — já entregamos projetos para clientes em Dublin, São Paulo e no interior do Paraná.',
+    q: 'Vocês trabalham com clientes fora de Canoinhas?',
+    a: 'Sim. Atendemos em todo o Brasil e no exterior. O processo é 100% remoto e funciona muito bem assim — já entregamos projetos para clientes em Dublin, São Paulo e no interior do país.',
   },
 ];
 
@@ -194,13 +194,13 @@ export default function ProcessoPage() {
                 <div className="fcol-title">Contato</div>
                 <a href="#">agenciawebfun@gmail.com</a>
                 <a href="#">WhatsApp</a>
-                <a href="#">Florianópolis, SC</a>
+                <a href="#">Canoinhas, SC</a>
               </div>
             </div>
           </div>
           <div className="footer-bottom">
             <span>© 2025 Webfun. Todos os direitos reservados.</span>
-            <span className="footer-credits">Feito com cuidado em Florianópolis</span>
+            <span className="footer-credits">Feito com cuidado em Canoinhas</span>
           </div>
         </div>
       </footer>

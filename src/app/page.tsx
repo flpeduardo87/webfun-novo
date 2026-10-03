@@ -245,13 +245,13 @@ export default function Home() {
                 <div className="fcol-title">Contato</div>
                 <a href="#">agenciawebfun@gmail.com</a>
                 <a href="#">WhatsApp</a>
-                <a href="#">Florianópolis, SC</a>
+                <a href="#">Canoinhas, SC</a>
               </div>
             </div>
           </div>
           <div className="footer-bottom">
             <span>© 2025 Webfun. Todos os direitos reservados.</span>
-            <span className="footer-credits">Feito com cuidado em Florianópolis</span>
+            <span className="footer-credits">Feito com cuidado em Canoinhas</span>
           </div>
         </div>
       </footer>
