@@ -39,7 +39,7 @@ export default function Home() {
               </p>
               <div className="hero-actions">
                 <a href="#orcamento" className="btn-p">
-                  <i className="ic">→</i>Falar sobre meu projeto
+                  Falar sobre meu projeto<i className="ic">→</i>
                 </a>
                 <a href="#" className="btn-g">Ver projetos</a>
               </div>
