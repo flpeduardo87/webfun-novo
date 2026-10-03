@@ -205,9 +205,14 @@ export default function ServicosPage() {
                     <span className="smi-val">{s.time}</span>
                   </div>
                 </div>
-                <a href="/#orcamento" className="serv-card-cta">
-                  Solicitar orçamento <ArrowRight size={14} strokeWidth={2} />
-                </a>
+                <div className="serv-card-actions">
+                  <a href="/#orcamento" className="serv-card-cta">
+                    Solicitar orçamento <ArrowRight size={14} strokeWidth={2} />
+                  </a>
+                  <a href={`/servicos/${s.slug}`} className="serv-card-details">
+                    Ver detalhes
+                  </a>
+                </div>
               </div>
               <div className="serv-card-detail">
                 <div className="serv-card-visual">{s.visual}</div>
@@ -298,11 +303,11 @@ export default function ServicosPage() {
             <div className="footer-cols">
               <div className="footer-col">
                 <div className="fcol-title">Serviços</div>
-                <a href="#site-institucional">Site institucional</a>
-                <a href="#loja-virtual">Loja virtual</a>
-                <a href="#landing-page">Landing page</a>
-                <a href="#sistema-sob-medida">Sistemas sob medida</a>
-                <a href="#automacao-ia">Automação & IA</a>
+                <a href="/servicos/site-institucional">Site institucional</a>
+                <a href="/servicos/loja-virtual">Loja virtual</a>
+                <a href="/servicos/landing-page">Landing page</a>
+                <a href="/servicos/sistema-sob-medida">Sistemas sob medida</a>
+                <a href="/servicos/automacao-ia">Automação & IA</a>
               </div>
               <div className="footer-col">
                 <div className="fcol-title">Empresa</div>

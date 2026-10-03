@@ -423,6 +423,22 @@
 }
 .serv-card-cta:hover { opacity: .8; }
 
+.serv-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.serv-card-details {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted2);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color .15s;
+}
+.serv-card-details:hover { color: var(--ink); }
+
 /* Service detail panel */
 .serv-card-detail {
   display: flex;
