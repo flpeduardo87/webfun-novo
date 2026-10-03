@@ -6,6 +6,7 @@ import {
   Check, Clock, Users, TrendingUp, Zap, Shield,
 } from 'lucide-react';
 import ThemeToggle from '@/components/ThemeToggle';
+import { VisualSite, VisualLanding, VisualLoja, VisualSistema, VisualAutomacao, VisualApp } from './ServicosVisuals';
 
 export const metadata = {
   title: 'Serviços — Webfun',
@@ -16,6 +17,7 @@ const SERVICES = [
   {
     slug: 'site-institucional',
     icon: <Globe size={24} strokeWidth={1.8} />,
+    visual: <VisualSite />,
     tag: 'Mais popular',
     title: 'Site institucional',
     headline: 'Sua empresa na web do jeito certo.',
@@ -37,6 +39,7 @@ const SERVICES = [
   {
     slug: 'landing-page',
     icon: <Megaphone size={24} strokeWidth={1.8} />,
+    visual: <VisualLanding />,
     tag: 'Alta conversão',
     title: 'Landing page',
     headline: 'Uma página. Um objetivo. Máxima conversão.',
@@ -58,6 +61,7 @@ const SERVICES = [
   {
     slug: 'loja-virtual',
     icon: <ShoppingBag size={24} strokeWidth={1.8} />,
+    visual: <VisualLoja />,
     tag: 'E-commerce',
     title: 'Loja virtual',
     headline: 'Venda online com autonomia total.',
@@ -79,6 +83,7 @@ const SERVICES = [
   {
     slug: 'sistema-sob-medida',
     icon: <Settings size={24} strokeWidth={1.8} />,
+    visual: <VisualSistema />,
     tag: 'Sob medida',
     title: 'Sistema sob medida',
     headline: 'Processos que funcionam do jeito que você precisa.',
@@ -100,6 +105,7 @@ const SERVICES = [
   {
     slug: 'automacao-ia',
     icon: <Bot size={24} strokeWidth={1.8} />,
+    visual: <VisualAutomacao />,
     tag: 'Inteligência artificial',
     title: 'Automação & IA',
     headline: 'Seu negócio trabalhando enquanto você dorme.',
@@ -121,6 +127,7 @@ const SERVICES = [
   {
     slug: 'aplicativo',
     icon: <Smartphone size={24} strokeWidth={1.8} />,
+    visual: <VisualApp />,
     tag: 'Mobile',
     title: 'Aplicativo',
     headline: 'Na palma da mão dos seus clientes.',
@@ -218,6 +225,7 @@ export default function ServicosPage() {
                 </a>
               </div>
               <div className="serv-card-detail">
+                <div className="serv-card-visual">{s.visual}</div>
                 <div className="serv-features">
                   <div className="sfd-title">O que está incluso</div>
                   <ul className="sfd-list">
