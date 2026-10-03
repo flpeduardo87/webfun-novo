@@ -1,22 +1,26 @@
 'use client';
 
 import { useState } from 'react';
+import {
+  Globe, ShoppingBag, Megaphone, Settings, Bot, Paintbrush,
+  Newspaper, UserCircle, Languages, Plug, MessageCircle,
+} from 'lucide-react';
 
 const SERVICES = [
-  { label: 'Site institucional', val: 1700, from: 'Site institucional · ~3 semanas' },
-  { label: 'Landing page', val: 2400, from: 'Landing page · ~2 semanas' },
-  { label: 'Loja virtual', val: 3800, from: 'Loja virtual · ~5 semanas' },
-  { label: 'Sistema sob medida', val: 5500, from: 'Sistema sob medida · ~8 semanas' },
-  { label: 'Automação & IA', val: 2200, from: 'Automação & IA · ~3 semanas' },
-  { label: 'Redesign', val: 1400, from: 'Redesign · ~2 semanas' },
+  { label: 'Site institucional', val: 1700, from: 'Site institucional · ~3 semanas', icon: Globe },
+  { label: 'Landing page',       val: 2400, from: 'Landing page · ~2 semanas',       icon: Megaphone },
+  { label: 'Loja virtual',       val: 3800, from: 'Loja virtual · ~5 semanas',       icon: ShoppingBag },
+  { label: 'Sistema sob medida', val: 5500, from: 'Sistema sob medida · ~8 semanas', icon: Settings },
+  { label: 'Automação & IA',     val: 2200, from: 'Automação & IA · ~3 semanas',     icon: Bot },
+  { label: 'Redesign',           val: 1400, from: 'Redesign · ~2 semanas',           icon: Paintbrush },
 ];
 
 const EXTRAS = [
-  { label: 'Blog / Notícias', val: 600 },
-  { label: 'Área do cliente', val: 800 },
-  { label: 'Múltiplos idiomas', val: 400 },
-  { label: 'Integrações externas', val: 500 },
-  { label: 'Chat / WhatsApp', val: 350 },
+  { label: 'Blog / Notícias',       val: 600, icon: Newspaper },
+  { label: 'Área do cliente',       val: 800, icon: UserCircle },
+  { label: 'Múltiplos idiomas',     val: 400, icon: Languages },
+  { label: 'Integrações externas',  val: 500, icon: Plug },
+  { label: 'Chat / WhatsApp',       val: 350, icon: MessageCircle },
 ];
 
 function fmt(n: number) {
@@ -50,29 +54,37 @@ export default function BudgetSection() {
           <div>
             <div className="bgroup-label">O que você precisa?</div>
             <div className="chip-row">
-              {SERVICES.map((s, i) => (
-                <span
-                  key={s.label}
-                  className={`chip${service === i ? ' on' : ''}`}
-                  onClick={() => setService(i)}
-                >
-                  {s.label}
-                </span>
-              ))}
+              {SERVICES.map((s, i) => {
+                const Icon = s.icon;
+                return (
+                  <span
+                    key={s.label}
+                    className={`chip${service === i ? ' on' : ''}`}
+                    onClick={() => setService(i)}
+                  >
+                    <Icon size={13} strokeWidth={2} />
+                    {s.label}
+                  </span>
+                );
+              })}
             </div>
           </div>
           <div>
             <div className="bgroup-label">Adicionar ao projeto</div>
             <div className="chip-row">
-              {EXTRAS.map((e, i) => (
-                <span
-                  key={e.label}
-                  className={`chip extra${extras.includes(i) ? ' on' : ''}`}
-                  onClick={() => toggleExtra(i)}
-                >
-                  {e.label}
-                </span>
-              ))}
+              {EXTRAS.map((e, i) => {
+                const Icon = e.icon;
+                return (
+                  <span
+                    key={e.label}
+                    className={`chip extra${extras.includes(i) ? ' on' : ''}`}
+                    onClick={() => toggleExtra(i)}
+                  >
+                    <Icon size={13} strokeWidth={2} />
+                    {e.label}
+                  </span>
+                );
+              })}
             </div>
           </div>
           <div className="budget-cta">
