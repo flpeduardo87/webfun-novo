@@ -2,15 +2,25 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { X } from 'lucide-react';
+import { X, ExternalLink } from 'lucide-react';
 
-const PROJECTS = [
+type Project = {
+  tag: string;
+  title: string;
+  desc: string;
+  img: string;
+  year: string;
+  url?: string;
+};
+
+const PROJECTS: Project[] = [
   {
     tag: 'Site institucional',
     title: 'LUME Odontologia',
     desc: 'Site de alta conversão para clínica odontológica com agendamento online e área do paciente.',
     img: '/projects/lume.jpg',
     year: '2025',
+    url: 'https://webfun.com.br/modelos/lume/index.html',
   },
   {
     tag: 'Loja virtual',
@@ -18,6 +28,7 @@ const PROJECTS = [
     desc: 'E-commerce de moda feminina com identidade minimalista, catálogo e checkout otimizado.',
     img: '/projects/azaff.jpg',
     year: '2025',
+    url: 'https://webfun.com.br/modelos/azaff/index.html',
   },
   {
     tag: 'Site institucional',
@@ -25,6 +36,7 @@ const PROJECTS = [
     desc: 'Site premium para clínica estética avançada com foco em conversão e identidade visual sofisticada.',
     img: '/projects/aura.jpg',
     year: '2025',
+    url: 'https://webfun.com.br/modelos/aura/index.html',
   },
   {
     tag: 'Sistema',
@@ -32,6 +44,7 @@ const PROJECTS = [
     desc: 'Site institucional + sistema de reservas de quadras, churrasqueiras e gestão de sócios.',
     img: '/projects/canoinhas-tc.jpg',
     year: '2025',
+    url: 'https://webfun.com.br/modelos/canoinhas-tc/index.html',
   },
   {
     tag: 'Site institucional',
@@ -39,6 +52,7 @@ const PROJECTS = [
     desc: 'Hotel boutique na Serra da Mantiqueira com sistema de reservas integrado e identidade visual premium.',
     img: '/projects/casa-serena.jpg',
     year: '2025',
+    url: 'https://webfun.com.br/modelos/casa-serena/index.html',
   },
   {
     tag: 'Sistema',
@@ -46,6 +60,7 @@ const PROJECTS = [
     desc: 'Plataforma completa para clube de raquete com reservas, planos de sócios e agenda de eventos.',
     img: '/projects/match.jpg',
     year: '2025',
+    url: 'https://webfun.com.br/modelos/match/index.html',
   },
   {
     tag: 'Site institucional',
@@ -53,6 +68,7 @@ const PROJECTS = [
     desc: 'Site de geração de leads para instaladora solar com portfólio de projetos entregues.',
     img: '/projects/mielke.jpg',
     year: '2024',
+    url: 'https://webfun.com.br/modelos/mielke/index.html',
   },
   {
     tag: 'Site institucional',
@@ -60,6 +76,7 @@ const PROJECTS = [
     desc: 'Site institucional para consultoria B2B com foco em diagnóstico executivo e autoridade de marca.',
     img: '/projects/nexo.jpg',
     year: '2025',
+    url: 'https://webfun.com.br/modelos/nexo/index.html',
   },
   {
     tag: 'Landing page',
@@ -67,6 +84,7 @@ const PROJECTS = [
     desc: 'Landing page de alta conversão para biblioteca cristã infantil digital com checkout integrado.',
     img: '/projects/com-cristo-kids.webp',
     year: '2025',
+    url: 'https://webfun.com.br/modelos/com-cristo-kids/index.html',
   },
   {
     tag: 'Delivery',
@@ -74,6 +92,7 @@ const PROJECTS = [
     desc: 'Cardápio digital com pedido online, controle de horário e integração direta com a cozinha.',
     img: '/projects/forno-alto.webp',
     year: '2025',
+    url: 'https://webfun.com.br/modelos/forno-alto/index.html',
   },
   {
     tag: 'Site institucional',
@@ -81,6 +100,7 @@ const PROJECTS = [
     desc: 'Site institucional para assessoria em engenharia florestal com portfólio técnico e captação de leads.',
     img: '/projects/mapear.jpg',
     year: '2024',
+    url: 'https://webfun.com.br/modelos/mapear/index.html',
   },
 ];
 
@@ -88,7 +108,7 @@ const FILTERS = ['Todos', 'Site institucional', 'Landing page', 'Loja virtual', 
 
 export default function ProjectsSection() {
   const [active, setActive] = useState('Todos');
-  const [lightbox, setLightbox] = useState<string | null>(null);
+  const [selected, setSelected] = useState<Project | null>(null);
 
   const visible = active === 'Todos' ? PROJECTS : PROJECTS.filter((p) => p.tag === active);
 
@@ -118,7 +138,7 @@ export default function ProjectsSection() {
 
         <div className="proj-grid">
           {visible.map((p) => (
-            <div key={p.title} className="proj-card" onClick={() => setLightbox(p.img)} style={{ cursor: 'pointer' }}>
+            <div key={p.title} className="proj-card" onClick={() => setSelected(p)} style={{ cursor: 'pointer' }}>
               <div className="proj-thumb proj-img-wrap">
                 <Image src={p.img} alt={p.title} fill sizes="(max-width:900px) 50vw, 33vw" style={{ objectFit: 'cover' }} />
                 <span className="proj-tag">{p.tag}</span>
@@ -127,20 +147,34 @@ export default function ProjectsSection() {
                 <div className="proj-meta">{p.year}</div>
                 <h3 className="proj-title">{p.title}</h3>
                 <p className="proj-desc">{p.desc}</p>
-                <span className="proj-link">Ver mockup <span>→</span></span>
+                <span className="proj-link">Ver projeto <span>→</span></span>
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      {lightbox && (
-        <div className="lb-overlay" onClick={() => setLightbox(null)}>
-          <button className="lb-close" onClick={() => setLightbox(null)} aria-label="Fechar">
-            <X size={20} strokeWidth={2} />
-          </button>
-          <div className="lb-img-wrap" onClick={(e) => e.stopPropagation()}>
-            <Image src={lightbox} alt="Mockup" fill sizes="90vw" style={{ objectFit: 'contain' }} />
+      {selected && (
+        <div className="lb-overlay" onClick={() => setSelected(null)}>
+          <div className="lb-bar" onClick={(e) => e.stopPropagation()}>
+            <div className="lb-bar-title">{selected.title}</div>
+            {selected.url && (
+              <a href={selected.url} target="_blank" rel="noopener noreferrer" className="lb-ext">
+                <ExternalLink size={14} strokeWidth={2} /> Abrir em nova aba
+              </a>
+            )}
+            <button className="lb-close" onClick={() => setSelected(null)} aria-label="Fechar">
+              <X size={18} strokeWidth={2} />
+            </button>
+          </div>
+          <div className="lb-frame-wrap" onClick={(e) => e.stopPropagation()}>
+            {selected.url ? (
+              <iframe src={selected.url} className="lb-iframe" title={selected.title} />
+            ) : (
+              <div className="lb-img-wrap">
+                <Image src={selected.img} alt={selected.title} fill sizes="90vw" style={{ objectFit: 'contain' }} />
+              </div>
+            )}
           </div>
         </div>
       )}
