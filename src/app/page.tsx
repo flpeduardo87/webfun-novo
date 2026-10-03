@@ -138,7 +138,7 @@ export default function Home() {
         <div className="numbers-inner">
           {[
             { val: '+50', label: 'projetos entregues', sub: 'sites, lojas e sistemas' },
-            { val: 'R$4M', label: 'em vendas geradas', sub: 'pelos projetos dos clientes' },
+            { val: '3×', label: 'mais leads gerados', sub: 'pelos projetos dos clientes' },
             { val: '98%', label: 'de satisfação', sub: 'avaliações pós-entrega' },
             { val: '4+', label: 'anos no mercado', sub: 'atendendo todo o Brasil' },
           ].map((n) => (
