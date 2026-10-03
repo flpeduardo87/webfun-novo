@@ -6,15 +6,14 @@
 /* HERO */
 .serv-hero {
   padding: 120px 0 80px;
-  text-align: center;
 }
 .serv-hero-inner {
-  max-width: 760px;
+  max-width: 1160px;
   margin: 0 auto;
   padding-inline: 40px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
 }
 .serv-hero .eyebrow {
@@ -43,7 +42,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  justify-content: center;
   margin-top: 8px;
 }
 .shpill {
