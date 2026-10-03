@@ -197,7 +197,7 @@ export default function ProjectsSection() {
               <iframe src={selected.url} className="lb-iframe" title={selected.title} />
             ) : (
               <div className="lb-img-wrap">
-                <Image src={selected.img} alt={selected.title} fill sizes="90vw" style={{ objectFit: 'contain' }} />
+                <Image src={selected.img!} alt={selected.title} fill sizes="90vw" style={{ objectFit: 'contain' }} />
               </div>
             )}
           </div>
