@@ -1,0 +1,209 @@
+export type ServiceData = {
+  slug: string;
+  name: string;
+  tagline: string;
+  headline: string;
+  sub: string;
+  color: string;
+  icon: string;
+  startingPrice: string;
+  deliveryTime: string;
+  ideal: string[];
+  deliverables: { title: string; desc: string }[];
+  process: { n: string; title: string; desc: string }[];
+  faq: { q: string; a: string }[];
+};
+
+export const SERVICES_DATA: ServiceData[] = [
+  {
+    slug: 'site-institucional',
+    name: 'Site institucional',
+    tagline: 'Presença digital',
+    headline: 'Seu negócio no digital,\ndo jeito certo.',
+    sub: 'Um site que representa sua empresa com credibilidade, carrega rápido em qualquer dispositivo e converte visitantes em clientes — sem depender de anúncios pagos.',
+    color: '#6366f1',
+    icon: '🌐',
+    startingPrice: 'R$ 4.800',
+    deliveryTime: '3–5 semanas',
+    ideal: [
+      'Empresas que precisam de presença digital profissional',
+      'Negócios que querem aparecer no Google (SEO)',
+      'Quem recebe indicações e precisa de um site para passar credibilidade',
+      'Empresas em fase de rebranding ou crescimento',
+    ],
+    deliverables: [
+      { title: 'Design exclusivo', desc: 'Layout criado do zero para a sua marca — nenhum template genérico.' },
+      { title: 'Até 8 páginas', desc: 'Home, Sobre, Serviços, Portfólio, Blog, Contato e mais conforme o escopo.' },
+      { title: 'Mobile-first', desc: 'Experiência perfeita em celular, tablet e desktop.' },
+      { title: 'SEO técnico', desc: 'Sitemap, metadados, velocidade otimizada. Base para ranquear no Google.' },
+      { title: 'Formulário de contato', desc: 'Integrado ao seu e-mail ou CRM — sem custo de backend.' },
+      { title: '30 dias de suporte', desc: 'Ajustes pós-entrega sem custo adicional.' },
+    ],
+    process: [
+      { n: '01', title: 'Briefing', desc: 'Entendemos o negócio, a concorrência e os objetivos do site.' },
+      { n: '02', title: 'Design', desc: 'Wireframes e visual completo antes de escrever uma linha de código.' },
+      { n: '03', title: 'Desenvolvimento', desc: 'Código limpo em Next.js — performático e fácil de escalar.' },
+      { n: '04', title: 'Revisão', desc: 'Você revisa, consolida o feedback e a gente aplica. Sem limite de rodadas.' },
+      { n: '05', title: 'Entrega', desc: 'Deploy, domínio configurado, treinamento e suporte de 30 dias.' },
+    ],
+    faq: [
+      { q: 'Preciso ter o conteúdo pronto antes de começar?', a: 'Não. Trabalhamos com o que você tem e orientamos sobre o que falta. Textos e fotos podem chegar durante o processo.' },
+      { q: 'O site vai aparecer no Google?', a: 'Aplicamos SEO técnico em todo projeto — velocidade, sitemap, metadados. Para ranquear em palavras-chave específicas, recomendamos complementar com estratégia de conteúdo.' },
+      { q: 'Quem vai manter o site depois?', a: 'Você pode gerenciar por conta própria (entregamos com painel de edição simples) ou contratar um plano de manutenção mensal conosco.' },
+      { q: 'Posso pedir mais páginas depois da entrega?', a: 'Sim. Páginas adicionais são tratadas como escopo novo, com valor proporcional.' },
+    ],
+  },
+  {
+    slug: 'loja-virtual',
+    name: 'Loja virtual',
+    tagline: 'E-commerce',
+    headline: 'Venda online\nsem complicação.',
+    sub: 'Uma loja que funciona de verdade: catálogo organizado, checkout fluido, integração com meios de pagamento e foco em converter visitantes em compradores.',
+    color: '#10b981',
+    icon: '🛒',
+    startingPrice: 'R$ 9.500',
+    deliveryTime: '5–8 semanas',
+    ideal: [
+      'Negócios que vendem produtos físicos ou digitais',
+      'Quem quer sair do marketplace e ter sua própria loja',
+      'Empresas com catálogo médio-grande (10–500+ produtos)',
+      'Negócios que querem controle total sobre a experiência de compra',
+    ],
+    deliverables: [
+      { title: 'Design exclusivo', desc: 'Identidade da loja criada do zero — diferente de todo template de e-commerce.' },
+      { title: 'Catálogo de produtos', desc: 'Com variações (cor, tamanho), fotos múltiplas e filtros inteligentes.' },
+      { title: 'Checkout otimizado', desc: 'Fluxo simplificado com Stripe, Mercado Pago ou PagSeguro.' },
+      { title: 'Gestão de estoque', desc: 'Painel para controlar produtos, pedidos e clientes.' },
+      { title: 'Frete integrado', desc: 'Cálculo automático via Correios, Melhor Envio ou transportadora própria.' },
+      { title: 'SEO para produtos', desc: 'URLs limpas, metadados por produto, sitemap de produtos.' },
+    ],
+    process: [
+      { n: '01', title: 'Briefing', desc: 'Catálogo, integrações necessárias, público e concorrentes.' },
+      { n: '02', title: 'Design', desc: 'Home, listagem, produto, carrinho e checkout desenhados antes do código.' },
+      { n: '03', title: 'Desenvolvimento', desc: 'Stack moderna com foco em performance e conversão.' },
+      { n: '04', title: 'Cadastro inicial', desc: 'Ajudamos a cadastrar os primeiros produtos e configurar o painel.' },
+      { n: '05', title: 'Entrega', desc: 'Testes de compra, integração de pagamento verificada, loja no ar.' },
+    ],
+    faq: [
+      { q: 'Qual plataforma vocês usam?', a: 'Desenvolvemos lojas em Next.js com backend customizado, WooCommerce (WordPress) ou Shopify, conforme o volume de produtos e necessidade de customização.' },
+      { q: 'A loja aceita cartão de crédito e Pix?', a: 'Sim. Integramos com Stripe, Mercado Pago, PagSeguro ou Cielo — você escolhe.' },
+      { q: 'Posso gerenciar os produtos sozinho?', a: 'Sim. Entregamos um painel intuitivo com treinamento incluído para adicionar, editar e remover produtos.' },
+      { q: 'E se eu precisar de integrações com ERP ou sistema de estoque?', a: 'Trabalhamos com integrações via API. Avaliamos o sistema que você usa e propomos a solução no escopo.' },
+    ],
+  },
+  {
+    slug: 'landing-page',
+    name: 'Landing page',
+    tagline: 'Conversão',
+    headline: 'Uma página.\nUma meta. Resultado.',
+    sub: 'Criada para converter tráfego pago em leads ou vendas — copy persuasivo, design que direciona o olhar e velocidade de carregamento otimizada para cada centavo do seu anúncio.',
+    color: '#f59e0b',
+    icon: '⚡',
+    startingPrice: 'R$ 2.400',
+    deliveryTime: '1–2 semanas',
+    ideal: [
+      'Quem vai rodar anúncios no Google ou Meta',
+      'Lançamentos de produtos ou serviços',
+      'Captura de leads para funis de vendas',
+      'Eventos, cursos ou serviços com oferta específica',
+    ],
+    deliverables: [
+      { title: 'Copy persuasivo', desc: 'Texto orientado à conversão — proposta de valor clara, objeções respondidas, CTA forte.' },
+      { title: 'Design focado', desc: 'Sem menu de navegação. Sem distrações. Cada elemento empurra para a conversão.' },
+      { title: 'Mobile-first', desc: 'Mais de 70% do tráfego pago vem de celular — a lp é otimizada para isso.' },
+      { title: 'Velocidade máxima', desc: 'Nota 95+ no PageSpeed Mobile — cada segundo conta no custo por lead.' },
+      { title: 'Integração de formulário', desc: 'Leads direto no seu CRM, planilha ou e-mail.' },
+      { title: 'Pixel e rastreamento', desc: 'Google Tag Manager, Meta Pixel e conversões configurados.' },
+    ],
+    process: [
+      { n: '01', title: 'Briefing', desc: 'Oferta, público, objeções principais e destino dos leads.' },
+      { n: '02', title: 'Copy', desc: 'Texto da página escrito antes do design — estrutura validada com você.' },
+      { n: '03', title: 'Design', desc: 'Layout criado em cima do copy aprovado.' },
+      { n: '04', title: 'Desenvolvimento', desc: 'Código leve, sem dependências desnecessárias.' },
+      { n: '05', title: 'Entrega', desc: 'No ar com rastreamento configurado, pronta para os anúncios.' },
+    ],
+    faq: [
+      { q: 'A landing page vem com o copy ou devo fornecer?', a: 'Criamos o copy junto com o design. Precisamos entender bem a oferta e o público — e é por isso que o briefing é detalhado.' },
+      { q: 'Posso usar a landing page para mais de uma campanha?', a: 'Sim, mas recomendamos uma landing específica por campanha para maximizar a relevância e a taxa de conversão.' },
+      { q: 'Quanto tempo para ver resultado?', a: 'A lp entrega conversão quando há tráfego qualificado. Com bons anúncios, é possível ver leads chegando no primeiro dia.' },
+      { q: 'Vocês fazem os anúncios também?', a: 'Não gerenciamos campanhas de tráfego pago, mas podemos recomendar parceiros de confiança.' },
+    ],
+  },
+  {
+    slug: 'sistema-sob-medida',
+    name: 'Sistema sob medida',
+    tagline: 'Software',
+    headline: 'Software que\nfaz o que você precisa.',
+    sub: 'Sistemas internos, portais de clientes, dashboards e automações complexas — construídos para o seu processo específico, não para um genérico que você tenta encaixar no seu negócio.',
+    color: '#8b5cf6',
+    icon: '⚙️',
+    startingPrice: 'R$ 14.000',
+    deliveryTime: '6–12 semanas',
+    ideal: [
+      'Empresas com processos que nenhuma ferramenta pronta resolve',
+      'Negócios que dependem de planilhas para tudo',
+      'Operações com muitas etapas manuais e retrabalho',
+      'Empresas que precisam de portal para clientes ou fornecedores',
+    ],
+    deliverables: [
+      { title: 'Levantamento de requisitos', desc: 'Mapeamos cada processo antes de escrever uma linha de código.' },
+      { title: 'Banco de dados robusto', desc: 'Estrutura pensada para crescer com o negócio sem reescrever tudo.' },
+      { title: 'Interface intuitiva', desc: 'Sistema usado por pessoas reais — projetado para facilitar, não complicar.' },
+      { title: 'Controle de acesso', desc: 'Permissões por usuário, perfil ou departamento.' },
+      { title: 'Integrações', desc: 'Conectamos com os sistemas que você já usa — ERP, CRM, APIs externas.' },
+      { title: 'Documentação', desc: 'Manual técnico e de uso entregue junto com o sistema.' },
+    ],
+    process: [
+      { n: '01', title: 'Discovery', desc: 'Mapeamos processos atuais, gargalos e objetivos com entrevistas e workshops.' },
+      { n: '02', title: 'Especificação', desc: 'Documento detalhado com fluxos, telas e regras de negócio — aprovado por você.' },
+      { n: '03', title: 'Design de interface', desc: 'Protótipo navegável antes do desenvolvimento.' },
+      { n: '04', title: 'Desenvolvimento iterativo', desc: 'Entregas parciais a cada 2 semanas — você acompanha o progresso.' },
+      { n: '05', title: 'Homologação', desc: 'Testes com usuários reais antes do lançamento.' },
+      { n: '06', title: 'Go-live e suporte', desc: 'Implantação assistida e suporte estendido nos primeiros 60 dias.' },
+    ],
+    faq: [
+      { q: 'O sistema fica hospedado onde?', a: 'Na infraestrutura que fizer mais sentido para o projeto — AWS, Vercel, VPS dedicado. Sempre com backup automático.' },
+      { q: 'E se precisar de novas funcionalidades depois?', a: 'O sistema é entregue com arquitetura extensível. Novas features são tratadas como fases adicionais do projeto.' },
+      { q: 'Quanto custa a manutenção mensal?', a: 'Oferecemos planos de suporte e evolução a partir de R$ 800/mês, com SLA definido em contrato.' },
+      { q: 'Posso trazer um sistema legado para modernizar?', a: 'Sim. Fazemos diagnóstico do sistema atual e propomos a melhor estratégia — migração gradual ou reconstrução completa.' },
+    ],
+  },
+  {
+    slug: 'automacao-ia',
+    name: 'Automação & IA',
+    tagline: 'Inteligência artificial',
+    headline: 'Menos trabalho\nrepetitivo. Mais resultado.',
+    sub: 'Fluxos automatizados e agentes de IA que executam tarefas repetitivas, integram sistemas e tomam decisões simples — liberando sua equipe para o que realmente importa.',
+    color: '#ec4899',
+    icon: '🤖',
+    startingPrice: 'R$ 3.500',
+    deliveryTime: '2–6 semanas',
+    ideal: [
+      'Equipes que repetem as mesmas tarefas manualmente todo dia',
+      'Negócios com dados espalhados em sistemas desconectados',
+      'Empresas que recebem muitas perguntas parecidas de clientes',
+      'Operações com relatórios manuais e processos de aprovação lentos',
+    ],
+    deliverables: [
+      { title: 'Mapeamento de processos', desc: 'Identificamos quais tarefas têm maior ROI para automatizar.' },
+      { title: 'Fluxos de automação', desc: 'Construídos em n8n, Make, Zapier ou código puro — conforme a necessidade.' },
+      { title: 'Agentes de IA', desc: 'Bots que entendem contexto, respondem perguntas e executam ações.' },
+      { title: 'Integrações entre sistemas', desc: 'Conectamos suas ferramentas para que os dados fluam sem intervenção manual.' },
+      { title: 'Dashboard de monitoramento', desc: 'Visibilidade sobre o que está rodando, quantas tarefas foram executadas e onde há falhas.' },
+      { title: 'Documentação e treinamento', desc: 'Para que sua equipe entenda e mantenha as automações.' },
+    ],
+    process: [
+      { n: '01', title: 'Diagnóstico', desc: 'Mapeamos os processos atuais e calculamos o impacto de cada automação.' },
+      { n: '02', title: 'Priorização', desc: 'Escolhemos juntos o que automatizar primeiro pelo maior retorno.' },
+      { n: '03', title: 'Construção', desc: 'Desenvolvimento dos fluxos com testes em ambiente de homologação.' },
+      { n: '04', title: 'Implantação', desc: 'Ativação gradual com monitoramento em tempo real.' },
+      { n: '05', title: 'Otimização', desc: 'Ajustes nas primeiras semanas de operação para garantir estabilidade.' },
+    ],
+    faq: [
+      { q: 'Preciso de uma equipe técnica para manter as automações?', a: 'Não. Construímos para que uma pessoa não técnica possa entender e ajustar os fluxos. Oferecemos também suporte mensal.' },
+      { q: 'Quais ferramentas vocês usam?', a: 'n8n, Make (Integromat), Zapier, OpenAI, Anthropic Claude, Python e APIs diretas — conforme o que faz mais sentido para cada caso.' },
+      { q: 'É possível automatizar atendimento ao cliente?', a: 'Sim. Construímos desde chatbots básicos até agentes de IA que consultam bases de dados e respondem perguntas complexas.' },
+      { q: 'Como sei se vale a pena financeiramente?', a: 'No diagnóstico calculamos o tempo economizado por semana e convertemos em custo. Na maioria dos casos o ROI aparece em 60–90 dias.' },
+    ],
+  },
+];

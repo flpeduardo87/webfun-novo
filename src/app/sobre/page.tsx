@@ -1,7 +1,7 @@
 import '../site.css';
 import './sobre.css';
 import { Camera, MessageCircle, Briefcase, ArrowRight, MapPin, Zap, Eye, Wrench, Target } from 'lucide-react';
-import ThemeToggle from '@/components/ThemeToggle';
+import NavBar from '@/components/NavBar';
 import Image from 'next/image';
 
 export const metadata = {
@@ -12,23 +12,7 @@ export const metadata = {
 export default function SobrePage() {
   return (
     <>
-      {/* NAV */}
-      <nav className="nav">
-        <a href="/" className="nav-logo">
-          <span className="logo-dot" />
-          webfun
-        </a>
-        <ul className="nav-links">
-          <li><a href="/sobre">Sobre</a></li>
-          <li><a href="/#servicos">Serviços</a></li>
-          <li><a href="/#projetos">Projetos</a></li>
-          <li><a href="/#orcamento">Contato</a></li>
-        </ul>
-        <div className="nav-right">
-          <ThemeToggle />
-          <a href="/#orcamento" className="nav-cta">Começar projeto</a>
-        </div>
-      </nav>
+      <NavBar active="sobre" />
 
       {/* HERO */}
       <section className="sobre-hero">

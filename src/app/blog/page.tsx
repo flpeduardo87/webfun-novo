@@ -1,7 +1,7 @@
 import '../site.css';
 import './blog.css';
 import { Camera, MessageCircle, Briefcase } from 'lucide-react';
-import ThemeToggle from '@/components/ThemeToggle';
+import NavBar from '@/components/NavBar';
 import BlogGrid from './BlogGrid';
 import { POSTS } from './data';
 
@@ -13,22 +13,7 @@ export const metadata = {
 export default function BlogPage() {
   return (
     <>
-      {/* NAV */}
-      <nav className="nav">
-        <a href="/" className="nav-logo">
-          <span className="logo-dot" />webfun
-        </a>
-        <ul className="nav-links">
-          <li><a href="/sobre">Sobre</a></li>
-          <li><a href="/servicos">Serviços</a></li>
-          <li><a href="/projetos">Projetos</a></li>
-          <li><a href="/contato">Contato</a></li>
-        </ul>
-        <div className="nav-right">
-          <ThemeToggle />
-          <a href="/contato" className="nav-cta">Começar projeto</a>
-        </div>
-      </nav>
+      <NavBar active="blog" />
 
       {/* HERO */}
       <section className="bl-hero">

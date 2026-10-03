@@ -4,28 +4,12 @@ import ServiceWindow from '@/components/ServiceWindow';
 import BudgetSection from '@/components/BudgetSection';
 import ProjectsSection from '@/components/ProjectsSection';
 import FAQSection from '@/components/FAQSection';
-import ThemeToggle from '@/components/ThemeToggle';
+import NavBar from '@/components/NavBar';
 
 export default function Home() {
   return (
     <>
-      {/* NAV */}
-      <nav className="nav">
-        <a href="#" className="nav-logo">
-          <span className="logo-dot" />
-          webfun
-        </a>
-        <ul className="nav-links">
-          <li><a href="#">Sobre</a></li>
-          <li><a href="#">Serviços</a></li>
-          <li><a href="#">Projetos</a></li>
-          <li><a href="#">Contato</a></li>
-        </ul>
-        <div className="nav-right">
-          <ThemeToggle />
-          <a href="#orcamento" className="nav-cta">Começar projeto</a>
-        </div>
-      </nav>
+      <NavBar />
 
       {/* HERO */}
       <section className="hero">

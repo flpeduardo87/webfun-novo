@@ -1,7 +1,7 @@
 import '../site.css';
 import './processo.css';
 import { Camera, MessageCircle, Briefcase, ArrowRight } from 'lucide-react';
-import ThemeToggle from '@/components/ThemeToggle';
+import NavBar from '@/components/NavBar';
 import ProcessoSteps from './ProcessoSteps';
 
 export const metadata = {
@@ -57,22 +57,7 @@ const faqs = [
 export default function ProcessoPage() {
   return (
     <>
-      {/* NAV */}
-      <nav className="nav">
-        <a href="/" className="nav-logo">
-          <span className="logo-dot" />webfun
-        </a>
-        <ul className="nav-links">
-          <li><a href="/sobre">Sobre</a></li>
-          <li><a href="/servicos">Serviços</a></li>
-          <li><a href="/projetos">Projetos</a></li>
-          <li><a href="/#orcamento">Contato</a></li>
-        </ul>
-        <div className="nav-right">
-          <ThemeToggle />
-          <a href="/#orcamento" className="nav-cta">Começar projeto</a>
-        </div>
-      </nav>
+      <NavBar active="processo" />
 
       {/* HERO */}
       <section className="proc-hero">

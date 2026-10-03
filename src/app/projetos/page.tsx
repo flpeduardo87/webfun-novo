@@ -1,7 +1,7 @@
 import '../site.css';
 import './projetos.css';
 import { Camera, MessageCircle, Briefcase, ArrowRight, ExternalLink } from 'lucide-react';
-import ThemeToggle from '@/components/ThemeToggle';
+import NavBar from '@/components/NavBar';
 import Image from 'next/image';
 import ProjetosGrid from './ProjetosGrid';
 import { PROJECTS } from './data';
@@ -16,22 +16,7 @@ const featured = PROJECTS.filter(p => p.featured);
 export default function ProjetosPage() {
   return (
     <>
-      {/* NAV */}
-      <nav className="nav">
-        <a href="/" className="nav-logo">
-          <span className="logo-dot" />webfun
-        </a>
-        <ul className="nav-links">
-          <li><a href="/sobre">Sobre</a></li>
-          <li><a href="/servicos">Serviços</a></li>
-          <li><a href="/projetos" className="nav-active">Projetos</a></li>
-          <li><a href="/#orcamento">Contato</a></li>
-        </ul>
-        <div className="nav-right">
-          <ThemeToggle />
-          <a href="/#orcamento" className="nav-cta">Começar projeto</a>
-        </div>
-      </nav>
+      <NavBar active="projetos" />
 
       {/* HERO */}
       <section className="proj-hero">

@@ -5,7 +5,7 @@ import {
   Globe, Megaphone, ShoppingBag, Settings, Bot, Smartphone,
   Check, Clock, Users, TrendingUp, Zap, Shield,
 } from 'lucide-react';
-import ThemeToggle from '@/components/ThemeToggle';
+import NavBar from '@/components/NavBar';
 import { VisualSite, VisualLanding, VisualLoja, VisualSistema, VisualAutomacao, VisualApp } from './ServicosVisuals';
 
 export const metadata = {
@@ -158,22 +158,7 @@ const DIFFS = [
 export default function ServicosPage() {
   return (
     <>
-      {/* NAV */}
-      <nav className="nav">
-        <a href="/" className="nav-logo">
-          <span className="logo-dot" />webfun
-        </a>
-        <ul className="nav-links">
-          <li><a href="/sobre">Sobre</a></li>
-          <li><a href="/servicos" className="nav-active">Serviços</a></li>
-          <li><a href="/#projetos">Projetos</a></li>
-          <li><a href="/#orcamento">Contato</a></li>
-        </ul>
-        <div className="nav-right">
-          <ThemeToggle />
-          <a href="/#orcamento" className="nav-cta">Começar projeto</a>
-        </div>
-      </nav>
+      <NavBar active="servicos" />
 
       {/* HERO */}
       <section className="serv-hero">
