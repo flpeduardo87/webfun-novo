@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 44" fill="none">
+  <!-- Icon: robot face (white version) -->
+  <rect x="10" y="4" width="36" height="36" rx="10" fill="rgba(255,255,255,0.15)"/>
+  <!-- Left bracket -->
+  <path d="M10 14 C4 14 4 30 10 30" stroke="rgba(255,255,255,0.4)" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <!-- Right bracket -->
+  <path d="M46 14 C52 14 52 30 46 30" stroke="rgba(255,255,255,0.4)" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <!-- Left eye -->
+  <circle cx="23" cy="22" r="5" fill="white"/>
+  <circle cx="23" cy="22" r="2.5" fill="rgba(255,255,255,0.15)"/>
+  <!-- Right eye -->
+  <circle cx="33" cy="22" r="5" fill="white"/>
+  <circle cx="33" cy="22" r="2.5" fill="rgba(255,255,255,0.15)"/>
+  <!-- Wordmark -->
+  <text x="56" y="30" font-family="'Bricolage Grotesque', 'Arial Black', sans-serif" font-weight="800" font-size="22" fill="white">webfun</text>
+</svg>

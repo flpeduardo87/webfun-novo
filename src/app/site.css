@@ -11,6 +11,11 @@
   animation: blink 3s ease-in-out infinite;
 }
 @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.4} }
+.nav-logo-img {
+  height: 28px;
+  width: auto;
+  display: block;
+}
 
 /* Wrap keeps pill centered; pointer-events:none lets clicks pass through gaps */
 .np-wrap {

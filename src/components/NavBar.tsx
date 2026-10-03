@@ -71,7 +71,7 @@ export default function NavBar({ active }: { active?: string }) {
         {/* ── PILL ── */}
         <div className={`np-pill${megaOpen ? ' np-pill--open' : ''}`}>
           <a href="/" className="nav-logo">
-            <span className="logo-dot" />webfun
+            <img src="/logo.svg" alt="Webfun" className="nav-logo-img" />
           </a>
 
           <nav className="np-links">
