@@ -443,6 +443,9 @@
 .proj-c7 { background: linear-gradient(135deg, #1c3040 0%, #0f1e2c 100%); }
 .proj-c8 { background: linear-gradient(135deg, #2e1e40 0%, #1e1030 100%); }
 .proj-c9 { background: linear-gradient(135deg, #203028 0%, #142018 100%); }
+.proj-wasabi  { background: linear-gradient(135deg, #1a2e1a 0%, #0e1e10 100%); }
+.proj-tresreis { background: linear-gradient(135deg, #2e1a14 0%, #1e0e0a 100%); }
+.proj-flavia  { background: linear-gradient(135deg, #1a1e30 0%, #10121e 100%); }
 
 .proj-tag {
   font-size: 10px; font-weight: 700; letter-spacing: .08em;

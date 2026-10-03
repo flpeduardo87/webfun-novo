@@ -8,7 +8,8 @@ type Project = {
   tag: string;
   title: string;
   desc: string;
-  img: string;
+  img?: string;
+  color?: string;
   year: string;
   url?: string;
 };
@@ -102,6 +103,30 @@ const PROJECTS: Project[] = [
     year: '2024',
     url: 'https://webfun.com.br/modelos/mapear/index.html',
   },
+  {
+    tag: 'Site institucional',
+    title: 'Wasabi Sushi Bar',
+    desc: 'Site para restaurante japonês em Dublin com cardápio digital, reservas e identidade visual marcante.',
+    color: 'proj-wasabi',
+    year: '2024',
+    url: 'https://wasabisushibar.ie',
+  },
+  {
+    tag: 'Site institucional',
+    title: 'Frigorífico Três Reis',
+    desc: 'Site institucional para frigorífico com portfólio de cortes, diferenciais e captação de clientes B2B.',
+    color: 'proj-tresreis',
+    year: '2024',
+    url: 'https://frigorificotresreis.com.br',
+  },
+  {
+    tag: 'Site institucional',
+    title: 'Flávia Sussenbach',
+    desc: 'Site para escritório de advocacia com foco em autoridade, credibilidade e captação de consultas.',
+    color: 'proj-flavia',
+    year: '2024',
+    url: 'https://flaviasussenbachadvogados.com.br',
+  },
 ];
 
 const FILTERS = ['Todos', 'Site institucional', 'Landing page', 'Loja virtual', 'Sistema', 'Delivery'];
@@ -139,15 +164,15 @@ export default function ProjectsSection() {
         <div className="proj-grid">
           {visible.map((p) => (
             <div key={p.title} className="proj-card" onClick={() => setSelected(p)} style={{ cursor: 'pointer' }}>
-              <div className="proj-thumb proj-img-wrap">
-                <Image src={p.img} alt={p.title} fill sizes="(max-width:900px) 50vw, 33vw" style={{ objectFit: 'cover' }} />
+              <div className={`proj-thumb${p.img ? ' proj-img-wrap' : ''} ${p.color ?? ''}`}>
+                {p.img && <Image src={p.img} alt={p.title} fill sizes="(max-width:900px) 50vw, 33vw" style={{ objectFit: 'cover' }} />}
                 <span className="proj-tag">{p.tag}</span>
               </div>
               <div className="proj-body">
                 <div className="proj-meta">{p.year}</div>
                 <h3 className="proj-title">{p.title}</h3>
                 <p className="proj-desc">{p.desc}</p>
-                <span className="proj-link">Ver projeto <span>→</span></span>
+                <span className="proj-link">{p.url ? 'Ver projeto' : 'Em breve'} <span>→</span></span>
               </div>
             </div>
           ))}
