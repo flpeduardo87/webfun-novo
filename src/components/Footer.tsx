@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="footer-top">
           <div className="footer-brand">
             <a href="/" className="nav-logo" style={{ marginBottom: 12 }}>
-              <img src="/logo-white.svg" alt="Webfun" className="nav-logo-img" />
+              <span className="logo-dot" />webfun
             </a>
             <p className="footer-tagline">Tecnologia e design para<br />negócios que querem crescer.</p>
             <div className="footer-socials">
