@@ -761,6 +761,12 @@
   font-family: Georgia, serif;
   margin-bottom: 16px;
 }
+.testi-stars {
+  font-size: 16px;
+  color: #f59e0b;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
 .testi-text {
   font-size: 14.5px; color: var(--ink);
   line-height: 1.72; flex: 1;

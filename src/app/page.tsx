@@ -152,29 +152,29 @@ export default function Home() {
           <div className="testi-grid">
             {[
               {
-                quote: 'Em 3 meses após o lançamento da loja, triplicamos as vendas online. O processo foi transparente do início ao fim — sabia exatamente o que esperar em cada semana.',
-                name: 'Fernanda Alves',
-                role: 'Fundadora · Moda Única Store',
-                init: 'FA',
+                quote: 'Atendimento excelente, entrega rápida e resultado acima do esperado. Recomendo para quem busca qualidade.',
+                name: 'Flávia Sussenbach',
+                role: 'Flávia Sussenbach Advocacia',
+                init: 'FS',
                 color: 'var(--blue)',
               },
               {
-                quote: 'Nossa clínica cresceu 40% em agendamentos novos. O site virou nosso melhor vendedor — funciona enquanto dormimos. Recomendo sem hesitar.',
-                name: 'Dr. Marcos Oliveira',
-                role: 'Diretor · Clínica Saúde Total',
-                init: 'MO',
+                quote: 'Foi muito bom ver o trabalho começar a aparecer no Google para buscas importantes do negócio. O resultado fez diferença na nossa presença online.',
+                name: 'João Kühl',
+                role: 'Frigorífico Três Reis',
+                init: 'JK',
                 color: 'var(--green)',
               },
               {
-                quote: 'O sistema de gestão que a Webfun desenvolveu economiza 3 horas por dia da minha equipe. Investimento que se pagou no primeiro mês de uso.',
-                name: 'Gabriela Santos',
-                role: 'Sócia · Distribuidora Gestão Fácil',
-                init: 'GS',
+                quote: 'Atendimento rápido e transparente do início ao fim. Tudo foi explicado com clareza e o resultado ficou do jeito que precisávamos.',
+                name: 'Jean Mielke',
+                role: 'Mielke Energia Solar',
+                init: 'JM',
                 color: 'var(--acid)',
               },
             ].map((t) => (
               <div key={t.name} className="testi-card">
-                <div className="testi-quote">❝</div>
+                <div className="testi-stars">★★★★★</div>
                 <p className="testi-text">{t.quote}</p>
                 <div className="testi-author">
                   <div className="testi-av" style={{ background: t.color, color: t.color === 'var(--acid)' ? 'var(--acid-fg)' : '#fff' }}>{t.init}</div>
