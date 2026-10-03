@@ -140,7 +140,10 @@
   padding: 11px 14px 10px;
   background: rgba(255,255,255,.03);
 }
-.cdot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,.1); }
+.cdot { width: 10px; height: 10px; border-radius: 50%; }
+.cdot:nth-child(1) { background: #ff5f57; }
+.cdot:nth-child(2) { background: #febc2e; }
+.cdot:nth-child(3) { background: #28c840; }
 .curl {
   margin-left: 10px; flex: 1;
   background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.07);
