@@ -113,9 +113,9 @@
   overflow: hidden;
   position: relative;
 }
-.feat-card.feat-lg { aspect-ratio: 16/10; }
-.feat-card.feat-sm { aspect-ratio: 4/5; }
-.feat-card.feat-full { aspect-ratio: 21/7; }
+.feat-card.feat-lg { aspect-ratio: 16/9; }
+.feat-card.feat-sm { aspect-ratio: 8/9; }
+.feat-card.feat-full { aspect-ratio: 21/6.3; }
 
 .feat-img {
   width: 100%;
@@ -255,7 +255,7 @@
   box-shadow: var(--shadow);
 }
 .pg-thumb {
-  height: 210px;
+  height: 190px;
   position: relative;
   overflow: hidden;
   display: flex;
