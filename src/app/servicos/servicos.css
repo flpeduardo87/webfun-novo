@@ -1,0 +1,371 @@
+/* ── SERVIÇOS PAGE ───────────────────────────────────────── */
+
+/* NAV active */
+.nav-active { color: var(--ink) !important; font-weight: 700; }
+
+/* HERO */
+.serv-hero {
+  padding: 120px 0 80px;
+  text-align: center;
+}
+.serv-hero-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  padding-inline: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.serv-hero .eyebrow {
+  font-size: 12px; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--acid);
+  display: flex; align-items: center; gap: 10px;
+}
+.serv-hero .eyebrow::before {
+  content: ''; width: 20px; height: 2px; background: var(--acid);
+}
+.serv-h1 {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 60px);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--ink);
+}
+.serv-h1 em { font-style: italic; color: var(--acid); }
+.serv-sub {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--muted);
+  max-width: 560px;
+}
+.serv-hero-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 8px;
+}
+.shpill {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 7px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color .16s, border-color .16s, background .16s;
+}
+.shpill:hover {
+  color: var(--ink);
+  border-color: var(--ink);
+  background: var(--bg2);
+}
+
+/* SERVICE LIST */
+.serv-list {
+  padding: 40px 0 80px;
+  border-top: 1px solid var(--line);
+}
+.serv-list-inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding-inline: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+/* SERVICE CARD */
+.serv-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-bottom: 1px solid var(--line);
+  padding: 64px 0;
+  scroll-margin-top: 80px;
+}
+.serv-card-flip {
+  direction: rtl;
+}
+.serv-card-flip > * {
+  direction: ltr;
+}
+.serv-card-copy {
+  padding-right: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.serv-card-flip .serv-card-copy {
+  padding-right: 0;
+  padding-left: 64px;
+}
+.serv-card-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.serv-icon {
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  display: grid; place-items: center;
+  flex-shrink: 0;
+}
+.serv-blue   { background: rgba(77,99,240,.12);  color: #4d63f0; border: 1px solid rgba(77,99,240,.2); }
+.serv-acid   { background: rgba(182,200,40,.12); color: #8a9a00; border: 1px solid rgba(182,200,40,.25); }
+.serv-green  { background: rgba(48,181,94,.12);  color: #30b55e; border: 1px solid rgba(48,181,94,.2); }
+.serv-purple { background: rgba(130,80,220,.12); color: #8250dc; border: 1px solid rgba(130,80,220,.2); }
+.serv-orange { background: rgba(240,140,40,.12); color: #e07820; border: 1px solid rgba(240,140,40,.2); }
+.serv-teal   { background: rgba(20,180,180,.12); color: #14b4b4; border: 1px solid rgba(20,180,180,.2); }
+
+[data-theme="dark"] .serv-acid,
+:root:not([data-theme="light"]) .serv-acid {
+  color: var(--acid);
+}
+
+.serv-badge {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--muted2);
+  background: var(--bg2);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 12px;
+}
+.serv-card-title {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1.1;
+}
+.serv-card-headline {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.4;
+}
+.serv-card-desc {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--muted);
+}
+.serv-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  margin-top: 4px;
+}
+.serv-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.serv-meta-item svg { color: var(--muted2); }
+.smi-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: var(--muted2);
+}
+.smi-val {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.serv-meta-sep {
+  width: 1px;
+  height: 28px;
+  background: var(--line);
+}
+.serv-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--ink);
+  color: var(--bg);
+  border-radius: 999px;
+  padding: 12px 22px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  align-self: flex-start;
+  transition: opacity .16s;
+}
+.serv-card-cta:hover { opacity: .8; }
+
+/* Service detail panel */
+.serv-card-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 32px;
+  background: var(--bg2);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  align-self: start;
+}
+.sfd-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--muted2);
+  margin-bottom: 14px;
+}
+.sfd-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sfd-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.4;
+}
+.sfd-list li svg {
+  color: var(--green);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.sfd-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+.sfd-tag {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+}
+.sfd-proj {
+  background: var(--win-bg);
+  border: 1px solid var(--win-line);
+  border-radius: 999px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255,255,255,.6);
+}
+
+/* DIFERENCIAIS */
+.diff-section {
+  padding: 80px 0;
+  background: var(--bg2);
+}
+.diff-inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding-inline: 40px;
+}
+.diff-header {
+  margin-bottom: 52px;
+}
+.diff-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.diff-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.diff-icon {
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  background: var(--bg2);
+  border: 1px solid var(--line);
+  display: grid; place-items: center;
+  color: var(--ink);
+}
+.diff-title {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ink);
+}
+.diff-desc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+/* CTA */
+.serv-cta-section {
+  padding: 120px 40px;
+  background: #17181b;
+  text-align: center;
+}
+.serv-cta-inner {
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.serv-cta-section .sec-eyebrow {
+  font-size: 12px; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--acid);
+  display: flex; align-items: center; gap: 10px;
+}
+.serv-cta-section .sec-eyebrow::before {
+  content: ''; width: 20px; height: 2px; background: var(--acid);
+}
+.serv-cta-h2 {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 800;
+  line-height: 1.15;
+  color: #fff;
+}
+.serv-cta-h2 em { font-style: italic; color: var(--acid); }
+.serv-cta-sub {
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(255,255,255,.45);
+}
+
+/* ── RESPONSIVE ─────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .serv-card {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 48px 0;
+  }
+  .serv-card-flip { direction: ltr; }
+  .serv-card-copy { padding-right: 0 !important; padding-left: 0 !important; }
+  .diff-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+  .serv-hero { padding: 100px 0 60px; }
+  .serv-hero-inner { padding-inline: 20px; }
+  .serv-list-inner { padding-inline: 20px; }
+  .diff-inner { padding-inline: 20px; }
+  .diff-grid { grid-template-columns: 1fr; }
+  .serv-cta-section { padding: 80px 20px; }
+  .serv-card { padding: 40px 0; }
+}
