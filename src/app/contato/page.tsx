@@ -64,11 +64,11 @@ export default function ContatoPage() {
                     <div className="ct-contact-val">agenciawebfun@gmail.com</div>
                   </div>
                 </a>
-                <a href="https://wa.me/5548999999999" target="_blank" rel="noopener noreferrer" className="ct-contact-item">
+                <a href="https://wa.me/5547997618824" target="_blank" rel="noopener noreferrer" className="ct-contact-item">
                   <div className="ct-contact-icon"><Phone size={16} strokeWidth={1.8} /></div>
                   <div>
                     <div className="ct-contact-label">WhatsApp</div>
-                    <div className="ct-contact-val">(48) 99999-9999</div>
+                    <div className="ct-contact-val">(47) 99761-8824</div>
                   </div>
                 </a>
                 <div className="ct-contact-item ct-contact-static">
@@ -143,7 +143,7 @@ export default function ContatoPage() {
               <div className="footer-col">
                 <div className="fcol-title">Contato</div>
                 <a href="mailto:agenciawebfun@gmail.com">agenciawebfun@gmail.com</a>
-                <a href="https://wa.me/5548999999999">WhatsApp</a>
+                <a href="https://wa.me/5547997618824">WhatsApp</a>
                 <a href="#">Florianópolis, SC</a>
               </div>
             </div>
