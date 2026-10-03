@@ -172,6 +172,13 @@ export default function Home() {
                 init: 'JM',
                 color: 'var(--acid)',
               },
+              {
+                quote: 'Perfeito, muito obrigada por todo o trabalho. Nós gostamos muito do resultado!',
+                name: 'Karen',
+                role: 'Brasileirinho',
+                init: 'KB',
+                color: 'var(--blue)',
+              },
             ].map((t) => (
               <div key={t.name} className="testi-card">
                 <div className="testi-stars">★★★★★</div>
