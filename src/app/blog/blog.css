@@ -30,11 +30,17 @@
 }
 
 /* TAG FILTERS */
+.bl-filters-wrap {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding-inline: 40px;
+  border-bottom: 1px solid var(--line);
+}
 .bl-filters {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  padding: 32px 0 0;
+  padding: 28px 0;
 }
 .bl-filter-btn {
   padding: 8px 18px;
@@ -396,6 +402,7 @@
   .bl-h1 { font-size: 40px; }
   .bl-section { padding: 48px 0 72px; }
   .bl-inner { padding-inline: 20px; }
+  .bl-filters-wrap { padding-inline: 20px; }
   .bl-grid { grid-template-columns: 1fr; }
 
   .art-hero { padding: 100px 0 48px; }

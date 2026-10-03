@@ -44,9 +44,7 @@ export default function BlogPage() {
       </section>
 
       {/* GRID WITH FILTERS */}
-      <div className="bl-hero-inner" style={{ maxWidth: 1160, margin: '0 auto', paddingInline: 40 }}>
-        <BlogGrid />
-      </div>
+      <BlogGrid />
 
       {/* FOOTER */}
       <footer className="footer">

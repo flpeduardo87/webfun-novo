@@ -27,6 +27,7 @@ export default function BlogGrid() {
   return (
     <>
       {/* Filters */}
+      <div className="bl-filters-wrap">
       <div className="bl-filters">
         {ALL_TAGS.map((t) => (
           <button
@@ -37,6 +38,7 @@ export default function BlogGrid() {
             {t}
           </button>
         ))}
+      </div>
       </div>
 
       {/* Grid */}
