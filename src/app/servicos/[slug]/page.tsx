@@ -9,8 +9,9 @@ export function generateStaticParams() {
   return SERVICES_DATA.map((s) => ({ slug: s.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const s = SERVICES_DATA.find((d) => d.slug === params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const s = SERVICES_DATA.find((d) => d.slug === slug);
   if (!s) return {};
   return {
     title: `${s.name} — Webfun`,
@@ -18,8 +19,9 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   };
 }
 
-export default function ServicoPage({ params }: { params: { slug: string } }) {
-  const s = SERVICES_DATA.find((d) => d.slug === params.slug);
+export default async function ServicoPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const s = SERVICES_DATA.find((d) => d.slug === slug);
   if (!s) notFound();
 
   const others = SERVICES_DATA.filter((d) => d.slug !== s.slug).slice(0, 3);
