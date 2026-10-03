@@ -94,8 +94,8 @@ export default function ProjetosPage() {
                     />
                   )}
                   <div className="feat-gradient" />
+                  <span className="feat-tag feat-tag-top">{p.tag}</span>
                   <div className="feat-info">
-                    <span className="feat-tag">{p.tag}</span>
                     <h2 className="feat-title">{p.title}</h2>
                     <p className="feat-desc">{p.desc}</p>
                     <div className="feat-link">
@@ -128,8 +128,8 @@ export default function ProjetosPage() {
                   />
                 )}
                 <div className="feat-gradient feat-gradient-side" />
+                <span className="feat-tag feat-tag-top">{p.tag}</span>
                 <div className="feat-info feat-info-side">
-                  <span className="feat-tag">{p.tag}</span>
                   <h2 className="feat-title feat-title-lg">{p.title}</h2>
                   <p className="feat-desc feat-desc-lg">{p.desc}</p>
                   <div className="feat-link">
