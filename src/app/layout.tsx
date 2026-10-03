@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Manrope } from "next/font/google";
 import "./globals.css";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const display = Bricolage_Grotesque({
   variable: "--font-display",
@@ -28,6 +29,7 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body className={`${display.variable} ${body.variable}`}>
         {children}
+        <WhatsAppButton />
       </body>
     </html>
   );

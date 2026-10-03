@@ -1,10 +1,11 @@
 import './site.css';
-import { Camera, MessageCircle, Briefcase, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import ServiceWindow from '@/components/ServiceWindow';
 import BudgetSection from '@/components/BudgetSection';
 import ProjectsSection from '@/components/ProjectsSection';
 import FAQSection from '@/components/FAQSection';
 import NavBar from '@/components/NavBar';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -209,51 +210,8 @@ export default function Home() {
 
       {/* BUDGET */}
       <BudgetSection />
-      {/* FOOTER */}
-      <footer className="footer">
-        <div className="footer-inner">
-          <div className="footer-top">
-            <div className="footer-brand">
-              <a href="#" className="nav-logo" style={{ marginBottom: 12 }}>
-                <span className="logo-dot" />webfun
-              </a>
-              <p className="footer-tagline">Tecnologia e design para<br />negócios que querem crescer.</p>
-              <div className="footer-socials">
-                <a href="#" className="fsoc" aria-label="Instagram"><Camera size={16} strokeWidth={1.8} /></a>
-                <a href="#" className="fsoc" aria-label="WhatsApp"><MessageCircle size={16} strokeWidth={1.8} /></a>
-                <a href="#" className="fsoc" aria-label="LinkedIn"><Briefcase size={16} strokeWidth={1.8} /></a>
-              </div>
-            </div>
-            <div className="footer-cols">
-              <div className="footer-col">
-                <div className="fcol-title">Serviços</div>
-                <a href="#">Site institucional</a>
-                <a href="#">Loja virtual</a>
-                <a href="#">Landing page</a>
-                <a href="#">Sistemas sob medida</a>
-                <a href="#">Automação & IA</a>
-              </div>
-              <div className="footer-col">
-                <div className="fcol-title">Empresa</div>
-                <a href="#">Sobre a Webfun</a>
-                <a href="#">Projetos</a>
-                <a href="#">Como trabalhamos</a>
-                <a href="#">Blog</a>
-              </div>
-              <div className="footer-col">
-                <div className="fcol-title">Contato</div>
-                <a href="#">agenciawebfun@gmail.com</a>
-                <a href="#">WhatsApp</a>
-                <a href="#">Canoinhas, SC</a>
-              </div>
-            </div>
-          </div>
-          <div className="footer-bottom">
-            <span>© 2025 Webfun. Todos os direitos reservados.</span>
-            <span className="footer-credits">Feito com cuidado em Canoinhas</span>
-          </div>
-        </div>
-      </footer>
+
+      <Footer />
     </>
   );
 }
