@@ -767,6 +767,14 @@
   letter-spacing: 2px;
   margin-bottom: 16px;
 }
+.testi-card-wide {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+}
+.testi-card-wide .testi-text { margin-bottom: 0; flex: 1; font-size: 16px; }
+.testi-card-wide .testi-author { border-top: none; padding-top: 0; flex-shrink: 0; flex-direction: column; align-items: flex-start; gap: 8px; }
 .testi-text {
   font-size: 14.5px; color: var(--ink);
   line-height: 1.72; flex: 1;

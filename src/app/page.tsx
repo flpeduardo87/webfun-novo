@@ -174,13 +174,21 @@ export default function Home() {
               },
               {
                 quote: 'Perfeito, muito obrigada por todo o trabalho. Nós gostamos muito do resultado!',
-                name: 'Karen',
-                role: 'Brasileirinho',
-                init: 'KB',
+                name: 'Karen Hames',
+                role: 'Brasileirinho · brasileirinho.ie',
+                init: 'KH',
                 color: 'var(--blue)',
               },
+              {
+                quote: 'Testei a calculadora e parece perfeita! Obrigada pelo ótimo trabalho.',
+                name: 'Nicole Zanellato',
+                role: 'Keep Clean · keepcleanireland.ie',
+                init: 'NZ',
+                color: 'var(--green)',
+                wide: true,
+              },
             ].map((t) => (
-              <div key={t.name} className="testi-card">
+              <div key={t.name} className={`testi-card${t.wide ? ' testi-card-wide' : ''}`}>
                 <div className="testi-stars">★★★★★</div>
                 <p className="testi-text">{t.quote}</p>
                 <div className="testi-author">
