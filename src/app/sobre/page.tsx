@@ -100,8 +100,8 @@ export default function SobrePage() {
         <div className="founder-inner">
           <div className="founder-img-col">
             <div className="founder-photo-wrap">
-              <div className="founder-photo-placeholder">
-                <span>F</span>
+              <div className="founder-photo-img">
+                <Image src="/felipe.jpg" alt="Felipe Pedroso" fill sizes="(max-width:1024px) 100vw, 400px" style={{ objectFit: 'cover', objectPosition: 'center top' }} />
               </div>
               <div className="founder-tag">
                 <span className="ftag-dot" />

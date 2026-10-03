@@ -185,18 +185,12 @@
 .founder-photo-wrap {
   position: relative;
 }
-.founder-photo-placeholder {
+.founder-photo-img {
   width: 100%;
   aspect-ratio: 4/5;
-  background: var(--bg2);
-  border: 1px solid var(--line);
   border-radius: 20px;
-  display: grid;
-  place-items: center;
-  font-family: var(--font-display);
-  font-size: 80px;
-  font-weight: 800;
-  color: var(--muted2);
+  overflow: hidden;
+  position: relative;
 }
 .founder-tag {
   position: absolute;
