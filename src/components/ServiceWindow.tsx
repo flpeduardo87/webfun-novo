@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { TrendingUp, Smartphone, Search, ShoppingCart, PackageCheck, Bot, Globe } from 'lucide-react';
 
 const TABS = [
   { id: 'site', label: 'Site' },
@@ -47,10 +48,7 @@ export default function ServiceWindow() {
             <div className="cdot" />
             <div className="cdot" />
             <div className="curl">
-              <svg width="9" height="9" viewBox="0 0 9 9" fill="none" aria-hidden="true">
-                <circle cx="4.5" cy="4.5" r="3.8" stroke="currentColor" strokeWidth=".9" opacity=".5" />
-                <path d="M4.5 1v7M1 4.5h7" stroke="currentColor" strokeWidth=".9" strokeLinecap="round" opacity=".4" />
-              </svg>
+              <Globe size={9} strokeWidth={1.4} opacity={0.5} />
               webfun.com.br
             </div>
           </div>
@@ -89,32 +87,17 @@ export default function ServiceWindow() {
             </div>
             <div className="site-feats">
               <div className="sfeat">
-                <div className="sfi">
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                    <circle cx="9" cy="9" r="7" stroke="var(--acid)" strokeWidth="1.5" />
-                    <path d="M6 9h6M9 6v6" stroke="var(--acid)" strokeWidth="1.5" strokeLinecap="round" />
-                  </svg>
-                </div>
+                <div className="sfi"><TrendingUp size={16} color="var(--acid)" strokeWidth={1.8} /></div>
                 <b>Conversão</b>
                 <small>Estruturado para gerar contato</small>
               </div>
               <div className="sfeat">
-                <div className="sfi">
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                    <rect x="2" y="4" width="14" height="10" rx="2" stroke="var(--acid)" strokeWidth="1.5" />
-                    <path d="M6 4V3M12 4V3" stroke="var(--acid)" strokeWidth="1.5" strokeLinecap="round" />
-                  </svg>
-                </div>
+                <div className="sfi"><Smartphone size={16} color="var(--acid)" strokeWidth={1.8} /></div>
                 <b>Responsivo</b>
                 <small>Perfeito em qualquer tela</small>
               </div>
               <div className="sfeat">
-                <div className="sfi">
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                    <circle cx="8" cy="8" r="5" stroke="var(--acid)" strokeWidth="1.5" />
-                    <path d="M13 13l2.5 2.5" stroke="var(--acid)" strokeWidth="1.5" strokeLinecap="round" />
-                  </svg>
-                </div>
+                <div className="sfi"><Search size={16} color="var(--acid)" strokeWidth={1.8} /></div>
                 <b>SEO</b>
                 <small>Encontrado no Google</small>
               </div>
@@ -126,11 +109,7 @@ export default function ServiceWindow() {
             <div className="loja-hd">
               <h4>Sua loja online</h4>
               <div className="cart-pill">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                  <path d="M1 1h1.5l1.8 5.5h5.2l1-3.5H3.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
-                  <circle cx="6" cy="10" r="1" fill="currentColor" />
-                  <circle cx="9.5" cy="10" r="1" fill="currentColor" />
-                </svg>
+                <ShoppingCart size={12} strokeWidth={1.8} />
                 R$387
               </div>
             </div>
@@ -190,9 +169,9 @@ export default function ServiceWindow() {
             <div className="ia-lede">Seu negócio trabalhando <em>enquanto você dorme.</em></div>
             <div className="ia-flow">
               {[
-                { live: true, icon: '📥', title: 'Pedido recebido', desc: 'Cliente finaliza compra na loja', tag: '✓ Automático', tagLive: true },
-                { live: true, icon: '⚡', title: 'Notificação instantânea', desc: 'WhatsApp + e-mail para cliente e equipe', tag: '✓ Automático', tagLive: true },
-                { live: false, icon: '🗂️', title: 'CRM atualizado', desc: 'Histórico do cliente registrado', tag: 'Integrado', tagLive: false },
+                { live: true, icon: <PackageCheck size={14} />, title: 'Pedido recebido', desc: 'Cliente finaliza compra na loja', tag: '✓ Automático', tagLive: true },
+                { live: true, icon: <Bot size={14} />, title: 'Notificação instantânea', desc: 'WhatsApp + e-mail para cliente e equipe', tag: '✓ Automático', tagLive: true },
+                { live: false, icon: <TrendingUp size={14} />, title: 'CRM atualizado', desc: 'Histórico do cliente registrado', tag: 'Integrado', tagLive: false },
               ].map((s, i) => (
                 <div key={i} className="ia-step">
                   <div className="ia-line" />

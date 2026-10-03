@@ -1,4 +1,5 @@
 import './site.css';
+import { Instagram, MessageCircle, Linkedin } from 'lucide-react';
 import ServiceWindow from '@/components/ServiceWindow';
 import BudgetSection from '@/components/BudgetSection';
 import ProjectsSection from '@/components/ProjectsSection';
@@ -215,21 +216,9 @@ export default function Home() {
               </a>
               <p className="footer-tagline">Tecnologia e design para<br />negócios que querem crescer.</p>
               <div className="footer-socials">
-                <a href="#" className="fsoc" aria-label="Instagram">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/>
-                  </svg>
-                </a>
-                <a href="#" className="fsoc" aria-label="WhatsApp">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
-                  </svg>
-                </a>
-                <a href="#" className="fsoc" aria-label="LinkedIn">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
-                  </svg>
-                </a>
+                <a href="#" className="fsoc" aria-label="Instagram"><Instagram size={16} strokeWidth={1.8} /></a>
+                <a href="#" className="fsoc" aria-label="WhatsApp"><MessageCircle size={16} strokeWidth={1.8} /></a>
+                <a href="#" className="fsoc" aria-label="LinkedIn"><Linkedin size={16} strokeWidth={1.8} /></a>
               </div>
             </div>
             <div className="footer-cols">
