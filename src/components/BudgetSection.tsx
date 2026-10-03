@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import {
-  Globe, ShoppingBag, Megaphone, Settings, Bot, Paintbrush,
+  Globe, ShoppingBag, Megaphone, Settings, Bot, Smartphone,
   Newspaper, UserCircle, Languages, Plug, MessageCircle,
 } from 'lucide-react';
 
@@ -12,7 +12,7 @@ const SERVICES = [
   { label: 'Loja virtual',       val: 3800, from: 'Loja virtual · ~5 semanas',       icon: ShoppingBag },
   { label: 'Sistema sob medida', val: 5500, from: 'Sistema sob medida · ~8 semanas', icon: Settings },
   { label: 'Automação & IA',     val: 2200, from: 'Automação & IA · ~3 semanas',     icon: Bot },
-  { label: 'Redesign',           val: 1400, from: 'Redesign · ~2 semanas',           icon: Paintbrush },
+  { label: 'Aplicativo',         val: 4500, from: 'Aplicativo · ~8 semanas',         icon: Smartphone },
 ];
 
 const EXTRAS = [
