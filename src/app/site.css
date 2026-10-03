@@ -418,6 +418,73 @@
 .proj-link:hover { gap: 10px; }
 .proj-link span { font-size: 15px; }
 
+/* ── PROCESS ── */
+.process-section {
+  background: var(--bg2);
+  padding: 96px 0;
+}
+.process-inner {
+  max-width: 1280px; margin: 0 auto; padding-inline: 44px;
+}
+.process-header {
+  margin-bottom: 64px;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  position: relative;
+}
+.pstep {
+  position: relative;
+  padding-right: 32px;
+}
+.pstep:last-child { padding-right: 0; }
+
+.pstep-num {
+  font-family: var(--font-display);
+  font-size: 13px; font-weight: 800;
+  letter-spacing: .06em;
+  color: var(--acid-fg);
+  background: var(--acid);
+  width: 40px; height: 40px;
+  border-radius: 12px;
+  display: grid; place-items: center;
+  margin-bottom: 24px;
+  position: relative; z-index: 1;
+}
+.pstep-connector {
+  position: absolute;
+  top: 20px;
+  left: calc(40px + 12px);
+  right: -12px;
+  height: 1.5px;
+  background: linear-gradient(to right, var(--acid) 0%, var(--line) 100%);
+}
+
+.pstep-title {
+  font-family: var(--font-display);
+  font-size: 22px; font-weight: 800;
+  letter-spacing: -.03em; line-height: 1.1;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+.pstep-desc {
+  font-size: 13.5px; color: var(--muted);
+  line-height: 1.68; margin-bottom: 18px;
+}
+.pstep-tags {
+  display: flex; flex-wrap: wrap; gap: 6px;
+}
+.pstep-tag {
+  font-size: 11px; font-weight: 700;
+  color: var(--muted);
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 11px;
+}
+
 /* ── BUDGET ── */
 .budget-section { background: var(--ink); padding: 96px 0; position: relative; overflow: hidden; }
 .budget-section::before {
@@ -485,8 +552,10 @@
   .hero-grid { grid-template-columns: 1fr; gap: 40px; }
   .win-wrap { order: -1; }
   .projects-inner { padding-inline: 20px; }
-
   .proj-grid { grid-template-columns: 1fr 1fr; }
+  .process-inner { padding-inline: 20px; }
+  .process-steps { grid-template-columns: 1fr 1fr; gap: 40px 24px; }
+  .pstep-connector { display: none; }
   .budget-inner { grid-template-columns: 1fr; gap: 48px; padding-inline: 20px; }
 }
 @media (max-width: 560px) {
@@ -494,4 +563,5 @@
   .site-feats { grid-template-columns: 1fr 1fr; }
   .prod-grid { grid-template-columns: 1fr 1fr; }
   .proj-grid { grid-template-columns: 1fr; }
+  .process-steps { grid-template-columns: 1fr; }
 }

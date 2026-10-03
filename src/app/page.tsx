@@ -63,6 +63,62 @@ export default function Home() {
       {/* PROJECTS */}
       <ProjectsSection />
 
+      {/* HOW WE WORK */}
+      <section className="process-section">
+        <div className="process-inner">
+          <div className="process-header">
+            <div className="sec-eyebrow">Como trabalhamos</div>
+            <div className="projects-title-row">
+              <h2 className="sec-h2">Do primeiro contato<br />à <em>entrega.</em></h2>
+              <p className="sec-sub">Um processo claro e sem surpresas — você sabe o que acontece em cada etapa e acompanha tudo de perto.</p>
+            </div>
+          </div>
+
+          <div className="process-steps">
+            {[
+              {
+                n: '01',
+                title: 'Briefing',
+                desc: 'Entendemos seu negócio, seus objetivos e o que diferencia você no mercado. Nada de formulário genérico — uma conversa de verdade.',
+                tags: ['Diagnóstico', 'Proposta', 'Cronograma'],
+              },
+              {
+                n: '02',
+                title: 'Design',
+                desc: 'Criamos a identidade visual e os protótipos navegáveis. Você aprova antes de qualquer linha de código ser escrita.',
+                tags: ['Wireframe', 'UI/UX', 'Aprovação'],
+              },
+              {
+                n: '03',
+                title: 'Desenvolvimento',
+                desc: 'Código limpo, rápido e testado. Cada recurso é implementado conforme aprovado, sem escopo inflado ou surpresas.',
+                tags: ['Sprint', 'Testes', 'Revisão'],
+              },
+              {
+                n: '04',
+                title: 'Entrega & Suporte',
+                desc: 'Publicamos, treinamos sua equipe e ficamos por perto. O projeto no ar é o começo — não o fim da parceria.',
+                tags: ['Deploy', 'Treinamento', 'Suporte'],
+              },
+            ].map((step, i) => (
+              <div key={step.n} className="pstep">
+                <div className="pstep-num">{step.n}</div>
+                {i < 3 && <div className="pstep-connector" />}
+                <div className="pstep-body">
+                  <h3 className="pstep-title">{step.title}</h3>
+                  <p className="pstep-desc">{step.desc}</p>
+                  <div className="pstep-tags">
+                    {step.tags.map((t) => (
+                      <span key={t} className="pstep-tag">{t}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* BUDGET */}
       <BudgetSection />
     </>
