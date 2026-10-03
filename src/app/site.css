@@ -271,7 +271,7 @@
 .st .tr { font-size: 10px; font-weight: 700; color: var(--green); margin-top: 3px; }
 .st.hi .tr { color: var(--acid-fg); opacity: .65; }
 .dash-row { display: flex; gap: 9px; }
-.chart-card { flex: 2; background: var(--win-2); border: 1px solid rgba(255,255,255,.07); border-radius: 12px; padding: 13px; min-width: 0; }
+.chart-card { flex: 1.3; background: var(--win-2); border: 1px solid rgba(255,255,255,.07); border-radius: 12px; padding: 13px; min-width: 0; }
 .chart-card small { font-size: 9px; letter-spacing: .09em; text-transform: uppercase; color: rgba(255,255,255,.38); display: block; margin-bottom: 10px; }
 .bars { display: flex; align-items: flex-end; gap: 5px; height: 56px; }
 .bar { flex: 1; background: rgba(255,255,255,.1); border-radius: 4px 4px 0 0; }
@@ -280,7 +280,7 @@
 .lrow { background: var(--win-2); border: 1px solid rgba(255,255,255,.07); border-radius: 9px; padding: 7px 9px; display: flex; align-items: center; justify-content: space-between; gap: 6px; }
 .lav { width: 22px; height: 22px; border-radius: 50%; color: #fff; font-size: 9px; font-weight: 800; display: grid; place-items: center; flex-shrink: 0; }
 .lav.b{background:var(--blue)}.lav.g{background:var(--green)}.lav.o{background:#e07444}
-.linfo { min-width: 0; }
+.linfo { flex: 1; min-width: 0; overflow: hidden; }
 .linfo b { font-size: 11px; font-weight: 700; color: #fff; display: block; }
 .linfo small { font-size: 9px; color: rgba(255,255,255,.38); }
 .spill { font-size: 9px; font-weight: 700; padding: 3px 8px; border-radius: 999px; white-space: nowrap; }
@@ -427,6 +427,9 @@
 }
 .proj-img-wrap {
   overflow: hidden;
+  margin: 10px 10px 0;
+  border-radius: 10px;
+  height: 190px;
 }
 .proj-img-wrap img {
   transition: transform .4s cubic-bezier(.2,1,.3,1);
