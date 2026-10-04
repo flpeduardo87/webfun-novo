@@ -68,6 +68,25 @@ export default function HeroAnimator() {
         el.style.transform = 'translateY(0)';
       });
     });
+
+    // Parallax — only on pointer:fine devices
+    if (!window.matchMedia('(pointer: coarse)').matches) {
+      const heroEl = document.querySelector<HTMLElement>('.hero');
+      const copyEl = document.querySelector<HTMLElement>('.hero-copy');
+      const winEl = document.querySelector<HTMLElement>('.service-window');
+
+      const onScroll = () => {
+        if (!heroEl) return;
+        const heroH = heroEl.offsetHeight;
+        const y = window.scrollY;
+        if (y > heroH * 1.2) return;
+        if (copyEl) copyEl.style.transform = `translateY(${y * 0.14}px)`;
+        if (winEl) winEl.style.transform = `translateY(${y * 0.07}px)`;
+      };
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      return () => window.removeEventListener('scroll', onScroll);
+    }
   }, []);
 
   return null;

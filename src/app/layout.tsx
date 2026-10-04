@@ -3,6 +3,7 @@ import { Bricolage_Grotesque, Manrope } from "next/font/google";
 import "./globals.css";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Analytics from "@/components/Analytics";
+import CustomCursor from "@/components/CustomCursor";
 
 const display = Bricolage_Grotesque({
   variable: "--font-display",
@@ -61,6 +62,7 @@ export default function RootLayout({
       <body className={`${display.variable} ${body.variable}`}>
         {children}
         <WhatsAppButton />
+        <CustomCursor />
       </body>
     </html>
   );

@@ -8,6 +8,8 @@ import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import HeroAnimator from '@/components/HeroAnimator';
 import RevealOnScroll from '@/components/RevealOnScroll';
+import CountUp from '@/components/CountUp';
+import TypewriterText from '@/components/TypewriterText';
 
 export default function Home() {
   return (
@@ -30,6 +32,9 @@ export default function Home() {
                 Criamos sites, lojas e sistemas para ajudar seu negócio a{' '}
                 <strong>vender mais</strong> e trabalhar melhor — com design que comunica e tecnologia que entrega.
               </p>
+              <div className="hero-typewriter">
+                <TypewriterText />
+              </div>
               <div className="hero-actions">
                 <a href="#orcamento" className="btn-p">
                   Falar sobre meu projeto<ArrowRight size={15} strokeWidth={2} />
@@ -140,7 +145,7 @@ export default function Home() {
           ].map((n, i) => (
             <RevealOnScroll key={n.label} delay={i * 80} from="bottom">
               <div className="num-card">
-                <div className="num-val">{n.val}</div>
+                <div className="num-val"><CountUp value={n.val} /></div>
                 <div className="num-label">{n.label}</div>
                 <div className="num-sub">{n.sub}</div>
               </div>
