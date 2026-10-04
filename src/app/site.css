@@ -1070,7 +1070,32 @@
   .hero-h1 { font-size: clamp(38px, 11vw, 52px); }
   .site-feats { grid-template-columns: 1fr 1fr; }
   .prod-grid { grid-template-columns: 1fr 1fr; }
-  .proj-grid { grid-template-columns: 1fr; }
+  /* Projetos: carrossel horizontal no mobile */
+  .proj-filters { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; padding-bottom: 4px; }
+  .proj-filters::-webkit-scrollbar { display: none; }
+  .pfil { white-space: nowrap; flex-shrink: 0; }
+  .proj-grid {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 12px;
+    padding-bottom: 16px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+    margin-inline: -20px;
+    padding-inline: 20px;
+  }
+  .proj-grid::-webkit-scrollbar { display: none; }
+  .proj-card {
+    flex: 0 0 78vw;
+    max-width: 300px;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
   .numbers-inner { grid-template-columns: 1fr; }
   .process-steps { grid-template-columns: 1fr; }
   .footer-cols { grid-template-columns: 1fr; }
