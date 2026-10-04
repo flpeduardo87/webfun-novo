@@ -97,14 +97,6 @@ const PROJECTS: Project[] = [
   },
   {
     tag: 'Site institucional',
-    title: 'MAPEAR Florestal',
-    desc: 'Site institucional para assessoria em engenharia florestal com portfólio técnico e captação de leads.',
-    img: '/projects/mapear.jpg',
-    year: '2024',
-    url: 'https://webfun.com.br/modelos/mapear/index.html',
-  },
-  {
-    tag: 'Site institucional',
     title: 'Wasabi Sushi Bar',
     desc: 'Site para restaurante japonês em Dublin com cardápio digital, reservas e identidade visual marcante.',
     color: 'proj-wasabi',
