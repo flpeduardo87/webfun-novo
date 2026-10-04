@@ -98,8 +98,8 @@ const PROJECTS: Project[] = [
   {
     tag: 'Site institucional',
     title: 'Perform',
-    desc: 'Site institucional para empresa de alta performance com identidade visual forte e foco em conversão.',
-    color: 'proj-c1',
+    desc: 'Site institucional para empresa de engenharia, montagens e manutenções industriais com foco em autoridade técnica.',
+    img: '/projects/perform.png',
     year: '2025',
     url: 'https://perform.ind.br',
   },
