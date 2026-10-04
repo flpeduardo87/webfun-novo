@@ -614,9 +614,6 @@
   border-radius: 10px;
   height: 200px;
   background: #0f1117;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .proj-img-wrap img {
   object-fit: contain !important;
