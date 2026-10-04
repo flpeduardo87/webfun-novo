@@ -772,8 +772,11 @@
   letter-spacing: 2px;
   margin-bottom: 16px;
 }
-.testi-card-wide {
+/* wide card: the RevealOnScroll wrapper is the grid item, so span goes on it */
+.testi-wide-wrap {
   grid-column: 1 / -1;
+}
+.testi-card-wide {
   flex-direction: row;
   gap: 40px;
   align-items: center;
@@ -1050,6 +1053,9 @@
   .num-card:nth-child(2n) { border-right: none; }
   .testi-inner { padding-inline: 20px; }
   .testi-grid { grid-template-columns: 1fr; }
+  .testi-card-wide { flex-direction: column; gap: 0; }
+  .testi-card-wide .testi-text { font-size: 14.5px; margin-bottom: 28px; }
+  .testi-card-wide .testi-author { border-top: 1px solid var(--line); padding-top: 20px; }
   .faq-inner { grid-template-columns: 1fr; gap: 40px; padding-inline: 20px; }
   .faq-header { position: static; }
   .process-inner { padding-inline: 20px; }

@@ -200,7 +200,7 @@ export default function Home() {
                 wide: true,
               },
             ].map((t, i) => (
-              <RevealOnScroll key={t.name} delay={i * 80}>
+              <RevealOnScroll key={t.name} delay={i * 80} className={t.wide ? 'testi-wide-wrap' : ''}>
                 <div className={`testi-card${t.wide ? ' testi-card-wide' : ''}`}>
                   <div className="testi-stars">★★★★★</div>
                   <p className="testi-text">{t.quote}</p>
