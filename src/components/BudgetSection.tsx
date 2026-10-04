@@ -88,7 +88,7 @@ export default function BudgetSection() {
             </div>
           </div>
           <div className="budget-cta">
-            <a href="#" className="bcta-btn">Quero um orçamento completo →</a>
+            <a href="/contato" className="bcta-btn">Quero um orçamento completo →</a>
             <span className="bcta-note">Sem compromisso.<br />Resposta em até 24h.</span>
           </div>
         </div>
