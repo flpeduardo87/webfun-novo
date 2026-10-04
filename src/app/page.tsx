@@ -6,11 +6,14 @@ import ProjectsSection from '@/components/ProjectsSection';
 import FAQSection from '@/components/FAQSection';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
+import HeroAnimator from '@/components/HeroAnimator';
+import RevealOnScroll from '@/components/RevealOnScroll';
 
 export default function Home() {
   return (
     <>
       <NavBar />
+      <HeroAnimator />
 
       {/* HERO */}
       <section className="hero">
@@ -69,13 +72,15 @@ export default function Home() {
       {/* HOW WE WORK */}
       <section className="process-section">
         <div className="process-inner">
-          <div className="process-header">
-            <div className="sec-eyebrow">Como trabalhamos</div>
-            <div className="projects-title-row">
-              <h2 className="sec-h2">Do primeiro contato<br />à <em>entrega.</em></h2>
-              <p className="sec-sub">Um processo claro e sem surpresas — você sabe o que acontece em cada etapa e acompanha tudo de perto.</p>
+          <RevealOnScroll>
+            <div className="process-header">
+              <div className="sec-eyebrow">Como trabalhamos</div>
+              <div className="projects-title-row">
+                <h2 className="sec-h2">Do primeiro contato<br />à <em>entrega.</em></h2>
+                <p className="sec-sub">Um processo claro e sem surpresas — você sabe o que acontece em cada etapa e acompanha tudo de perto.</p>
+              </div>
             </div>
-          </div>
+          </RevealOnScroll>
 
           <div className="process-steps">
             {[
@@ -104,19 +109,21 @@ export default function Home() {
                 tags: ['Deploy', 'Treinamento', 'Suporte'],
               },
             ].map((step, i) => (
-              <div key={step.n} className="pstep">
-                <div className="pstep-num">{step.n}</div>
-                {i < 3 && <div className="pstep-connector" />}
-                <div className="pstep-body">
-                  <h3 className="pstep-title">{step.title}</h3>
-                  <p className="pstep-desc">{step.desc}</p>
-                  <div className="pstep-tags">
-                    {step.tags.map((t) => (
-                      <span key={t} className="pstep-tag">{t}</span>
-                    ))}
+              <RevealOnScroll key={step.n} delay={i * 100}>
+                <div className="pstep">
+                  <div className="pstep-num">{step.n}</div>
+                  {i < 3 && <div className="pstep-connector" />}
+                  <div className="pstep-body">
+                    <h3 className="pstep-title">{step.title}</h3>
+                    <p className="pstep-desc">{step.desc}</p>
+                    <div className="pstep-tags">
+                      {step.tags.map((t) => (
+                        <span key={t} className="pstep-tag">{t}</span>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
+              </RevealOnScroll>
             ))}
           </div>
         </div>
@@ -130,12 +137,14 @@ export default function Home() {
             { val: '3×', label: 'mais leads gerados', sub: 'pelos projetos dos clientes' },
             { val: '98%', label: 'de satisfação', sub: 'avaliações pós-entrega' },
             { val: '4+', label: 'anos no mercado', sub: 'atendendo todo o Brasil' },
-          ].map((n) => (
-            <div key={n.label} className="num-card">
-              <div className="num-val">{n.val}</div>
-              <div className="num-label">{n.label}</div>
-              <div className="num-sub">{n.sub}</div>
-            </div>
+          ].map((n, i) => (
+            <RevealOnScroll key={n.label} delay={i * 80} from="bottom">
+              <div className="num-card">
+                <div className="num-val">{n.val}</div>
+                <div className="num-label">{n.label}</div>
+                <div className="num-sub">{n.sub}</div>
+              </div>
+            </RevealOnScroll>
           ))}
         </div>
       </section>
@@ -143,13 +152,15 @@ export default function Home() {
       {/* TESTIMONIALS */}
       <section className="testi-section">
         <div className="testi-inner">
-          <div className="testi-header">
-            <div className="sec-eyebrow">Depoimentos</div>
-            <div className="projects-title-row">
-              <h2 className="sec-h2">Quem trabalhou<br />com a <em>gente fala.</em></h2>
-              <p className="sec-sub">Resultados reais de negócios que apostaram em tecnologia e design.</p>
+          <RevealOnScroll>
+            <div className="testi-header">
+              <div className="sec-eyebrow">Depoimentos</div>
+              <div className="projects-title-row">
+                <h2 className="sec-h2">Quem trabalhou<br />com a <em>gente fala.</em></h2>
+                <p className="sec-sub">Resultados reais de negócios que apostaram em tecnologia e design.</p>
+              </div>
             </div>
-          </div>
+          </RevealOnScroll>
           <div className="testi-grid">
             {[
               {
@@ -188,18 +199,20 @@ export default function Home() {
                 color: 'var(--green)',
                 wide: true,
               },
-            ].map((t) => (
-              <div key={t.name} className={`testi-card${t.wide ? ' testi-card-wide' : ''}`}>
-                <div className="testi-stars">★★★★★</div>
-                <p className="testi-text">{t.quote}</p>
-                <div className="testi-author">
-                  <div className="testi-av" style={{ background: t.color, color: t.color === 'var(--acid)' ? 'var(--acid-fg)' : '#fff' }}>{t.init}</div>
-                  <div>
-                    <div className="testi-name">{t.name}</div>
-                    <div className="testi-role">{t.role}</div>
+            ].map((t, i) => (
+              <RevealOnScroll key={t.name} delay={i * 80}>
+                <div className={`testi-card${t.wide ? ' testi-card-wide' : ''}`}>
+                  <div className="testi-stars">★★★★★</div>
+                  <p className="testi-text">{t.quote}</p>
+                  <div className="testi-author">
+                    <div className="testi-av" style={{ background: t.color, color: t.color === 'var(--acid)' ? 'var(--acid-fg)' : '#fff' }}>{t.init}</div>
+                    <div>
+                      <div className="testi-name">{t.name}</div>
+                      <div className="testi-role">{t.role}</div>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </RevealOnScroll>
             ))}
           </div>
         </div>
