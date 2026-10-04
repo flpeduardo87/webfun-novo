@@ -29,7 +29,7 @@ const PROJECTS: Project[] = [
     desc: 'E-commerce de moda feminina com identidade minimalista, catálogo e checkout otimizado.',
     img: '/projects/azaff.jpg',
     year: '2025',
-    url: 'https://webfun.com.br/modelos/azaff/index.html',
+    url: 'https://lojasazaff.com.br',
   },
   {
     tag: 'Site institucional',
@@ -45,7 +45,7 @@ const PROJECTS: Project[] = [
     desc: 'Site institucional + sistema de reservas de quadras, churrasqueiras e gestão de sócios.',
     img: '/projects/canoinhas-tc.jpg',
     year: '2025',
-    url: 'https://webfun.com.br/modelos/canoinhas-tc/index.html',
+    url: 'https://canoinhastenisclube.com.br',
   },
   {
     tag: 'Site institucional',
@@ -69,7 +69,7 @@ const PROJECTS: Project[] = [
     desc: 'Site de geração de leads para instaladora solar com portfólio de projetos entregues.',
     img: '/projects/mielke.jpg',
     year: '2024',
-    url: 'https://webfun.com.br/modelos/mielke/index.html',
+    url: 'https://mielkenergiasolar.com.br',
   },
   {
     tag: 'Site institucional',
@@ -85,7 +85,7 @@ const PROJECTS: Project[] = [
     desc: 'Landing page de alta conversão para biblioteca cristã infantil digital com checkout integrado.',
     img: '/projects/com-cristo-kids.webp',
     year: '2025',
-    url: 'https://webfun.com.br/modelos/com-cristo-kids/index.html',
+    url: 'https://comcristokids.com.br',
   },
   {
     tag: 'Delivery',
