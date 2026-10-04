@@ -97,6 +97,22 @@ const PROJECTS: Project[] = [
   },
   {
     tag: 'Site institucional',
+    title: 'Perform',
+    desc: 'Site institucional para empresa de alta performance com identidade visual forte e foco em conversão.',
+    color: 'proj-c1',
+    year: '2025',
+    url: 'https://perform.ind.br',
+  },
+  {
+    tag: 'Landing page',
+    title: 'Elisangela Pontes',
+    desc: 'Landing page de alta conversão para advocacia com foco em captação de consultas e autoridade jurídica.',
+    color: 'proj-flavia',
+    year: '2025',
+    url: 'https://elisangelapontes.adv.br',
+  },
+  {
+    tag: 'Site institucional',
     title: 'Wasabi Sushi Bar',
     desc: 'Site para restaurante japonês em Dublin com cardápio digital, reservas e identidade visual marcante.',
     color: 'proj-wasabi',
