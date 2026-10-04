@@ -106,8 +106,8 @@ const PROJECTS: Project[] = [
   {
     tag: 'Landing page',
     title: 'Elisangela Pontes',
-    desc: 'Landing page de alta conversão para advocacia com foco em captação de consultas e autoridade jurídica.',
-    color: 'proj-flavia',
+    desc: 'Landing page para advocacia empresarial especializada em blindagem jurídica de empresas e gestão de riscos.',
+    img: '/projects/elisangela.png',
     year: '2025',
     url: 'https://elisangelapontes.adv.br',
   },
