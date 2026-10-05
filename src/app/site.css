@@ -27,7 +27,7 @@
   flex-direction: column;
   align-items: center;
   pointer-events: none;
-  padding-inline: 16px;
+  padding-inline: 24px;
 }
 
 .np-pill {
@@ -44,7 +44,7 @@
   border-radius: 999px;
   box-shadow: 0 4px 24px var(--shadow), 0 1px 0 rgba(255,255,255,.04) inset;
   width: 100%;
-  max-width: 840px;
+  max-width: 1160px;
   transition: box-shadow .2s;
 }
 .np-pill--open {
@@ -115,7 +115,7 @@
 .np-mega {
   pointer-events: none;
   width: 100%;
-  max-width: 840px;
+  max-width: 1160px;
   margin-top: 10px;
   opacity: 0;
   transform: translateY(-8px) scale(.98);
