@@ -17,8 +17,8 @@
   display: block;
 }
 
-/* Wrap keeps pill centered; pointer-events:none lets clicks pass through gaps */
-.np-wrap {
+/* Bar — full-width fixed strip; children set their own pointer-events */
+.np-bar {
   position: fixed;
   top: calc(env(safe-area-inset-top, 0px) + 14px);
   left: 0; right: 0;
@@ -29,22 +29,28 @@
   pointer-events: none;
   padding-inline: 24px;
 }
-
-.np-pill {
-  pointer-events: all;
+.np-inner {
+  width: 100%;
+  max-width: 1160px;
   display: flex;
   align-items: center;
-  gap: 4px;
-  height: 52px;
-  padding: 0 6px 0 14px;
+  justify-content: space-between;
+  gap: 16px;
+}
+.np-inner > * { pointer-events: all; }
+
+/* Pill — only wraps the nav links */
+.np-pill {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  padding: 4px 6px;
   background: color-mix(in srgb, var(--bg) 88%, transparent);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--line);
   border-radius: 999px;
-  box-shadow: 0 4px 24px var(--shadow), 0 1px 0 rgba(255,255,255,.04) inset;
-  width: 100%;
-  max-width: 1160px;
+  box-shadow: 0 4px 24px var(--shadow);
   transition: box-shadow .2s;
 }
 .np-pill--open {
@@ -55,8 +61,6 @@
   display: flex;
   align-items: center;
   gap: 2px;
-  flex: 1;
-  justify-content: center;
 }
 .np-link {
   padding: 7px 13px;
@@ -217,10 +221,9 @@
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
-  .np-links, .np-right .nav-cta { display: none; }
-  .np-right { margin-left: auto; }
+  .np-pill { display: none; }
+  .np-right .nav-cta { display: none; }
   .np-burger { display: flex; }
-  .np-pill { padding: 0 8px 0 14px; }
   .np-mega { display: none; }
 }
 

@@ -67,54 +67,56 @@ export default function NavBar({ active }: { active?: string }) {
 
   return (
     <>
-      <div className="np-wrap" ref={wrapRef}>
-        {/* ── PILL ── */}
-        <div className={`np-pill${megaOpen ? ' np-pill--open' : ''}`}>
+      <div className="np-bar" ref={wrapRef}>
+        <div className="np-inner">
+          {/* Logo */}
           <a href="/" className="nav-logo">
             <span className="logo-dot" />webfun
           </a>
 
-          <nav className="np-links">
-            <button
-              className={`np-link np-link-btn${active === 'servicos' ? ' np-link--active' : ''}${megaOpen ? ' np-link--mega' : ''}`}
-              onClick={() => setMegaOpen((v) => !v)}
-              aria-expanded={megaOpen}
-            >
-              Serviços
-              <ChevronDown
-                size={12}
-                strokeWidth={2.5}
-                className="np-chevron"
-                style={{ transform: megaOpen ? 'rotate(180deg)' : 'none', transition: 'transform .2s' }}
-              />
-            </button>
-
-            {LINKS.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                className={`np-link${active === l.href.slice(1) ? ' np-link--active' : ''}`}
+          {/* ── PILL — só os links ── */}
+          <div className={`np-pill${megaOpen ? ' np-pill--open' : ''}`}>
+            <nav className="np-links">
+              <button
+                className={`np-link np-link-btn${active === 'servicos' ? ' np-link--active' : ''}${megaOpen ? ' np-link--mega' : ''}`}
+                onClick={() => setMegaOpen((v) => !v)}
+                aria-expanded={megaOpen}
               >
-                {l.label}
-              </a>
-            ))}
-          </nav>
+                Serviços
+                <ChevronDown
+                  size={12}
+                  strokeWidth={2.5}
+                  className="np-chevron"
+                  style={{ transform: megaOpen ? 'rotate(180deg)' : 'none', transition: 'transform .2s' }}
+                />
+              </button>
 
+              {LINKS.map((l) => (
+                <a
+                  key={l.href}
+                  href={l.href}
+                  className={`np-link${active === l.href.slice(1) ? ' np-link--active' : ''}`}
+                >
+                  {l.label}
+                </a>
+              ))}
+            </nav>
+          </div>
+
+          {/* Right: toggle + CTA + burger */}
           <div className="np-right">
             <ThemeToggle />
             <a href="/contato" className="nav-cta">Começar projeto</a>
+            <button
+              className="np-burger"
+              onClick={() => setMobileOpen((v) => !v)}
+              aria-label={mobileOpen ? 'Fechar menu' : 'Abrir menu'}
+            >
+              {mobileOpen
+                ? <X size={18} strokeWidth={2} />
+                : <Menu size={18} strokeWidth={2} />}
+            </button>
           </div>
-
-          {/* Mobile burger */}
-          <button
-            className="np-burger"
-            onClick={() => setMobileOpen((v) => !v)}
-            aria-label={mobileOpen ? 'Fechar menu' : 'Abrir menu'}
-          >
-            {mobileOpen
-              ? <X size={18} strokeWidth={2} />
-              : <Menu size={18} strokeWidth={2} />}
-          </button>
         </div>
 
         {/* ── MEGA MENU ── */}
