@@ -150,21 +150,24 @@ export default async function ServicoPage({ params }: { params: Promise<{ slug: 
 
       {/* OTHER SERVICES */}
       {others.length > 0 && (
-        <section className="sv-section">
+        <section className="sv-section sv-other-section">
           <div className="sv-inner">
             <div className="sv-eyebrow">Outros serviços</div>
             <h2 className="sv-h2">Explore<br /><em>mais.</em></h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}>
+          </div>
+          <div className="sv-other-scroll">
+            <div className="sv-other-grid">
               {others.map((o) => (
                 <a
                   key={o.slug}
                   href={`/servicos/${o.slug}`}
                   className="sv-other-card"
                 >
-                  <span className="sv-other-icon">{ICONS[o.slug]}</span>
-                  <div>
-                    <div style={{ fontSize: 14, fontWeight: 700, color: 'var(--ink)', marginBottom: 4 }}>{o.name}</div>
-                    <div style={{ fontSize: 13, color: 'var(--muted)' }}>{o.tagline}</div>
+                  <div className="sv-other-icon-wrap">{ICONS[o.slug]}</div>
+                  <div className="sv-other-name">{o.name}</div>
+                  <div className="sv-other-tag">{o.tagline}</div>
+                  <div className="sv-other-arrow">
+                    <ArrowRight size={14} strokeWidth={2} />
                   </div>
                 </a>
               ))}
