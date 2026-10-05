@@ -10,6 +10,7 @@ import HeroAnimator from '@/components/HeroAnimator';
 import RevealOnScroll from '@/components/RevealOnScroll';
 import CountUp from '@/components/CountUp';
 import TypewriterText from '@/components/TypewriterText';
+import MagneticButton from '@/components/MagneticButton';
 
 export default function Home() {
   return (
@@ -19,6 +20,11 @@ export default function Home() {
 
       {/* HERO */}
       <section className="hero">
+        <div className="hero-orbs" aria-hidden="true">
+          <div className="hero-orb hero-orb-1" />
+          <div className="hero-orb hero-orb-2" />
+          <div className="hero-orb hero-orb-3" />
+        </div>
         <div className="hero-shell">
           <div className="hero-grid">
             <div className="hero-copy">
@@ -36,9 +42,11 @@ export default function Home() {
                 <TypewriterText />
               </div>
               <div className="hero-actions">
-                <a href="#orcamento" className="btn-p">
-                  Falar sobre meu projeto<ArrowRight size={15} strokeWidth={2} />
-                </a>
+                <MagneticButton>
+                  <a href="#orcamento" className="btn-p">
+                    Falar sobre meu projeto<ArrowRight size={15} strokeWidth={2} />
+                  </a>
+                </MagneticButton>
                 <a href="/projetos" className="btn-g">Ver projetos</a>
               </div>
               <div className="proof">

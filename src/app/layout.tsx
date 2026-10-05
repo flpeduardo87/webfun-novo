@@ -4,6 +4,7 @@ import "./globals.css";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Analytics from "@/components/Analytics";
 import CustomCursor from "@/components/CustomCursor";
+import SmoothScroll from "@/components/SmoothScroll";
 
 const display = Bricolage_Grotesque({
   variable: "--font-display",
@@ -63,6 +64,7 @@ export default function RootLayout({
         {children}
         <WhatsAppButton />
         <CustomCursor />
+        <SmoothScroll />
       </body>
     </html>
   );
