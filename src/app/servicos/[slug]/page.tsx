@@ -1,10 +1,19 @@
 import '../../site.css';
 import '../servico.css';
 import { notFound } from 'next/navigation';
-import { ArrowLeft, ArrowRight, Check } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Check, Globe, ShoppingBag, Megaphone, Settings, Bot, Smartphone } from 'lucide-react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import { SERVICES_DATA } from '../services-data';
+
+const ICONS: Record<string, React.ReactNode> = {
+  'site-institucional': <Globe size={28} strokeWidth={1.6} />,
+  'loja-virtual':       <ShoppingBag size={28} strokeWidth={1.6} />,
+  'landing-page':       <Megaphone size={28} strokeWidth={1.6} />,
+  'sistema-sob-medida': <Settings size={28} strokeWidth={1.6} />,
+  'automacao-ia':       <Bot size={28} strokeWidth={1.6} />,
+  'aplicativo':         <Smartphone size={28} strokeWidth={1.6} />,
+};
 
 export function generateStaticParams() {
   return SERVICES_DATA.map((s) => ({ slug: s.slug }));
@@ -39,7 +48,7 @@ export default async function ServicoPage({ params }: { params: Promise<{ slug: 
               <ArrowLeft size={14} strokeWidth={2} /> Todos os serviços
             </a>
             <div className="sv-tag">
-              <span style={{ fontSize: 18 }}>{s.icon}</span>
+              {ICONS[s.slug]}
               {s.tagline}
             </div>
             <h1 className="sv-h1">{s.headline}</h1>
@@ -53,7 +62,7 @@ export default async function ServicoPage({ params }: { params: Promise<{ slug: 
           </div>
 
           <div className="sv-hero-card">
-            <div className="sv-hero-card-icon">{s.icon}</div>
+            <div className="sv-hero-card-icon">{ICONS[s.slug]}</div>
             <div>
               <div className="sv-hero-stat-label">A partir de</div>
               <div className="sv-hero-stat-val">{s.startingPrice}</div>
@@ -152,7 +161,7 @@ export default async function ServicoPage({ params }: { params: Promise<{ slug: 
                   href={`/servicos/${o.slug}`}
                   className="sv-other-card"
                 >
-                  <span style={{ fontSize: 28, lineHeight: 1 }}>{o.icon}</span>
+                  <span className="sv-other-icon">{ICONS[o.slug]}</span>
                   <div>
                     <div style={{ fontSize: 14, fontWeight: 700, color: 'var(--ink)', marginBottom: 4 }}>{o.name}</div>
                     <div style={{ fontSize: 13, color: 'var(--muted)' }}>{o.tagline}</div>

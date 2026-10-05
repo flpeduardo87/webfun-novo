@@ -1,6 +1,6 @@
 import '../site.css';
 import './processo.css';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Clock, FileText, Target } from 'lucide-react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import ProcessoSteps from './ProcessoSteps';
@@ -12,17 +12,17 @@ export const metadata = {
 
 const guarantees = [
   {
-    icon: '⏱',
+    icon: <Clock size={22} strokeWidth={1.7} />,
     title: 'Prazo real',
     desc: 'Só prometemos o que conseguimos cumprir. Se houver atraso por nossa parte, avisamos antes — não depois com desculpas.',
   },
   {
-    icon: '📄',
+    icon: <FileText size={22} strokeWidth={1.7} />,
     title: 'Sem letra miúda',
     desc: 'Tudo documentado em linguagem simples. Você sabe exatamente o que está contratando antes de assinar qualquer coisa.',
   },
   {
-    icon: '🎯',
+    icon: <Target size={22} strokeWidth={1.7} />,
     title: 'Comunicação direta',
     desc: 'Sem gerente de contas no meio. Você fala diretamente com quem está construindo o seu projeto.',
   },

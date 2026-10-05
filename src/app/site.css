@@ -838,7 +838,7 @@
   text-align: left;
   transition: color .16s;
 }
-.faq-q:hover { color: var(--acid-fg); }
+@media (hover: hover) { .faq-q:hover { color: var(--acid); } }
 .faq-item.open .faq-q { color: var(--ink); }
 .faq-icon {
   font-size: 22px; font-weight: 300;
