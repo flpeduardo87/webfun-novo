@@ -499,6 +499,49 @@
 .ia-gain { background: var(--win-2); border: 1px solid rgba(255,255,255,.07); border-radius: 9px; padding: 10px 11px; display: flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 600; color: rgba(255,255,255,.72); }
 .dot8 { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
 
+/* ── APP PANEL ── */
+.app-layout { display: flex; gap: 16px; align-items: flex-start; padding: 16px 18px; height: 100%; }
+.app-phone {
+  width: 148px; flex-shrink: 0;
+  background: #0d0e11;
+  border-radius: 18px;
+  border: 1.5px solid rgba(255,255,255,.12);
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,.5);
+}
+.app-screen { padding: 10px 10px 12px; display: flex; flex-direction: column; gap: 8px; }
+.app-status-bar { display: flex; justify-content: space-between; align-items: center; font-size: 9px; color: rgba(255,255,255,.5); font-weight: 600; }
+.app-status-icons { display: flex; gap: 3px; align-items: center; }
+.app-signal, .app-wifi, .app-battery {
+  width: 12px; height: 6px; border-radius: 1px;
+  background: rgba(255,255,255,.35);
+}
+.app-header { display: flex; justify-content: space-between; align-items: flex-start; }
+.app-greeting { font-size: 11px; font-weight: 700; color: #fff; }
+.app-sub { font-size: 9px; color: rgba(255,255,255,.4); margin-top: 1px; }
+.app-notif-btn { position: relative; width: 24px; height: 24px; border-radius: 8px; background: rgba(255,255,255,.08); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,.6); }
+.app-badge { position: absolute; top: -3px; right: -3px; width: 10px; height: 10px; border-radius: 50%; background: var(--acid); font-size: 7px; color: var(--acid-fg); font-weight: 800; display: flex; align-items: center; justify-content: center; }
+.app-card-main {
+  background: linear-gradient(135deg, var(--acid) 0%, color-mix(in srgb, var(--acid) 70%, #fff) 100%);
+  border-radius: 10px; padding: 10px; display: flex; flex-direction: column; gap: 3px;
+}
+.app-card-label { font-size: 8px; font-weight: 800; letter-spacing: .08em; color: var(--acid-fg); opacity: .7; text-transform: uppercase; }
+.app-card-title { font-size: 13px; font-weight: 800; color: var(--acid-fg); }
+.app-card-row { display: flex; align-items: center; gap: 3px; font-size: 9px; color: var(--acid-fg); opacity: .75; }
+.app-menu { display: flex; flex-direction: column; gap: 2px; }
+.app-menu-item { display: flex; align-items: center; gap: 7px; padding: 6px 8px; border-radius: 8px; background: rgba(255,255,255,.05); }
+.app-menu-icon { color: var(--acid); display: flex; align-items: center; }
+.app-menu-item span { font-size: 10px; color: rgba(255,255,255,.7); font-weight: 500; flex: 1; }
+.app-menu-arrow { color: rgba(255,255,255,.25); }
+.app-meta { display: flex; flex-direction: column; gap: 12px; padding-top: 4px; flex: 1; }
+.app-stat { display: flex; flex-direction: column; gap: 2px; }
+.app-stat b { font-size: 22px; font-weight: 800; color: #fff; line-height: 1; }
+.app-stat small { font-size: 10px; color: rgba(255,255,255,.4); }
+.app-stars { font-size: 11px; color: var(--acid); letter-spacing: 1px; }
+.app-divider { height: 1px; background: rgba(255,255,255,.08); }
+.app-stores { display: flex; gap: 6px; flex-wrap: wrap; }
+.app-store-badge { font-size: 10px; font-weight: 700; color: rgba(255,255,255,.7); background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12); border-radius: 6px; padding: 4px 10px; }
+
 /* progress footer */
 .win-foot { padding: 10px 18px 15px; border-top: 1px solid rgba(255,255,255,.07); display: flex; align-items: center; gap: 11px; }
 .prog-track { flex: 1; height: 3px; background: rgba(255,255,255,.1); border-radius: 99px; overflow: hidden; }
