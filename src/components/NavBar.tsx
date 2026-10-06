@@ -44,8 +44,9 @@ const SERVICES = [
 ];
 
 const LINKS = [
-  { href: '/',          label: 'home', icon: true },
+  { href: '/',          label: 'Início',   icon: true },
   { href: '/sobre',     label: 'Sobre' },
+  { href: '#servicos',  label: 'Serviços', dropdown: true },
   { href: '/projetos',  label: 'Projetos' },
   { href: '/processo',  label: 'Processo' },
   { href: '/blog',      label: 'Blog' },
@@ -79,21 +80,22 @@ export default function NavBar({ active }: { active?: string }) {
           {/* ── PILL — só os links ── */}
           <div className={`np-pill${megaOpen ? ' np-pill--open' : ''}`}>
             <nav className="np-links">
-              <button
-                className={`np-link np-link-btn${active === 'servicos' ? ' np-link--active' : ''}${megaOpen ? ' np-link--mega' : ''}`}
-                onClick={() => setMegaOpen((v) => !v)}
-                aria-expanded={megaOpen}
-              >
-                Serviços
-                <ChevronDown
-                  size={12}
-                  strokeWidth={2.5}
-                  className="np-chevron"
-                  style={{ transform: megaOpen ? 'rotate(180deg)' : 'none', transition: 'transform .2s' }}
-                />
-              </button>
-
-              {LINKS.map((l) => (
+              {LINKS.map((l) => l.dropdown ? (
+                <button
+                  key={l.href}
+                  className={`np-link np-link-btn${active === 'servicos' ? ' np-link--active' : ''}${megaOpen ? ' np-link--mega' : ''}`}
+                  onClick={() => setMegaOpen((v) => !v)}
+                  aria-expanded={megaOpen}
+                >
+                  {l.label}
+                  <ChevronDown
+                    size={12}
+                    strokeWidth={2.5}
+                    className="np-chevron"
+                    style={{ transform: megaOpen ? 'rotate(180deg)' : 'none', transition: 'transform .2s' }}
+                  />
+                </button>
+              ) : (
                 <a
                   key={l.href}
                   href={l.href}
@@ -161,7 +163,7 @@ export default function NavBar({ active }: { active?: string }) {
           </div>
           <div className="np-mobile-group">
             <div className="np-mobile-label">Menu</div>
-            {LINKS.map((l) => (
+            {LINKS.filter((l) => !l.dropdown).map((l) => (
               <a key={l.href} href={l.href} className="np-mobile-link" onClick={() => setMobileOpen(false)}>
                 {l.icon ? <><Home size={14} strokeWidth={2} /> Início</> : l.label}
               </a>
