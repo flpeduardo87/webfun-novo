@@ -49,8 +49,6 @@ const LINKS = [
   { href: '#servicos',  label: 'Serviços', dropdown: true },
   { href: '/projetos',  label: 'Projetos' },
   { href: '/processo',  label: 'Processo' },
-  { href: '/blog',      label: 'Blog' },
-  { href: '/contato',   label: 'Contato' },
 ];
 
 export default function NavBar({ active }: { active?: string }) {
@@ -152,26 +150,32 @@ export default function NavBar({ active }: { active?: string }) {
       {/* ── MOBILE MENU ── */}
       <div className={`np-mobile${mobileOpen ? ' np-mobile--open' : ''}`} aria-hidden={!mobileOpen}>
         <div className="np-mobile-inner">
-          <div className="np-mobile-group">
-            <div className="np-mobile-label">Serviços</div>
-            {SERVICES.map(({ Icon, name, href }) => (
-              <a key={href} href={href} className="np-mobile-link" onClick={() => setMobileOpen(false)}>
-                <Icon size={14} strokeWidth={1.8} />
-                {name}
-              </a>
-            ))}
+          <div className="np-mobile-scroll">
+            <div className="np-mobile-group">
+              <div className="np-mobile-label">Serviços</div>
+              {SERVICES.map(({ Icon, name, href }) => (
+                <a key={href} href={href} className="np-mobile-link" onClick={() => setMobileOpen(false)}>
+                  <Icon size={14} strokeWidth={1.8} />
+                  {name}
+                </a>
+              ))}
+            </div>
+            <div className="np-mobile-group">
+              <div className="np-mobile-label">Menu</div>
+              {LINKS.filter((l) => !l.dropdown).map((l) => (
+                <a key={l.href} href={l.href} className="np-mobile-link" onClick={() => setMobileOpen(false)}>
+                  {l.icon ? <><Home size={14} strokeWidth={2} /> Início</> : l.label}
+                </a>
+              ))}
+              <a href="/blog" className="np-mobile-link" onClick={() => setMobileOpen(false)}>Blog</a>
+              <a href="/contato" className="np-mobile-link" onClick={() => setMobileOpen(false)}>Contato</a>
+            </div>
           </div>
-          <div className="np-mobile-group">
-            <div className="np-mobile-label">Menu</div>
-            {LINKS.filter((l) => !l.dropdown).map((l) => (
-              <a key={l.href} href={l.href} className="np-mobile-link" onClick={() => setMobileOpen(false)}>
-                {l.icon ? <><Home size={14} strokeWidth={2} /> Início</> : l.label}
-              </a>
-            ))}
+          <div className="np-mobile-footer">
+            <a href="/contato" className="btn-p np-mobile-cta" onClick={() => setMobileOpen(false)}>
+              Começar projeto <ArrowRight size={14} strokeWidth={2} />
+            </a>
           </div>
-          <a href="/contato" className="btn-p np-mobile-cta" onClick={() => setMobileOpen(false)}>
-            Começar projeto <ArrowRight size={14} strokeWidth={2} />
-          </a>
         </div>
       </div>
     </>
