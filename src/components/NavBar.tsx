@@ -66,6 +66,11 @@ export default function NavBar({ active }: { active?: string }) {
     return () => document.removeEventListener('mousedown', onDown);
   }, [megaOpen]);
 
+  useEffect(() => {
+    document.body.classList.toggle('mobile-menu-open', mobileOpen);
+    return () => document.body.classList.remove('mobile-menu-open');
+  }, [mobileOpen]);
+
   return (
     <>
       <div className="np-bar" ref={wrapRef}>

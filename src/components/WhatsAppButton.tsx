@@ -37,6 +37,11 @@ export default function WhatsAppButton() {
         @media (max-width: 640px) {
           .whatsapp-fab { bottom: 20px; right: 20px; width: 50px; height: 50px; }
         }
+        .mobile-menu-open .whatsapp-fab {
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity .2s;
+        }
       `}</style>
     </>
   );
