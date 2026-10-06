@@ -34,10 +34,11 @@
   max-width: 1160px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 16px;
 }
 .np-inner > * { pointer-events: all; }
+.np-inner .nav-logo { flex: 1; }
+.np-inner .np-right  { flex: 1; justify-content: flex-end; display: flex; align-items: center; gap: 8px; }
 
 /* Pill — only wraps the nav links */
 .np-pill {
@@ -86,7 +87,7 @@
 .np-chevron { flex-shrink: 0; }
 
 .np-right {
-  display: flex; align-items: center; gap: 8px; flex-shrink: 0;
+  display: flex; align-items: center; gap: 8px;
 }
 .nav-cta {
   height: 38px; padding: 0 16px;
