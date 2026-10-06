@@ -232,8 +232,13 @@ export default function ServiceWindow() {
                 ].map((r) => (
                   <div key={r.num} className="lrow">
                     <div className={`lav ${r.cls}`}>{r.init}</div>
-                    <div className="linfo"><b>{r.name}</b><small>{r.num}</small></div>
-                    <span className={`spill ${r.ok ? 'ok' : 'pend'}`}>{r.ok ? 'Entregue' : 'Pendente'}</span>
+                    <div className="linfo">
+                      <b>{r.name}</b>
+                      <div className="lrow-foot">
+                        <small>{r.num}</small>
+                        <span className={`spill ${r.ok ? 'ok' : 'pend'}`}>{r.ok ? 'Entregue' : 'Pendente'}</span>
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>

@@ -472,11 +472,12 @@
 .bar { flex: 1; background: rgba(255,255,255,.1); border-radius: 4px 4px 0 0; }
 .bar.hi { background: var(--acid); }
 .list-card { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
-.lrow { background: var(--win-2); border: 1px solid rgba(255,255,255,.07); border-radius: 9px; padding: 7px 9px; display: flex; align-items: center; justify-content: space-between; gap: 6px; }
+.lrow { background: var(--win-2); border: 1px solid rgba(255,255,255,.07); border-radius: 9px; padding: 7px 9px; display: flex; align-items: center; gap: 6px; }
 .lav { width: 22px; height: 22px; border-radius: 50%; color: #fff; font-size: 9px; font-weight: 800; display: grid; place-items: center; flex-shrink: 0; }
 .lav.b{background:var(--blue)}.lav.g{background:var(--green)}.lav.o{background:#e07444}
-.linfo { flex: 1; min-width: 0; overflow: hidden; }
-.linfo b { font-size: 11px; font-weight: 700; color: #fff; display: block; }
+.linfo { flex: 1; min-width: 0; }
+.linfo b { font-size: 11px; font-weight: 700; color: #fff; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.lrow-foot { display: flex; align-items: center; gap: 6px; margin-top: 2px; }
 .linfo small { font-size: 9px; color: rgba(255,255,255,.38); }
 .spill { font-size: 9px; font-weight: 700; padding: 3px 8px; border-radius: 999px; white-space: nowrap; }
 .spill.ok{background:rgba(48,181,94,.18);color:#7de8a8}
