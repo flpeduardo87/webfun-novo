@@ -120,7 +120,7 @@
 .np-mega {
   pointer-events: none;
   width: 100%;
-  max-width: 1160px;
+  max-width: 680px;
   margin-top: 10px;
   opacity: 0;
   transform: translateY(-8px) scale(.98);
@@ -134,22 +134,44 @@
 .np-mega-inner {
   background: var(--bg);
   border: 1px solid var(--line);
-  border-radius: 24px;
-  padding: 24px;
+  border-radius: 20px;
+  padding: 16px 16px 12px;
   box-shadow: 0 16px 48px var(--shadow);
+}
+.np-mega-grid {
   display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 24px;
-  align-items: start;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
 }
-.np-mega-headline {
-  font-family: var(--font-display);
-  font-size: 18px; font-weight: 800; color: var(--ink);
-  margin-bottom: 8px;
+.np-mega-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: background .15s;
 }
-.np-mega-sub {
-  font-size: 13px; line-height: 1.6; color: var(--muted);
-  margin-bottom: 16px;
+.np-mega-card:hover { background: var(--surface); }
+.np-mega-icon {
+  width: 30px; height: 30px; border-radius: 9px;
+  background: var(--surface); border: 1px solid var(--line);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--acid); flex-shrink: 0;
+  margin-top: 1px;
+}
+.np-mega-name {
+  font-size: 13px; font-weight: 700; color: var(--ink);
+  margin-bottom: 2px;
+}
+.np-mega-desc { font-size: 12px; color: var(--muted); line-height: 1.45; }
+.np-mega-footer {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: flex-end;
 }
 .np-mega-all {
   display: inline-flex; align-items: center; gap: 5px;
@@ -157,33 +179,6 @@
   text-decoration: none;
 }
 .np-mega-all:hover { opacity: .75; }
-.np-mega-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 6px;
-}
-.np-mega-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  padding: 14px;
-  border-radius: 14px;
-  text-decoration: none;
-  color: inherit;
-  transition: background .15s;
-}
-.np-mega-card:hover { background: var(--surface); }
-.np-mega-icon {
-  width: 32px; height: 32px; border-radius: 10px;
-  background: var(--surface); border: 1px solid var(--line);
-  display: flex; align-items: center; justify-content: center;
-  color: var(--acid); flex-shrink: 0;
-}
-.np-mega-name {
-  font-size: 13px; font-weight: 700; color: var(--ink);
-  margin-bottom: 2px;
-}
-.np-mega-desc { font-size: 12px; color: var(--muted); line-height: 1.5; }
 
 /* ── MOBILE MENU ── */
 .np-mobile {

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { ChevronDown, X, Menu, ArrowRight, Globe, ShoppingCart, Zap, Settings, Bot, Smartphone } from 'lucide-react';
+import { ChevronDown, X, Menu, ArrowRight, Globe, ShoppingCart, Zap, Settings, Bot, Smartphone, Home } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 
 const SERVICES = [
@@ -44,10 +44,12 @@ const SERVICES = [
 ];
 
 const LINKS = [
-  { href: '/projetos', label: 'Projetos' },
-  { href: '/processo', label: 'Processo' },
-  { href: '/blog', label: 'Blog' },
-  { href: '/sobre', label: 'Sobre' },
+  { href: '/',          label: 'home', icon: true },
+  { href: '/sobre',     label: 'Sobre' },
+  { href: '/projetos',  label: 'Projetos' },
+  { href: '/processo',  label: 'Processo' },
+  { href: '/blog',      label: 'Blog' },
+  { href: '/contato',   label: 'Contato' },
 ];
 
 export default function NavBar({ active }: { active?: string }) {
@@ -96,8 +98,9 @@ export default function NavBar({ active }: { active?: string }) {
                   key={l.href}
                   href={l.href}
                   className={`np-link${active === l.href.slice(1) ? ' np-link--active' : ''}`}
+                  aria-label={l.icon ? 'Início' : undefined}
                 >
-                  {l.label}
+                  {l.icon ? <Home size={14} strokeWidth={2} /> : l.label}
                 </a>
               ))}
             </nav>
@@ -122,13 +125,6 @@ export default function NavBar({ active }: { active?: string }) {
         {/* ── MEGA MENU ── */}
         <div className={`np-mega${megaOpen ? ' np-mega--open' : ''}`} aria-hidden={!megaOpen}>
           <div className="np-mega-inner">
-            <div className="np-mega-header">
-              <div className="np-mega-headline">Nossos serviços</div>
-              <p className="np-mega-sub">Do site ao sistema — tudo com design e resultado.</p>
-              <a href="/servicos" className="np-mega-all" onClick={() => setMegaOpen(false)}>
-                Ver todos <ArrowRight size={12} strokeWidth={2} />
-              </a>
-            </div>
             <div className="np-mega-grid">
               {SERVICES.map(({ Icon, name, desc, href }) => (
                 <a key={href} href={href} className="np-mega-card" onClick={() => setMegaOpen(false)}>
@@ -141,6 +137,11 @@ export default function NavBar({ active }: { active?: string }) {
                   </div>
                 </a>
               ))}
+            </div>
+            <div className="np-mega-footer">
+              <a href="/servicos" className="np-mega-all" onClick={() => setMegaOpen(false)}>
+                Ver todos os serviços <ArrowRight size={12} strokeWidth={2} />
+              </a>
             </div>
           </div>
         </div>
@@ -162,7 +163,7 @@ export default function NavBar({ active }: { active?: string }) {
             <div className="np-mobile-label">Menu</div>
             {LINKS.map((l) => (
               <a key={l.href} href={l.href} className="np-mobile-link" onClick={() => setMobileOpen(false)}>
-                {l.label}
+                {l.icon ? <><Home size={14} strokeWidth={2} /> Início</> : l.label}
               </a>
             ))}
           </div>
