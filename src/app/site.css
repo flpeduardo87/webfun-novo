@@ -16,6 +16,14 @@
   width: auto;
   display: block;
 }
+/* Theme-aware logo switching */
+.nav-logo-dark { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .nav-logo-light { display: none; }
+  :root:not([data-theme="light"]) .nav-logo-dark  { display: block; }
+}
+:root[data-theme="dark"] .nav-logo-light { display: none; }
+:root[data-theme="dark"] .nav-logo-dark  { display: block; }
 
 /* Bar — full-width fixed strip; children set their own pointer-events */
 .np-bar {

@@ -77,7 +77,8 @@ export default function NavBar({ active }: { active?: string }) {
         <div className="np-inner">
           {/* Logo */}
           <a href="/" className="nav-logo">
-            <span className="logo-dot" />webfun
+            <img src="/logo-light.svg" alt="webfun" className="nav-logo-img nav-logo-light" />
+            <img src="/logo-dark.svg"  alt="webfun" className="nav-logo-img nav-logo-dark"  />
           </a>
 
           {/* ── PILL — só os links ── */}
