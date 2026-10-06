@@ -69,6 +69,81 @@ export default function ServiceWindow() {
 
         {/* Panels */}
         <div className="win-body">
+          {/* APLICATIVO */}
+          <div className={`panel${active === 4 ? ' active' : ''}`}>
+            <div className="app-layout">
+              <div className="app-phone">
+                <div className="app-screen">
+                  <div className="app-status-bar">
+                    <span>09:41</span>
+                    <div className="app-status-icons">
+                      <div className="app-signal" />
+                      <div className="app-wifi" />
+                      <div className="app-battery" />
+                    </div>
+                  </div>
+                  <div className="app-header">
+                    <div>
+                      <div className="app-greeting">Olá, Felipe 👋</div>
+                      <div className="app-sub">Confira suas novidades</div>
+                    </div>
+                    <div className="app-notif-btn">
+                      <Bell size={13} strokeWidth={1.8} />
+                      <div className="app-badge">2</div>
+                    </div>
+                  </div>
+                  <div className="app-card-main">
+                    <div className="app-card-label">PEDIDO EM ROTA</div>
+                    <div className="app-card-title">Entrega hoje</div>
+                    <div className="app-card-row">
+                      <MapPin size={10} strokeWidth={2} color="var(--acid-fg)" />
+                      <span>Chegando em ~20 min</span>
+                    </div>
+                  </div>
+                  <div className="app-menu">
+                    {[
+                      { icon: <ShoppingCart size={12} strokeWidth={1.8} />, label: 'Pedidos' },
+                      { icon: <Star size={12} strokeWidth={1.8} />, label: 'Favoritos' },
+                      { icon: <Smartphone size={12} strokeWidth={1.8} />, label: 'Perfil' },
+                    ].map((m) => (
+                      <div key={m.label} className="app-menu-item">
+                        <div className="app-menu-icon">{m.icon}</div>
+                        <span>{m.label}</span>
+                        <ChevronRight size={9} strokeWidth={2} className="app-menu-arrow" />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <div className="app-meta">
+                <div className="app-meta-row">
+                  <b>4.9</b>
+                  <div className="app-stars">★★★★★</div>
+                </div>
+                <div className="app-meta-label">App Store</div>
+                <div className="app-divider" />
+                <div className="app-meta-row">
+                  <b>50k+</b>
+                  <small>Downloads</small>
+                </div>
+                <div className="app-divider" />
+                <div className="app-stores">
+                  <div className="app-store-badge">iOS</div>
+                  <div className="app-store-badge">Android</div>
+                </div>
+                <div className="app-divider" />
+                <div className="app-feats">
+                  {['Notificações push', 'Offline first', 'Câmera nativa'].map((f) => (
+                    <div key={f} className="app-feat">
+                      <span className="dot8" style={{ background: 'var(--acid)' }} />
+                      {f}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* SITE */}
           <div className={`panel${active === 0 ? ' active' : ''}`}>
             <div className="site-hero">
@@ -201,65 +276,7 @@ export default function ServiceWindow() {
           </div>
         </div>
 
-          {/* APLICATIVO */}
-          <div className={`panel${active === 4 ? ' active' : ''}`}>
-            <div className="app-layout">
-              <div className="app-phone">
-                <div className="app-screen">
-                  <div className="app-status-bar">
-                    <span>09:41</span>
-                    <div className="app-status-icons">
-                      <div className="app-signal" />
-                      <div className="app-wifi" />
-                      <div className="app-battery" />
-                    </div>
-                  </div>
-                  <div className="app-header">
-                    <div>
-                      <div className="app-greeting">Olá, Felipe 👋</div>
-                      <div className="app-sub">Confira suas novidades</div>
-                    </div>
-                    <div className="app-notif-btn">
-                      <Bell size={13} strokeWidth={1.8} />
-                      <div className="app-badge">2</div>
-                    </div>
-                  </div>
-                  <div className="app-card-main">
-                    <div className="app-card-label">PEDIDO EM ROTA</div>
-                    <div className="app-card-title">Entrega hoje</div>
-                    <div className="app-card-row">
-                      <MapPin size={10} strokeWidth={2} color="var(--acid)" />
-                      <span>Chegando em ~20 min</span>
-                    </div>
-                  </div>
-                  <div className="app-menu">
-                    {[
-                      { icon: <ShoppingCart size={12} strokeWidth={1.8} />, label: 'Pedidos' },
-                      { icon: <Star size={12} strokeWidth={1.8} />, label: 'Favoritos' },
-                      { icon: <Smartphone size={12} strokeWidth={1.8} />, label: 'Perfil' },
-                    ].map((m) => (
-                      <div key={m.label} className="app-menu-item">
-                        <div className="app-menu-icon">{m.icon}</div>
-                        <span>{m.label}</span>
-                        <ChevronRight size={9} strokeWidth={2} className="app-menu-arrow" />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-              <div className="app-meta">
-                <div className="app-stat"><b>4.9</b><div className="app-stars">{'★★★★★'}</div><small>App Store</small></div>
-                <div className="app-divider" />
-                <div className="app-stat"><b>50k+</b><small>Downloads</small></div>
-                <div className="app-stores">
-                  <div className="app-store-badge">iOS</div>
-                  <div className="app-store-badge">Android</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        {/* Progress footer */}
+          {/* Progress footer */}
         <div className="win-foot">
           <div className="prog-track">
             <div className="prog-bar" style={{ width: `${progress}%` }} />

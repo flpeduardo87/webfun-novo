@@ -533,14 +533,17 @@
 .app-menu-icon { color: var(--acid); display: flex; align-items: center; }
 .app-menu-item span { font-size: 10px; color: rgba(255,255,255,.7); font-weight: 500; flex: 1; }
 .app-menu-arrow { color: rgba(255,255,255,.25); }
-.app-meta { display: flex; flex-direction: column; gap: 12px; padding-top: 4px; flex: 1; }
-.app-stat { display: flex; flex-direction: column; gap: 2px; }
-.app-stat b { font-size: 22px; font-weight: 800; color: #fff; line-height: 1; }
-.app-stat small { font-size: 10px; color: rgba(255,255,255,.4); }
-.app-stars { font-size: 11px; color: var(--acid); letter-spacing: 1px; }
+.app-meta { display: flex; flex-direction: column; gap: 8px; padding-top: 2px; flex: 1; min-width: 0; }
+.app-meta-row { display: flex; align-items: baseline; gap: 6px; white-space: nowrap; }
+.app-meta-row b { font-size: 16px; font-weight: 800; color: #fff; line-height: 1; }
+.app-meta-row small { font-size: 10px; color: rgba(255,255,255,.4); }
+.app-meta-label { font-size: 9px; color: rgba(255,255,255,.35); font-weight: 600; letter-spacing: .06em; text-transform: uppercase; margin-top: -4px; }
+.app-stars { font-size: 10px; color: var(--acid); letter-spacing: .5px; }
 .app-divider { height: 1px; background: rgba(255,255,255,.08); }
-.app-stores { display: flex; gap: 6px; flex-wrap: wrap; }
-.app-store-badge { font-size: 10px; font-weight: 700; color: rgba(255,255,255,.7); background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12); border-radius: 6px; padding: 4px 10px; }
+.app-stores { display: flex; gap: 5px; }
+.app-store-badge { font-size: 9px; font-weight: 700; color: rgba(255,255,255,.7); background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12); border-radius: 5px; padding: 3px 8px; white-space: nowrap; }
+.app-feats { display: flex; flex-direction: column; gap: 5px; }
+.app-feat { display: flex; align-items: center; gap: 6px; font-size: 10px; color: rgba(255,255,255,.55); font-weight: 500; white-space: nowrap; }
 
 /* progress footer */
 .win-foot { padding: 10px 18px 15px; border-top: 1px solid rgba(255,255,255,.07); display: flex; align-items: center; gap: 11px; }
