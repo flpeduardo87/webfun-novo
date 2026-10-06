@@ -226,10 +226,10 @@
 }
 .all-proj-header {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  margin-bottom: 48px;
-  gap: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 32px;
+  gap: 4px;
 }
 
 /* Grid */
@@ -377,7 +377,7 @@
   .feat-card.feat-sm { aspect-ratio: 16/10; }
   .feat-card.feat-full { aspect-ratio: 16/7; }
   .pg-grid { grid-template-columns: 1fr 1fr; }
-  .all-proj-header { flex-direction: column; align-items: flex-start; }
+  .all-proj-header { gap: 8px; }
 }
 
 @media (max-width: 640px) {
