@@ -21,13 +21,22 @@
 /* Bar — full-width fixed strip; children set their own pointer-events */
 .np-bar {
   position: fixed;
-  top: calc(env(safe-area-inset-top, 0px) + 14px);
+  top: 0;
   left: 0; right: 0;
   z-index: 100;
   display: flex;
   flex-direction: column;
   align-items: center;
   pointer-events: none;
+  padding-top: calc(env(safe-area-inset-top, 0px) + 14px);
+  transition: background .25s, backdrop-filter .25s, box-shadow .25s;
+}
+.np-bar.scrolled {
+  background: color-mix(in srgb, var(--bg) 80%, transparent);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 1px 0 var(--line);
+  padding-bottom: 10px;
 }
 .np-inner {
   width: 100%;
@@ -233,6 +242,7 @@
   .np-right .nav-cta { display: none; }
   .np-burger { display: flex; }
   .np-mega { display: none; }
+  .np-inner { padding-inline: 20px; }
 }
 
 /* ── HERO ── */
