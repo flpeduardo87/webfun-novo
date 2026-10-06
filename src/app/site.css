@@ -224,7 +224,7 @@
   transition: background .15s, color .15s;
 }
 .np-mobile-link:hover { background: var(--surface); color: var(--ink); }
-.np-mobile-cta { width: 100%; justify-content: center; }
+.np-mobile-cta { width: 100%; justify-content: space-between; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {

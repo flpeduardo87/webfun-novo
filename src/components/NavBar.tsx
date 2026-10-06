@@ -44,11 +44,11 @@ const SERVICES = [
 ];
 
 const LINKS = [
+  { href: '/',          label: 'Início',   icon: true },
   { href: '/sobre',     label: 'Sobre' },
   { href: '#servicos',  label: 'Serviços', dropdown: true },
   { href: '/projetos',  label: 'Projetos' },
   { href: '/processo',  label: 'Processo' },
-  { href: '/',          label: 'Início',   icon: true },
 ];
 
 export default function NavBar({ active }: { active?: string }) {
