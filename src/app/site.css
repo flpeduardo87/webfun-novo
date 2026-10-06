@@ -1118,7 +1118,7 @@
 @media (max-width: 900px) {
   .nav { padding: 0 20px; }
   .nav-links { display: none; }
-  .hero-shell { padding-inline: 20px; }
+  .hero-shell { padding-inline: 20px; padding-block-start: 35px; }
   .hero-grid { grid-template-columns: 1fr; gap: 40px; }
   .win-wrap { order: 1; }
   .logos-label { padding-inline: 20px; }
