@@ -131,15 +131,6 @@ export default function ServiceWindow() {
                   <div className="app-store-badge">iOS</div>
                   <div className="app-store-badge">Android</div>
                 </div>
-                <div className="app-divider" />
-                <div className="app-feats">
-                  {['Notificações push', 'Offline first', 'Câmera nativa'].map((f) => (
-                    <div key={f} className="app-feat">
-                      <span className="dot8" style={{ background: 'var(--acid)' }} />
-                      {f}
-                    </div>
-                  ))}
-                </div>
               </div>
             </div>
           </div>
@@ -248,35 +239,37 @@ export default function ServiceWindow() {
           {/* IA */}
           <div className={`panel${active === 3 ? ' active' : ''}`}>
             <div className="ia-lede">Seu negócio trabalhando <em>enquanto você dorme.</em></div>
-            <div className="ia-flow">
-              {[
-                { live: true, icon: <PackageCheck size={14} />, title: 'Pedido recebido', desc: 'Cliente finaliza compra na loja', tag: '✓ Automático', tagLive: true },
-                { live: true, icon: <Bot size={14} />, title: 'Notificação instantânea', desc: 'WhatsApp + e-mail para cliente e equipe', tag: '✓ Automático', tagLive: true },
-                { live: false, icon: <TrendingUp size={14} />, title: 'CRM atualizado', desc: 'Histórico do cliente registrado', tag: 'Integrado', tagLive: false },
-              ].map((s, i) => (
-                <div key={i} className="ia-step">
-                  <div className="ia-line" />
-                  <div className={`ia-ic${s.live ? ' live' : ''}`}>{s.icon}</div>
-                  <div className="ia-body">
-                    <b>{s.title}</b>
-                    <small>{s.desc}</small>
-                    <div><span className={`ia-tag${s.tagLive ? ' live' : ''}`}>{s.tag}</span></div>
+            <div className="ia-cols">
+              <div className="ia-flow">
+                {[
+                  { live: true, icon: <PackageCheck size={14} />, title: 'Pedido recebido', desc: 'Cliente finaliza compra na loja', tag: '✓ Automático', tagLive: true },
+                  { live: true, icon: <Bot size={14} />, title: 'Notificação instantânea', desc: 'WhatsApp + e-mail para cliente e equipe', tag: '✓ Automático', tagLive: true },
+                  { live: false, icon: <TrendingUp size={14} />, title: 'CRM atualizado', desc: 'Histórico do cliente registrado', tag: 'Integrado', tagLive: false },
+                ].map((s, i) => (
+                  <div key={i} className="ia-step">
+                    <div className="ia-line" />
+                    <div className={`ia-ic${s.live ? ' live' : ''}`}>{s.icon}</div>
+                    <div className="ia-body">
+                      <b>{s.title}</b>
+                      <small>{s.desc}</small>
+                      <div><span className={`ia-tag${s.tagLive ? ' live' : ''}`}>{s.tag}</span></div>
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
-            <div className="ia-gains">
-              {[
-                { color: 'var(--green)', label: 'Menos retrabalho' },
-                { color: 'var(--blue)', label: 'Mais velocidade' },
-                { color: 'var(--acid)', label: 'IA no fluxo' },
-                { color: '#e07444', label: '0 tarefas manuais' },
-              ].map((g) => (
-                <div key={g.label} className="ia-gain">
-                  <span className="dot8" style={{ background: g.color }} />
-                  {g.label}
-                </div>
-              ))}
+                ))}
+              </div>
+              <div className="ia-gains">
+                {[
+                  { color: 'var(--green)', label: 'Menos retrabalho' },
+                  { color: 'var(--blue)', label: 'Mais velocidade' },
+                  { color: 'var(--acid)', label: 'IA no fluxo' },
+                  { color: '#e07444', label: '0 tarefas manuais' },
+                ].map((g) => (
+                  <div key={g.label} className="ia-gain">
+                    <span className="dot8" style={{ background: g.color }} />
+                    {g.label}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
