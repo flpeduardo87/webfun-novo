@@ -58,7 +58,7 @@ export default function NavBar({ active }: { active?: string }) {
   const wrapRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    function onScroll() { setScrolled(window.scrollY > 1); }
+    function onScroll() { setScrolled(window.scrollY > 40); }
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
     return () => window.removeEventListener('scroll', onScroll);
