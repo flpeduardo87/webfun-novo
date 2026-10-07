@@ -47,12 +47,24 @@ export default function HeroCanvas() {
       ));
     }
 
+    // Circular sprite texture
+    const spriteCanvas = document.createElement('canvas');
+    spriteCanvas.width = 32; spriteCanvas.height = 32;
+    const ctx2d = spriteCanvas.getContext('2d')!;
+    const grad = ctx2d.createRadialGradient(16, 16, 0, 16, 16, 16);
+    grad.addColorStop(0, 'rgba(255,255,255,1)');
+    grad.addColorStop(0.4, 'rgba(255,255,255,0.8)');
+    grad.addColorStop(1, 'rgba(255,255,255,0)');
+    ctx2d.fillStyle = grad;
+    ctx2d.fillRect(0, 0, 32, 32);
+    const spriteTex = new THREE.CanvasTexture(spriteCanvas);
+
     // Dot geometry
     const dotGeo = new THREE.BufferGeometry();
     const dotPositions = new Float32Array(PARTICLE_COUNT * 3);
     positions.forEach((p, i) => { dotPositions[i * 3] = p.x; dotPositions[i * 3 + 1] = p.y; dotPositions[i * 3 + 2] = p.z; });
     dotGeo.setAttribute('position', new THREE.BufferAttribute(dotPositions, 3));
-    const dotMat = new THREE.PointsMaterial({ color: accentColor, size: 0.022, transparent: true, opacity: 0.7 });
+    const dotMat = new THREE.PointsMaterial({ color: accentColor, size: 0.028, map: spriteTex, transparent: true, opacity: 0.85, depthWrite: false });
     const dots = new THREE.Points(dotGeo, dotMat);
     scene.add(dots);
 
