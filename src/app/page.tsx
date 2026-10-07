@@ -11,6 +11,7 @@ import RevealOnScroll from '@/components/RevealOnScroll';
 import CountUp from '@/components/CountUp';
 import TypewriterText from '@/components/TypewriterText';
 import MagneticButton from '@/components/MagneticButton';
+import HeroCanvas from '@/components/HeroCanvas';
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
 
       {/* HERO */}
       <section className="hero">
+        <HeroCanvas />
         <div className="hero-orbs" aria-hidden="true">
           <div className="hero-orb hero-orb-1" />
           <div className="hero-orb hero-orb-2" />

@@ -236,7 +236,7 @@
 }
 
 /* ── HERO ── */
-.hero { padding-top: 80px; min-height: 100svh; display: flex; align-items: center; }
+.hero { padding-top: 80px; min-height: 100svh; display: flex; align-items: center; position: relative; overflow: hidden; }
 .hero-shell {
   width: 100%; max-width: 1260px; margin: 0 auto;
   padding-inline: 40px; padding-block: 60px;
