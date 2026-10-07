@@ -54,15 +54,7 @@ const LINKS = [
 export default function NavBar({ active }: { active?: string }) {
   const [megaOpen, setMegaOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const wrapRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    function onScroll() { setScrolled(window.scrollY > 40); }
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
 
   useEffect(() => {
     function onDown(e: MouseEvent) {
@@ -81,7 +73,7 @@ export default function NavBar({ active }: { active?: string }) {
 
   return (
     <>
-      <div className={`np-bar${scrolled ? ' scrolled' : ''}`} ref={wrapRef}>
+      <div className="np-bar" ref={wrapRef}>
         <div className="np-inner">
           {/* Logo */}
           <a href="/" className="nav-logo" aria-label="webfun">
