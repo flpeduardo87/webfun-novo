@@ -259,42 +259,6 @@
   background: var(--bg);
   padding-top: 80px; /* navbar height */
 }
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-.hero-bg::before {
-  content: '';
-  position: absolute;
-  width: 70%; aspect-ratio: 1;
-  right: 3%; top: -15%;
-  border-radius: 50%;
-  background: radial-gradient(circle, color-mix(in srgb, var(--acid) 32%, transparent) 0%, transparent 65%);
-  filter: blur(30px);
-  animation: blob-drift-a 10s ease-in-out infinite;
-}
-.hero-bg::after {
-  content: '';
-  position: absolute;
-  width: 60%; aspect-ratio: 1;
-  left: -8%; top: 15%;
-  border-radius: 50%;
-  background: radial-gradient(circle, color-mix(in srgb, var(--blue) 24%, transparent) 0%, transparent 65%);
-  filter: blur(40px);
-  animation: blob-drift-b 13s ease-in-out infinite;
-}
-@keyframes blob-drift-a {
-  0%,100% { transform: translate(0,0) scale(1); }
-  30%  { transform: translate(-35px, 45px) scale(1.06); }
-  65%  { transform: translate(50px,-30px) scale(.94); }
-}
-@keyframes blob-drift-b {
-  0%,100% { transform: translate(0,0) scale(1); }
-  40%  { transform: translate(55px, 25px) scale(1.09); }
-  75%  { transform: translate(-20px,-45px) scale(.92); }
-}
 .hero-shell {
   position: relative;
   z-index: 1;

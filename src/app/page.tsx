@@ -9,6 +9,7 @@ import Footer from '@/components/Footer';
 import RevealOnScroll from '@/components/RevealOnScroll';
 import CountUp from '@/components/CountUp';
 import TypewriterText from '@/components/TypewriterText';
+import HeroNet from '@/components/HeroNet';
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
 
       {/* HERO */}
       <section className="hero">
-        <div className="hero-bg" aria-hidden="true" />
+        <HeroNet />
         <div className="hero-shell">
           <div className="hero-grid">
             <div className="hero-copy">
