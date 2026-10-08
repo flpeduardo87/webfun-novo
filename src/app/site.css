@@ -1047,15 +1047,15 @@
 
 .pcard-light {
   background: #fff;
-  color: var(--ink);
+  color: #17181b;
 }
 .pcard-dark {
-  background: var(--ink);
+  background: #17181b;
   color: #fff;
 }
 .pcard-acid {
-  background: var(--acid);
-  color: var(--acid-fg);
+  background: #b6c828;
+  color: #2a2e00;
 }
 
 .pcard-meta {
