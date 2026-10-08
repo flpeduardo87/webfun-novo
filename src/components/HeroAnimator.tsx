@@ -7,9 +7,7 @@ const CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#
 function scramble(el: HTMLElement, text: string, delay: number) {
   let frame = 0;
   const totalFrames = 22;
-
   setTimeout(() => {
-    el.style.opacity = '1';
     const raf = () => {
       frame++;
       const revealed = Math.floor((frame / totalFrames) * text.length);
@@ -32,47 +30,14 @@ export default function HeroAnimator() {
     if (ran.current) return;
     ran.current = true;
 
-    const copy = document.querySelector('.hero-copy') as HTMLElement;
-    if (!copy) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    // Eyebrow scramble
-    const eyebrow = copy.querySelector('.eyebrow') as HTMLElement;
-    if (eyebrow && !reduceMotion) {
+    // Scramble only changes textContent — CSS @keyframes handles all opacity/transform
+    const eyebrow = document.querySelector('.hero-copy .eyebrow') as HTMLElement;
+    if (eyebrow) {
       const txt = eyebrow.textContent ?? '';
-      eyebrow.style.opacity = '0';
-      eyebrow.style.transition = 'none';
-      scramble(eyebrow, txt, 100);
+      scramble(eyebrow, txt, 200);
     }
-
-    // H1 lines slide up staggered
-    if (!reduceMotion) {
-      const rows = copy.querySelectorAll<HTMLElement>('.hero-h1 .row');
-      rows.forEach((row, i) => {
-        row.style.opacity = '0';
-        row.style.transform = 'translateY(24px)';
-        row.style.transition = `opacity 0.6s ease ${300 + i * 120}ms, transform 0.6s cubic-bezier(0.2,1,0.3,1) ${300 + i * 120}ms`;
-        requestAnimationFrame(() => {
-          row.style.opacity = '1';
-          row.style.transform = 'translateY(0)';
-        });
-      });
-
-      // Sub + actions + proof fade up
-      ['.hero-sub', '.hero-actions', '.proof'].forEach((sel, i) => {
-        const el = copy.querySelector<HTMLElement>(sel);
-        if (!el) return;
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = `opacity 0.6s ease ${700 + i * 100}ms, transform 0.6s cubic-bezier(0.2,1,0.3,1) ${700 + i * 100}ms`;
-        requestAnimationFrame(() => {
-          el.style.opacity = '1';
-          el.style.transform = 'translateY(0)';
-        });
-      });
-    }
-
   }, []);
 
   return null;
