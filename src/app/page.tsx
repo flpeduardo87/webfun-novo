@@ -158,48 +158,26 @@ export default function Home() {
             </div>
           </RevealOnScroll>
 
-          <div className="process-steps">
+          <div className="process-cards">
             {[
-              {
-                n: '01',
-                title: 'Briefing',
-                desc: 'A gente entende seu negócio antes de qualquer coisa. Nenhum template, nenhum achismo — só o que faz sentido pra você.',
-                tags: ['Diagnóstico', 'Proposta', 'Cronograma'],
-              },
-              {
-                n: '02',
-                title: 'Design',
-                desc: 'Montamos as telas e você aprova tudo antes de qualquer código. O que você vê é o que vai ao ar — sem surpresa no final.',
-                tags: ['Wireframe', 'UI/UX', 'Aprovação'],
-              },
-              {
-                n: '03',
-                title: 'Desenvolvimento',
-                desc: 'Código limpo, rápido e testado. Cada recurso sai do jeito combinado — sem enrolação, sem escopo inflado.',
-                tags: ['Sprint', 'Testes', 'Revisão'],
-              },
-              {
-                n: '04',
-                title: 'Entrega & Suporte',
-                desc: 'Colocamos no ar, mostramos como usar e continuamos por perto. Pra gente, entregar é o começo da parceria, não o fim.',
-                tags: ['Deploy', 'Treinamento', 'Suporte'],
-              },
-            ].map((step, i) => (
-              <RevealOnScroll key={step.n} delay={i * 100}>
-                <div className="pstep">
-                  <div className="pstep-num">{step.n}</div>
-                  {i < 3 && <div className="pstep-connector" />}
-                  <div className="pstep-body">
-                    <h3 className="pstep-title">{step.title}</h3>
-                    <p className="pstep-desc">{step.desc}</p>
-                    <div className="pstep-tags">
-                      {step.tags.map((t) => (
-                        <span key={t} className="pstep-tag">{t}</span>
-                      ))}
-                    </div>
-                  </div>
+              { n: '01', dur: '30–60 min', title: 'Briefing', desc: 'A gente entende seu negócio antes de qualquer coisa. Nenhum template, nenhum achismo — só o que faz sentido pra você.', theme: 'light' },
+              { n: '02', dur: '24–48h', title: 'Design', desc: 'Montamos as telas e você aprova tudo antes de qualquer código. O que você vê é o que vai ao ar — sem surpresa no final.', theme: 'dark' },
+              { n: '03', dur: 'Semanas', title: 'Desenvolvimento', desc: 'Código limpo, rápido e testado. Cada recurso sai do jeito combinado — sem enrolação, sem escopo inflado.', theme: 'light' },
+              { n: '04', dur: 'Contínuo', title: 'Entrega & Suporte', desc: 'Colocamos no ar, mostramos como usar e continuamos por perto. Entregar é o começo da parceria, não o fim.', theme: 'acid' },
+            ].map((step, i, arr) => (
+              <div key={step.n} className={`pcard pcard-${step.theme}`} style={{ '--card-index': i } as React.CSSProperties}>
+                <div className="pcard-meta">
+                  <span className="pcard-label">ETAPA {step.n}</span>
+                  <span className="pcard-dur">{step.dur}</span>
                 </div>
-              </RevealOnScroll>
+                <div className="pcard-bars">
+                  {arr.map((_, j) => (
+                    <div key={j} className={`pcard-bar${j <= i ? ' filled' : ''}`} />
+                  ))}
+                </div>
+                <h3 className="pcard-title">{step.title}</h3>
+                <p className="pcard-desc">{step.desc}</p>
+              </div>
             ))}
           </div>
         </div>
