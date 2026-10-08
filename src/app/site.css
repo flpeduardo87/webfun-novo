@@ -664,7 +664,9 @@
   font-weight: 800; letter-spacing: -.045em; line-height: .96;
   color: var(--ink);
 }
-.sec-h2 em { font-style: normal; color: var(--acid); }
+.sec-h2 em { font-style: normal; color: var(--ink); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .sec-h2 em { color: var(--acid); } }
+:root[data-theme="dark"] .sec-h2 em { color: var(--acid); }
 .sec-sub {
   font-size: 14.5px; color: var(--muted); line-height: 1.68;
   max-width: 480px;
