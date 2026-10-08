@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { X, ExternalLink } from 'lucide-react';
+import { X, ExternalLink, ArrowRight } from 'lucide-react';
 
 type Project = {
   tag: string;
@@ -180,7 +180,7 @@ export default function ProjectsSection() {
                 <div className="proj-meta">{p.year}</div>
                 <h3 className="proj-title">{p.title}</h3>
                 <p className="proj-desc">{p.desc}</p>
-                <span className="proj-link">{p.url ? 'Ver projeto' : 'Em breve'} <span>→</span></span>
+                <span className="proj-link">{p.url ? 'Ver projeto' : 'Em breve'} <ArrowRight size={13} strokeWidth={2} /></span>
               </div>
             </div>
           ))}
