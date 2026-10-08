@@ -6,31 +6,22 @@ import ProjectsSection from '@/components/ProjectsSection';
 import FAQSection from '@/components/FAQSection';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
-import HeroAnimator from '@/components/HeroAnimator';
 import RevealOnScroll from '@/components/RevealOnScroll';
 import CountUp from '@/components/CountUp';
 import TypewriterText from '@/components/TypewriterText';
-import MagneticButton from '@/components/MagneticButton';
-import HeroCanvas from '@/components/HeroCanvas';
 
 export default function Home() {
   return (
     <>
       <NavBar />
-      <HeroAnimator />
 
       {/* HERO */}
       <section className="hero">
-        <HeroCanvas />
-        <div className="hero-orbs" aria-hidden="true">
-          <div className="hero-orb hero-orb-1" />
-          <div className="hero-orb hero-orb-2" />
-          <div className="hero-orb hero-orb-3" />
-        </div>
+        <div className="hero-bg" aria-hidden="true" />
         <div className="hero-shell">
           <div className="hero-grid">
             <div className="hero-copy">
-              <div className="eyebrow">Webfun · Serviços Digitais</div>
+              <p className="eyebrow">Webfun · Serviços Digitais</p>
               <h1 className="hero-h1">
                 <span className="row">Seu negócio</span>
                 <span className="row">merece <span className="stamp">mais</span></span>
@@ -44,11 +35,9 @@ export default function Home() {
                 <TypewriterText />
               </div>
               <div className="hero-actions">
-                <MagneticButton>
-                  <a href="#orcamento" className="btn-p">
-                    Falar sobre meu projeto<ArrowRight size={15} strokeWidth={2} />
-                  </a>
-                </MagneticButton>
+                <a href="#orcamento" className="btn-p">
+                  Falar sobre meu projeto<ArrowRight size={15} strokeWidth={2} />
+                </a>
                 <a href="/projetos" className="btn-g">Ver projetos</a>
               </div>
               <div className="proof">
