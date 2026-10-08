@@ -3,10 +3,10 @@
 import { useEffect, useState } from 'react';
 
 const PHRASES = [
-  'Sites que convertem.',
-  'Lojas que vendem.',
-  'Sistemas que escalam.',
-  'Resultados que aparecem.',
+  'Aparecer na primeira página do Google.',
+  'Receber pedidos pelo WhatsApp.',
+  'Ter uma loja que vende de madrugada.',
+  'Parar de perder cliente pro concorrente.',
 ];
 
 export default function TypewriterText() {

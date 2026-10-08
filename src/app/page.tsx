@@ -24,13 +24,13 @@ export default function Home() {
             <div className="hero-copy">
               <p className="eyebrow"><span className="eyebrow-stars">★★★★★</span> 4.8 · +50 projetos entregues</p>
               <h1 className="hero-h1">
-                <span className="row">Seu negócio</span>
-                <span className="row">merece <span className="stamp">mais</span></span>
-                <span className="row">do que um site.</span>
+                <span className="row">Seu site aparece</span>
+                <span className="row">no <span className="stamp">Google.</span></span>
+                <span className="row">Seu cliente chega.</span>
               </h1>
               <p className="hero-sub">
-                Criamos sites, lojas e sistemas para ajudar seu negócio a{' '}
-                <strong>vender mais</strong> e trabalhar melhor — com design que comunica e tecnologia que entrega.
+                A Webfun cria sites, lojas e sistemas que{' '}
+                <strong>trabalham por você</strong> — mesmo quando você não está olhando.
               </p>
               <div className="hero-typewriter">
                 <TypewriterText />
@@ -38,7 +38,7 @@ export default function Home() {
               <div className="hero-actions">
                 <span className="btn-ring">
                   <a href="#orcamento" className="btn-p">
-                    Falar sobre meu projeto<ArrowRight size={15} strokeWidth={2} />
+                    Quero meu site funcionando<ArrowRight size={15} strokeWidth={2} />
                   </a>
                 </span>
                 <a href="/projetos" className="btn-g">Ver projetos</a>
