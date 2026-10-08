@@ -28,6 +28,14 @@
   flex-direction: column;
   align-items: center;
   pointer-events: none;
+  transition: top .25s ease, padding .25s ease, background .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+.np-bar--scrolled {
+  top: 0;
+  padding-block: 10px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 2px 16px var(--shadow);
 }
 .np-inner {
   width: 100%;
