@@ -3,9 +3,9 @@
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
-const PARTICLE_COUNT = 80;
-const CONNECTION_DIST = 0.28;
-const FLOAT_SPEED = 0.00018;
+const PARTICLE_COUNT = 120;
+const CONNECTION_DIST = 0.45;
+const FLOAT_SPEED = 0.00055;
 
 export default function HeroCanvas() {
   const mountRef = useRef<HTMLDivElement>(null);

@@ -237,9 +237,7 @@
     top: 0;
     padding-top: calc(env(safe-area-inset-top, 0px) + 14px);
     padding-bottom: 10px;
-    background: color-mix(in srgb, var(--bg) 88%, transparent);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: var(--bg);
     border-bottom: 1px solid var(--line);
   }
   .np-inner { padding-inline: 20px; }
