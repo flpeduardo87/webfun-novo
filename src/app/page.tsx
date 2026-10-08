@@ -22,7 +22,7 @@ export default function Home() {
         <div className="hero-shell">
           <div className="hero-grid">
             <div className="hero-copy">
-              <p className="eyebrow">Webfun · Serviços Digitais</p>
+              <p className="eyebrow"><span className="eyebrow-stars">★★★★★</span> 4.8 · +50 projetos entregues</p>
               <h1 className="hero-h1">
                 <span className="row">Seu negócio</span>
                 <span className="row">merece <span className="stamp">mais</span></span>
@@ -66,12 +66,81 @@ export default function Home() {
         <div className="logos-label">Empresas que confiam</div>
         <div className="logos-track">
           <div className="logos-inner">
-            {['Clínica Saúde Total', 'Moda Única', 'Gestão Fácil', 'Imóvel Certo', 'Sabor Artesanal', 'Nova Era', 'FluxoBot', 'Forma+', 'AgendaPro', 'Clínica Saúde Total', 'Moda Única', 'Gestão Fácil', 'Imóvel Certo', 'Sabor Artesanal', 'Nova Era', 'FluxoBot', 'Forma+', 'AgendaPro'].map((name, i) => (
+            {['Frigorífico Três Reis', 'Mielke Energia Solar', 'Canoinhas TC', 'Flávia Sussenbach', 'AZAFF', 'Wasabi Sushi Bar', 'Com Cristo Kids', 'Perform Engenharia', 'Elisangela Pontes', 'Frigorífico Três Reis', 'Mielke Energia Solar', 'Canoinhas TC', 'Flávia Sussenbach', 'AZAFF', 'Wasabi Sushi Bar', 'Com Cristo Kids', 'Perform Engenharia', 'Elisangela Pontes'].map((name, i) => (
               <span key={i} className="logo-name">{name}</span>
             ))}
           </div>
         </div>
       </div>
+
+      {/* TESTIMONIALS */}
+      <section className="testi-section">
+        <div className="testi-inner">
+          <RevealOnScroll>
+            <div className="testi-header">
+              <div className="sec-eyebrow">Depoimentos</div>
+              <div className="projects-title-row">
+                <h2 className="sec-h2">Quem trabalhou<br />com a <em>gente fala.</em></h2>
+                <p className="sec-sub">Resultados reais de negócios que apostaram em tecnologia e design.</p>
+              </div>
+            </div>
+          </RevealOnScroll>
+          <div className="testi-grid">
+            {[
+              {
+                quote: 'Atendimento excelente, entrega rápida e resultado acima do esperado. Recomendo para quem busca qualidade.',
+                name: 'Flávia Sussenbach',
+                role: 'Flávia Sussenbach Advocacia',
+                init: 'FS',
+                color: 'var(--blue)',
+              },
+              {
+                quote: 'Foi muito bom ver o trabalho começar a aparecer no Google para buscas importantes do negócio. O resultado fez diferença na nossa presença online.',
+                name: 'João Kühl',
+                role: 'Frigorífico Três Reis',
+                init: 'JK',
+                color: 'var(--green)',
+              },
+              {
+                quote: 'Atendimento rápido e transparente do início ao fim. Tudo foi explicado com clareza e o resultado ficou do jeito que precisávamos.',
+                name: 'Jean Mielke',
+                role: 'Mielke Energia Solar',
+                init: 'JM',
+                color: 'var(--acid)',
+              },
+              {
+                quote: 'Perfeito, muito obrigada por todo o trabalho. Nós gostamos muito do resultado!',
+                name: 'Karen Hames',
+                role: 'Brasileirinho · brasileirinho.ie',
+                init: 'KH',
+                color: 'var(--blue)',
+              },
+              {
+                quote: 'Testei a calculadora e parece perfeita! Obrigada pelo ótimo trabalho.',
+                name: 'Nicole Zanellato',
+                role: 'Keep Clean · keepcleanireland.ie',
+                init: 'NZ',
+                color: 'var(--green)',
+                wide: true,
+              },
+            ].map((t, i) => (
+              <RevealOnScroll key={t.name} delay={i * 80} className={t.wide ? 'testi-wide-wrap' : ''}>
+                <div className={`testi-card${t.wide ? ' testi-card-wide' : ''}`}>
+                  <div className="testi-stars">★★★★★</div>
+                  <p className="testi-text">{t.quote}</p>
+                  <div className="testi-author">
+                    <div className="testi-av" style={{ background: t.color, color: t.color === 'var(--acid)' ? 'var(--acid-fg)' : '#fff' }}>{t.init}</div>
+                    <div>
+                      <div className="testi-name">{t.name}</div>
+                      <div className="testi-role">{t.role}</div>
+                    </div>
+                  </div>
+                </div>
+              </RevealOnScroll>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* PROJECTS */}
       <ProjectsSection />
@@ -153,75 +222,6 @@ export default function Home() {
               </div>
             </RevealOnScroll>
           ))}
-        </div>
-      </section>
-
-      {/* TESTIMONIALS */}
-      <section className="testi-section">
-        <div className="testi-inner">
-          <RevealOnScroll>
-            <div className="testi-header">
-              <div className="sec-eyebrow">Depoimentos</div>
-              <div className="projects-title-row">
-                <h2 className="sec-h2">Quem trabalhou<br />com a <em>gente fala.</em></h2>
-                <p className="sec-sub">Resultados reais de negócios que apostaram em tecnologia e design.</p>
-              </div>
-            </div>
-          </RevealOnScroll>
-          <div className="testi-grid">
-            {[
-              {
-                quote: 'Atendimento excelente, entrega rápida e resultado acima do esperado. Recomendo para quem busca qualidade.',
-                name: 'Flávia Sussenbach',
-                role: 'Flávia Sussenbach Advocacia',
-                init: 'FS',
-                color: 'var(--blue)',
-              },
-              {
-                quote: 'Foi muito bom ver o trabalho começar a aparecer no Google para buscas importantes do negócio. O resultado fez diferença na nossa presença online.',
-                name: 'João Kühl',
-                role: 'Frigorífico Três Reis',
-                init: 'JK',
-                color: 'var(--green)',
-              },
-              {
-                quote: 'Atendimento rápido e transparente do início ao fim. Tudo foi explicado com clareza e o resultado ficou do jeito que precisávamos.',
-                name: 'Jean Mielke',
-                role: 'Mielke Energia Solar',
-                init: 'JM',
-                color: 'var(--acid)',
-              },
-              {
-                quote: 'Perfeito, muito obrigada por todo o trabalho. Nós gostamos muito do resultado!',
-                name: 'Karen Hames',
-                role: 'Brasileirinho · brasileirinho.ie',
-                init: 'KH',
-                color: 'var(--blue)',
-              },
-              {
-                quote: 'Testei a calculadora e parece perfeita! Obrigada pelo ótimo trabalho.',
-                name: 'Nicole Zanellato',
-                role: 'Keep Clean · keepcleanireland.ie',
-                init: 'NZ',
-                color: 'var(--green)',
-                wide: true,
-              },
-            ].map((t, i) => (
-              <RevealOnScroll key={t.name} delay={i * 80} className={t.wide ? 'testi-wide-wrap' : ''}>
-                <div className={`testi-card${t.wide ? ' testi-card-wide' : ''}`}>
-                  <div className="testi-stars">★★★★★</div>
-                  <p className="testi-text">{t.quote}</p>
-                  <div className="testi-author">
-                    <div className="testi-av" style={{ background: t.color, color: t.color === 'var(--acid)' ? 'var(--acid-fg)' : '#fff' }}>{t.init}</div>
-                    <div>
-                      <div className="testi-name">{t.name}</div>
-                      <div className="testi-role">{t.role}</div>
-                    </div>
-                  </div>
-                </div>
-              </RevealOnScroll>
-            ))}
-          </div>
         </div>
       </section>
 
