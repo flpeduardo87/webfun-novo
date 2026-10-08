@@ -486,10 +486,10 @@
 .prod-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
 .prod { background: var(--win-2); border: 1px solid rgba(255,255,255,.07); border-radius: 14px; overflow: hidden; }
 .prod-thumb { height: 90px; display: flex; align-items: center; justify-content: center; }
-.prod-thumb.c1{background:color-mix(in srgb,var(--blue) 22%,var(--ink))}
-.prod-thumb.c2{background:color-mix(in srgb,var(--acid) 28%,var(--ink))}
-.prod-thumb.c3{background:color-mix(in srgb,var(--blue) 14%,#1a1c20)}
-.prod-thumb.c4{background:color-mix(in srgb,var(--acid) 18%,#16180e)}
+.prod-thumb.c1{background:var(--blue)}
+.prod-thumb.c2{background:#e07444}
+.prod-thumb.c3{background:var(--acid)}
+.prod-thumb.c4{background:#c44f8a}
 .prod-info { padding: 10px; }
 .prod-info .pname { font-size: 11.5px; font-weight: 700; color: #fff; margin-bottom: 2px; }
 .prod-info .pprice { font-size: 13px; font-weight: 800; color: var(--acid); font-variant-numeric: tabular-nums; margin-bottom: 8px; }
