@@ -1198,8 +1198,20 @@
   .num-card { border-right: none; border-bottom: 1px solid rgba(255,255,255,.08); }
   .num-card:nth-child(2n) { border-right: none; }
   .testi-inner { padding-inline: 20px; }
-  .testi-grid { grid-template-columns: 1fr; }
-  .testi-card-wide { flex-direction: column; gap: 0; }
+  .testi-grid {
+    display: flex; flex-direction: column; gap: 0;
+  }
+  .testi-grid > div {
+    position: sticky;
+    margin-bottom: 12px;
+  }
+  .testi-grid > div:nth-child(1) { top: 64px; }
+  .testi-grid > div:nth-child(2) { top: calc(64px + 14px); }
+  .testi-grid > div:nth-child(3) { top: calc(64px + 28px); }
+  .testi-grid > div:nth-child(4) { top: calc(64px + 42px); }
+  .testi-grid > div:nth-child(5) { top: calc(64px + 56px); }
+  .testi-wide-wrap { grid-column: unset; }
+  .testi-card-wide { flex-direction: column; gap: 0; align-items: flex-start; }
   .testi-card-wide .testi-text { font-size: 14.5px; margin-bottom: 28px; }
   .testi-card-wide .testi-author { border-top: 1px solid var(--line); padding-top: 20px; }
   .faq-inner { grid-template-columns: 1fr; gap: 40px; padding-inline: 20px; }
