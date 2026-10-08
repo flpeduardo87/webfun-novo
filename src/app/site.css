@@ -260,13 +260,40 @@
   padding-top: 80px; /* navbar height */
 }
 .hero-bg {
-  /* subtle acid glow — pure CSS, no canvas, no JS */
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background:
-    radial-gradient(ellipse 55% 55% at 72% 42%, color-mix(in srgb, var(--acid) 14%, transparent) 0%, transparent 70%),
-    radial-gradient(ellipse 45% 45% at 20% 60%, color-mix(in srgb, var(--blue) 8%, transparent) 0%, transparent 70%);
+  overflow: hidden;
+}
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  width: 62%; aspect-ratio: 1;
+  right: 5%; top: -10%;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--acid) 18%, transparent) 0%, transparent 65%);
+  filter: blur(48px);
+  animation: blob-drift-a 10s ease-in-out infinite;
+}
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  width: 52%; aspect-ratio: 1;
+  left: -8%; top: 20%;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--blue) 14%, transparent) 0%, transparent 65%);
+  filter: blur(60px);
+  animation: blob-drift-b 13s ease-in-out infinite;
+}
+@keyframes blob-drift-a {
+  0%,100% { transform: translate(0,0) scale(1); }
+  30%  { transform: translate(-35px, 45px) scale(1.06); }
+  65%  { transform: translate(50px,-30px) scale(.94); }
+}
+@keyframes blob-drift-b {
+  0%,100% { transform: translate(0,0) scale(1); }
+  40%  { transform: translate(55px, 25px) scale(1.09); }
+  75%  { transform: translate(-20px,-45px) scale(.92); }
 }
 .hero-shell {
   position: relative;
@@ -1278,6 +1305,40 @@
   vertical-align: middle;
 }
 @keyframes tw-blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+/* ── HERO GRAIN OVERLAY ── */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: .038;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+}
+
+/* ── HERO CTA ORBIT RING ── */
+@property --ring-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+.btn-ring {
+  display: inline-flex;
+  border-radius: 999px;
+  padding: 2px;
+  background: conic-gradient(from var(--ring-angle),
+    transparent 72%,
+    rgba(255,255,255,.95) 82%,
+    transparent 93%
+  );
+  animation: ring-orbit 2.5s linear infinite;
+}
+@keyframes ring-orbit {
+  to { --ring-angle: 360deg; }
+}
 
 /* ── NUMBER COUNTERS — tabular nums ── */
 .num-val { font-variant-numeric: tabular-nums; }

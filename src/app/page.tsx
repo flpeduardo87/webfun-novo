@@ -35,9 +35,11 @@ export default function Home() {
                 <TypewriterText />
               </div>
               <div className="hero-actions">
-                <a href="#orcamento" className="btn-p">
-                  Falar sobre meu projeto<ArrowRight size={15} strokeWidth={2} />
-                </a>
+                <span className="btn-ring">
+                  <a href="#orcamento" className="btn-p">
+                    Falar sobre meu projeto<ArrowRight size={15} strokeWidth={2} />
+                  </a>
+                </span>
                 <a href="/projetos" className="btn-g">Ver projetos</a>
               </div>
               <div className="proof">
