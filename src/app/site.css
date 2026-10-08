@@ -1288,7 +1288,7 @@
   z-index: 0;
   overflow: hidden;
 }
-.hero-shell { position: relative; }
+.hero-shell { position: relative; z-index: 2; }
 .hero-orb {
   position: absolute;
   border-radius: 50%;

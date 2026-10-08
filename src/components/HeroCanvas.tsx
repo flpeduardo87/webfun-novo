@@ -2,8 +2,8 @@
 
 import { useEffect, useRef } from 'react';
 
-const STREAM_COUNT = 18;
-const PARTICLE_COUNT = 55;
+const STREAM_COUNT = 28;
+const PARTICLE_COUNT = 65;
 
 export default function HeroCanvas() {
   const mountRef = useRef<HTMLDivElement>(null);
@@ -76,8 +76,8 @@ export default function HeroCanvas() {
         y2: Math.random() * 0.6 + 0.2,
         progress: Math.random(),
         speed: 0.0012 + Math.random() * 0.0018,
-        width: 0.5 + Math.random() * 1.2,
-        alpha: 0.28 + Math.random() * 0.55,
+        width: 0.8 + Math.random() * 1.8,
+        alpha: 0.45 + Math.random() * 0.50,
         tail: [],
         tailLen: 80 + Math.floor(Math.random() * 100),
       };
@@ -216,7 +216,6 @@ export default function HeroCanvas() {
         position: 'absolute',
         inset: 0,
         pointerEvents: 'none',
-        zIndex: 0,
         overflow: 'hidden',
       }}
     />
