@@ -1302,11 +1302,11 @@
 .btn-ring {
   display: inline-flex;
   border-radius: 999px;
-  padding: 2px;
+  padding: 1px;
   background: conic-gradient(from var(--ring-angle),
-    transparent 72%,
-    rgba(255,255,255,.95) 82%,
-    transparent 93%
+    transparent 78%,
+    rgba(255,255,255,.7) 84%,
+    transparent 90%
   );
   animation: ring-orbit 2.5s linear infinite;
 }
