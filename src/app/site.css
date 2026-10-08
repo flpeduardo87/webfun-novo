@@ -954,6 +954,7 @@
 }
 .faq-a {
   display: grid; grid-template-rows: 0fr;
+  overflow: hidden;
   transition: grid-template-rows .28s ease;
 }
 .faq-item.open .faq-a { grid-template-rows: 1fr; }
