@@ -45,9 +45,9 @@ export default function Home() {
               </div>
               <div className="proof">
                 <div className="proof-avs">
-                  <div className="av">F</div>
-                  <div className="av">A</div>
-                  <div className="av">M</div>
+                  <img className="av" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente" />
+                  <img className="av" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente" />
+                  <img className="av" src="https://randomuser.me/api/portraits/men/67.jpg" alt="Cliente" />
                 </div>
                 <div className="proof-txt">
                   <strong>+50 projetos entregues</strong>
