@@ -152,7 +152,7 @@ export default function Home() {
             <div className="process-header">
               <div className="sec-eyebrow">Como trabalhamos</div>
               <div className="projects-title-row">
-                <h2 className="sec-h2">Do primeiro contato<br />à <em>entrega.</em></h2>
+                <h2 className="sec-h2">Do primeiro papo<br />ao <em>site no ar.</em></h2>
                 <p className="sec-sub">Um processo claro e sem surpresas — você sabe o que acontece em cada etapa e acompanha tudo de perto.</p>
               </div>
             </div>
@@ -163,25 +163,25 @@ export default function Home() {
               {
                 n: '01',
                 title: 'Briefing',
-                desc: 'Entendemos seu negócio, seus objetivos e o que diferencia você no mercado. Nada de formulário genérico — uma conversa de verdade.',
+                desc: 'A gente entende seu negócio antes de qualquer coisa. Nenhum template, nenhum achismo — só o que faz sentido pra você.',
                 tags: ['Diagnóstico', 'Proposta', 'Cronograma'],
               },
               {
                 n: '02',
                 title: 'Design',
-                desc: 'Criamos a identidade visual e os protótipos navegáveis. Você aprova antes de qualquer linha de código ser escrita.',
+                desc: 'Montamos as telas e você aprova tudo antes de qualquer código. O que você vê é o que vai ao ar — sem surpresa no final.',
                 tags: ['Wireframe', 'UI/UX', 'Aprovação'],
               },
               {
                 n: '03',
                 title: 'Desenvolvimento',
-                desc: 'Código limpo, rápido e testado. Cada recurso é implementado conforme aprovado, sem escopo inflado ou surpresas.',
+                desc: 'Código limpo, rápido e testado. Cada recurso sai do jeito combinado — sem enrolação, sem escopo inflado.',
                 tags: ['Sprint', 'Testes', 'Revisão'],
               },
               {
                 n: '04',
                 title: 'Entrega & Suporte',
-                desc: 'Publicamos, treinamos sua equipe e ficamos por perto. O projeto no ar é o começo — não o fim da parceria.',
+                desc: 'Colocamos no ar, mostramos como usar e continuamos por perto. Pra gente, entregar é o começo da parceria, não o fim.',
                 tags: ['Deploy', 'Treinamento', 'Suporte'],
               },
             ].map((step, i) => (
@@ -210,8 +210,8 @@ export default function Home() {
         <div className="numbers-inner">
           {[
             { val: '+50', label: 'projetos entregues', sub: 'sites, lojas e sistemas' },
-            { val: '3×', label: 'mais leads gerados', sub: 'pelos projetos dos clientes' },
-            { val: '98%', label: 'de satisfação', sub: 'avaliações pós-entrega' },
+            { val: '+8', label: 'estados atendidos', sub: 'de SC ao exterior' },
+            { val: '4.8', label: 'de avaliação média', sub: 'nos projetos entregues' },
             { val: '4+', label: 'anos no mercado', sub: 'atendendo todo o Brasil' },
           ].map((n, i) => (
             <RevealOnScroll key={n.label} delay={i * 80} from="bottom">

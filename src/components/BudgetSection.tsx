@@ -41,7 +41,7 @@ export default function BudgetSection() {
       <div className="budget-inner">
         <div className="budget-copy">
           <div className="budget-tag">Orçamento rápido</div>
-          <h2 className="budget-h2">Já sabe o que precisa?<br /><em>Vamos dar um norte.</em></h2>
+          <h2 className="budget-h2">Vamos conversar?<br /><em>A gente dá um norte.</em></h2>
           <p className="budget-note">Selecione o que você precisa ao lado. Sem compromisso — em 2 minutos você tem uma estimativa real para começar a planejar.</p>
           <div style={{ marginTop: 32 }}>
             <div className="budget-price-label">Estimativa a partir de</div>
