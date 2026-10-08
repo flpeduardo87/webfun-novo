@@ -35,9 +35,11 @@ export default function HeroAnimator() {
     const copy = document.querySelector('.hero-copy') as HTMLElement;
     if (!copy) return;
 
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     // Eyebrow scramble
     const eyebrow = copy.querySelector('.eyebrow') as HTMLElement;
-    if (eyebrow) {
+    if (eyebrow && !reduceMotion) {
       const txt = eyebrow.textContent ?? '';
       eyebrow.style.opacity = '0';
       eyebrow.style.transition = 'none';
@@ -45,29 +47,31 @@ export default function HeroAnimator() {
     }
 
     // H1 lines slide up staggered
-    const rows = copy.querySelectorAll<HTMLElement>('.hero-h1 .row');
-    rows.forEach((row, i) => {
-      row.style.opacity = '0';
-      row.style.transform = 'translateY(24px)';
-      row.style.transition = `opacity 0.6s ease ${300 + i * 120}ms, transform 0.6s cubic-bezier(0.2,1,0.3,1) ${300 + i * 120}ms`;
-      requestAnimationFrame(() => {
-        row.style.opacity = '1';
-        row.style.transform = 'translateY(0)';
+    if (!reduceMotion) {
+      const rows = copy.querySelectorAll<HTMLElement>('.hero-h1 .row');
+      rows.forEach((row, i) => {
+        row.style.opacity = '0';
+        row.style.transform = 'translateY(24px)';
+        row.style.transition = `opacity 0.6s ease ${300 + i * 120}ms, transform 0.6s cubic-bezier(0.2,1,0.3,1) ${300 + i * 120}ms`;
+        requestAnimationFrame(() => {
+          row.style.opacity = '1';
+          row.style.transform = 'translateY(0)';
+        });
       });
-    });
 
-    // Sub + actions + proof fade up
-    ['.hero-sub', '.hero-actions', '.proof'].forEach((sel, i) => {
-      const el = copy.querySelector<HTMLElement>(sel);
-      if (!el) return;
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(20px)';
-      el.style.transition = `opacity 0.6s ease ${700 + i * 100}ms, transform 0.6s cubic-bezier(0.2,1,0.3,1) ${700 + i * 100}ms`;
-      requestAnimationFrame(() => {
-        el.style.opacity = '1';
-        el.style.transform = 'translateY(0)';
+      // Sub + actions + proof fade up
+      ['.hero-sub', '.hero-actions', '.proof'].forEach((sel, i) => {
+        const el = copy.querySelector<HTMLElement>(sel);
+        if (!el) return;
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = `opacity 0.6s ease ${700 + i * 100}ms, transform 0.6s cubic-bezier(0.2,1,0.3,1) ${700 + i * 100}ms`;
+        requestAnimationFrame(() => {
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+        });
       });
-    });
+    }
 
     // Parallax — only on pointer:fine devices
     if (!window.matchMedia('(pointer: coarse)').matches) {
