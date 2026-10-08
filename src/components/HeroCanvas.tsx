@@ -77,9 +77,9 @@ export default function HeroCanvas() {
         progress: Math.random(),
         speed: 0.0012 + Math.random() * 0.0018,
         width: 0.5 + Math.random() * 1.2,
-        alpha: 0.18 + Math.random() * 0.42,
+        alpha: 0.28 + Math.random() * 0.55,
         tail: [],
-        tailLen: 55 + Math.floor(Math.random() * 80),
+        tailLen: 80 + Math.floor(Math.random() * 100),
       };
     };
 
@@ -118,9 +118,8 @@ export default function HeroCanvas() {
     const draw = () => {
       raf = requestAnimationFrame(draw);
 
-      // Clear with a subtle fade trail
-      ctx.fillStyle = `rgba(0,0,0,0.22)`;
-      ctx.fillRect(0, 0, W, H);
+      // Clear fully transparent — hero background shows through in both themes
+      ctx.clearRect(0, 0, W, H);
 
       // ── Draw streams ───────────────────────────────────────
       for (const s of streams) {
