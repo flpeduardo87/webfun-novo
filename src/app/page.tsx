@@ -1,5 +1,4 @@
 import './site.css';
-import { ArrowRight } from 'lucide-react';
 import ServiceWindow from '@/components/ServiceWindow';
 import BudgetSection from '@/components/BudgetSection';
 import ProjectsSection from '@/components/ProjectsSection';
@@ -10,7 +9,6 @@ import HeroAnimator from '@/components/HeroAnimator';
 import RevealOnScroll from '@/components/RevealOnScroll';
 import CountUp from '@/components/CountUp';
 import TypewriterText from '@/components/TypewriterText';
-import MagneticButton from '@/components/MagneticButton';
 import HeroCanvas from '@/components/HeroCanvas';
 
 export default function Home() {
@@ -44,11 +42,15 @@ export default function Home() {
                 <TypewriterText />
               </div>
               <div className="hero-actions">
-                <MagneticButton>
-                  <a href="#orcamento" className="btn-p">
-                    Falar sobre meu projeto<ArrowRight size={15} strokeWidth={2} />
-                  </a>
-                </MagneticButton>
+                <a href="#orcamento" className="btn-p">
+                  Falar sobre meu projeto
+                  <span className="btn-badge" aria-hidden="true">
+                    <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" width="14" height="14">
+                      <line x1="7" y1="1.5" x2="7" y2="12.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/>
+                      <line x1="1.5" y1="7" x2="12.5" y2="7" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/>
+                    </svg>
+                  </span>
+                </a>
                 <a href="/projetos" className="btn-g">Ver projetos</a>
               </div>
               <div className="proof">
