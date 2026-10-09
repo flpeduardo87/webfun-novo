@@ -1029,7 +1029,7 @@
 /* ── PROCESS ── */
 .process-section {
   background: var(--bg2);
-  padding: 96px 0;
+  padding: 96px 0 180px;
 }
 .process-inner {
   max-width: 1260px;
@@ -1050,6 +1050,14 @@
   display: flex;
   flex-direction: column;
   gap: 0;
+}
+
+/* Desktop: cards also stack as user scrolls */
+@media (min-width: 681px) {
+  .pcard {
+    position: sticky;
+    top: calc(88px + var(--card-index, 0) * 18px);
+  }
 }
 
 .pcard {
