@@ -1,31 +1,28 @@
 /* ── NAV PILL ── */
-
-/* Logo pill: dark glass pill */
 .nav-logo {
+  font-family: var(--font-display);
+  font-size: 17px; font-weight: 800;
+  color: var(--ink); text-decoration: none;
   display: flex; align-items: center; gap: 7px;
-  text-decoration: none;
   flex-shrink: 0;
-  background: rgba(15,16,20,.72);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(255,255,255,.10);
-  border-radius: 999px;
-  padding: 7px 16px 7px 8px;
-  box-shadow: 0 2px 12px rgba(0,0,0,.22);
-  transition: border-color .18s, opacity .18s;
 }
-.nav-logo:hover { border-color: rgba(255,255,255,.20); }
-/* SVG inside logo pill: wordmark always white, icon always lime */
-.nav-logo svg path { fill: #eceae4; }
-.logo-icon { fill: #c9ff41; }
+.logo-dot {
+  width: 9px; height: 9px; border-radius: 50%; background: var(--acid);
+  animation: blink 3s ease-in-out infinite;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.4} }
 .nav-logo-svg {
-  height: 26px;
+  height: 32px;
   width: auto;
   display: block;
   flex-shrink: 0;
 }
+/* icon: black in light mode, acid in dark */
+.logo-icon { fill: var(--ink); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .logo-icon { fill: var(--acid); } }
+:root[data-theme="dark"] .logo-icon { fill: var(--acid); }
 
-/* Bar — transparent fixed wrapper */
+/* Bar — full-width fixed strip; children set their own pointer-events */
 .np-bar {
   position: fixed;
   top: 0;
@@ -35,14 +32,27 @@
   align-items: center;
   justify-content: center;
   pointer-events: none;
-  padding-top: calc(env(safe-area-inset-top, 0px) + 16px);
+  padding-top: calc(env(safe-area-inset-top, 0px) + 14px);
   padding-bottom: 10px;
-  background: transparent;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+  transition: box-shadow .25s ease;
+}
+/* Desktop only: transparent at top, solid on scroll */
+@media (min-width: 769px) {
+  .np-bar:not(.np-bar--scrolled) {
+    background: transparent;
+    border-bottom-color: transparent;
+    box-shadow: none;
+  }
+  .np-bar--scrolled {
+    box-shadow: 0 2px 16px var(--shadow);
+  }
 }
 .np-inner {
   width: 100%;
   max-width: 1260px;
-  padding-inline: 24px;
+  padding-inline: 40px;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -51,49 +61,22 @@
 .np-inner .nav-logo { flex: 1; }
 .np-inner .np-right  { flex: 1; justify-content: flex-end; display: flex; align-items: center; gap: 8px; }
 
-/* Center nav links pill */
+/* Pill — only wraps the nav links */
 .np-pill {
   display: flex;
   align-items: center;
-  height: 42px;
+  height: 44px;
   padding: 4px 6px;
-  background: rgba(15,16,20,.72);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(255,255,255,.10);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--line);
   border-radius: 999px;
-  box-shadow: 0 2px 12px rgba(0,0,0,.22);
-  transition: border-color .2s;
+  box-shadow: 0 4px 24px var(--shadow);
+  transition: box-shadow .2s;
 }
 .np-pill--open {
-  border-color: rgba(255,255,255,.18);
-}
-/* Nav links inside dark pill: always light text */
-.np-pill .np-link { color: rgba(236,234,228,.55); }
-.np-pill .np-link:hover { background: rgba(255,255,255,.08); color: #eceae4; }
-.np-pill .np-link--active { background: rgba(255,255,255,.10); color: #eceae4; font-weight: 600; }
-.np-pill .np-link--mega { background: rgba(255,255,255,.10); color: #eceae4; }
-
-/* Right pill (desktop): ThemeToggle + CTA on dark glass */
-.np-right-pill {
-  display: flex; align-items: center; gap: 4px;
-  height: 42px;
-  padding: 4px 4px 4px 6px;
-  background: rgba(15,16,20,.72);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(255,255,255,.10);
-  border-radius: 999px;
-  box-shadow: 0 2px 12px rgba(0,0,0,.22);
-}
-.np-right-pill .theme-toggle {
-  border-color: rgba(255,255,255,.12);
-  color: #8c949c;
-  background: none;
-}
-.np-right-pill .theme-toggle:hover { color: #eceae4; border-color: rgba(255,255,255,.28); }
-.np-right-pill .nav-cta {
-  background: #c9ff41; color: #1e2700; height: 34px; padding: 0 14px;
+  box-shadow: 0 4px 32px var(--shadow), 0 0 0 2px color-mix(in srgb, var(--acid) 20%, transparent);
 }
 
 .np-links {
@@ -145,21 +128,14 @@
 }
 .theme-toggle:hover { color: var(--ink); border-color: var(--ink); }
 
-/* Burger: dark glass circle (mobile only) */
 .np-burger {
   display: none;
-  width: 44px; height: 44px; border-radius: 50%;
-  background: rgba(15,16,20,.72);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(255,255,255,.10);
-  color: #eceae4; cursor: pointer;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: none; border: 1.5px solid var(--line);
+  color: var(--muted); cursor: pointer;
   align-items: center; justify-content: center;
-  flex-shrink: 0;
-  box-shadow: 0 2px 12px rgba(0,0,0,.22);
-  transition: border-color .18s;
+  margin-left: 4px; flex-shrink: 0;
 }
-.np-burger:hover { border-color: rgba(255,255,255,.22); }
 
 /* ── MEGA MENU ── */
 .np-mega {
@@ -276,18 +252,16 @@
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   .np-pill { display: none; }
-  .np-right-pill { display: none; }
+  .np-right .nav-cta { display: none; }
   .np-burger { display: flex; }
   .np-mega { display: none; }
-  .np-inner { padding-inline: 16px; gap: 0; justify-content: space-between; }
-  .np-inner .nav-logo { flex: unset; }
-  .np-inner .np-right { flex: unset; }
+  .np-inner { padding-inline: 20px; }
 }
 
 /* ── HERO ── */
 .hero {
   background: var(--bg);
-  padding-top: 0;
+  padding-top: 80px; /* navbar height */
 }
 .hero-shell {
   position: relative;

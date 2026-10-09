@@ -131,12 +131,10 @@ export default function NavBar({ active }: { active?: string }) {
             </nav>
           </div>
 
-          {/* Right: right pill (desktop) + burger (mobile) */}
+          {/* Right: toggle + CTA + burger */}
           <div className="np-right">
-            <div className="np-right-pill">
-              <ThemeToggle />
-              <a href="/contato" className="nav-cta">Começar projeto</a>
-            </div>
+            <ThemeToggle />
+            <a href="/contato" className="nav-cta">Começar projeto</a>
             <button
               className="np-burger"
               onClick={() => setMobileOpen((v) => !v)}
