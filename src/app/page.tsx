@@ -148,15 +148,13 @@ export default function Home() {
       {/* HOW WE WORK */}
       <section className="process-section">
         <div className="process-inner">
-          <RevealOnScroll>
-            <div className="process-header">
-              <div className="sec-eyebrow">Como trabalhamos</div>
-              <div className="projects-title-row">
-                <h2 className="sec-h2">Do primeiro papo<br />ao <em>site no ar.</em></h2>
-                <p className="sec-sub">Um processo claro e sem surpresas — você sabe o que acontece em cada etapa e acompanha tudo de perto.</p>
-              </div>
+          <div className="process-header">
+            <div className="sec-eyebrow">Como trabalhamos</div>
+            <div className="projects-title-row">
+              <h2 className="sec-h2">Do primeiro papo<br />ao <em>site no ar.</em></h2>
+              <p className="sec-sub">Um processo claro e sem surpresas — você sabe o que acontece em cada etapa e acompanha tudo de perto.</p>
             </div>
-          </RevealOnScroll>
+          </div>
 
           <div className="process-cards">
             {[

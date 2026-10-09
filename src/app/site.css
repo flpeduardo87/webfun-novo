@@ -1032,10 +1032,17 @@
   padding: 96px 0;
 }
 .process-inner {
-  max-width: 860px; margin: 0 auto; padding-inline: 44px;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding-inline: 44px;
+  display: grid;
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+  gap: 80px;
+  align-items: start;
 }
 .process-header {
-  margin-bottom: 56px;
+  position: sticky;
+  top: 100px;
 }
 
 /* ── PROCESS CARDS ── */
@@ -1047,8 +1054,8 @@
 
 .pcard {
   border-radius: 20px;
-  padding: 40px 44px;
-  margin-bottom: 16px;
+  padding: 36px 40px;
+  margin-bottom: 12px;
 }
 .pcard:last-child { margin-bottom: 0; }
 
@@ -1096,7 +1103,7 @@
 
 .pcard-title {
   font-family: var(--font-display);
-  font-size: clamp(28px, 5vw, 40px);
+  font-size: clamp(26px, 3.5vw, 42px);
   font-weight: 800;
   letter-spacing: -.03em;
   line-height: 1.1;
@@ -1111,9 +1118,14 @@
   color: inherit;
 }
 
-/* sticky stack on mobile */
+/* single column + sticky stack on mobile */
 @media (max-width: 680px) {
-  .process-inner { padding-inline: 20px; }
+  .process-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-inline: 20px;
+  }
+  .process-header { position: static; }
   .pcard {
     position: sticky;
     top: calc(64px + var(--card-index, 0) * 14px);
