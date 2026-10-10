@@ -87,12 +87,12 @@ export default function Home() {
           </RevealOnScroll>
           <div className="svc-grid">
             {[
-              { icon: <Globe size={22} strokeWidth={1.8} />, title: 'Site', desc: 'Presença profissional que comunica seus diferenciais e converte visitantes em clientes.', tag: 'Mais popular', href: '/servicos/site-institucional', accent: 'svc-blue' },
-              { icon: <ShoppingBag size={22} strokeWidth={1.8} />, title: 'Loja virtual', desc: 'E-commerce completo com catálogo, checkout e integração com os principais meios de pagamento.', tag: 'E-commerce', href: '/servicos/loja-virtual', accent: 'svc-green' },
-              { icon: <Megaphone size={22} strokeWidth={1.8} />, title: 'Landing page', desc: 'Uma página focada em converter o tráfego que você já está pagando em campanhas e lançamentos.', tag: 'Alta conversão', href: '/servicos/landing-page', accent: 'svc-acid' },
-              { icon: <Settings size={22} strokeWidth={1.8} />, title: 'Sistemas', desc: 'Plataformas sob medida para quando uma solução pronta não resolve o seu processo.', tag: 'Sob medida', href: '/servicos/sistema-sob-medida', accent: 'svc-purple' },
-              { icon: <Bot size={22} strokeWidth={1.8} />, title: 'Automação & IA', desc: 'Fluxos automáticos e inteligência artificial integrados ao seu negócio para reduzir trabalho manual.', tag: 'IA', href: '/servicos/automacao-ia', accent: 'svc-orange' },
-              { icon: <Smartphone size={22} strokeWidth={1.8} />, title: 'Aplicativo', desc: 'Apps mobile (PWA e nativo) quando seus clientes precisam do seu produto na palma da mão.', tag: 'Mobile', href: '/servicos/aplicativo', accent: 'svc-teal' },
+              { icon: <Globe size={22} strokeWidth={1.8} />, title: 'Site', desc: 'Presença profissional que comunica seus diferenciais e converte visitantes em clientes.', tag: 'Mais popular', from: 'R$ 1.700', time: '~3 semanas', href: '/servicos/site-institucional', accent: 'svc-blue' },
+              { icon: <ShoppingBag size={22} strokeWidth={1.8} />, title: 'Loja virtual', desc: 'E-commerce completo com catálogo, checkout e integração com os principais meios de pagamento.', tag: 'E-commerce', from: 'R$ 3.800', time: '~5 semanas', href: '/servicos/loja-virtual', accent: 'svc-green' },
+              { icon: <Megaphone size={22} strokeWidth={1.8} />, title: 'Landing page', desc: 'Uma página focada em converter o tráfego que você já está pagando em campanhas e lançamentos.', tag: 'Alta conversão', from: 'R$ 2.400', time: '~2 semanas', href: '/servicos/landing-page', accent: 'svc-acid' },
+              { icon: <Settings size={22} strokeWidth={1.8} />, title: 'Sistemas', desc: 'Plataformas sob medida para quando uma solução pronta não resolve o seu processo.', tag: 'Sob medida', from: 'R$ 5.500', time: '~8 semanas', href: '/servicos/sistema-sob-medida', accent: 'svc-purple' },
+              { icon: <Bot size={22} strokeWidth={1.8} />, title: 'Automação & IA', desc: 'Fluxos automáticos e inteligência artificial integrados ao seu negócio para reduzir trabalho manual.', tag: 'IA', from: 'R$ 2.200', time: '~3 semanas', href: '/servicos/automacao-ia', accent: 'svc-orange' },
+              { icon: <Smartphone size={22} strokeWidth={1.8} />, title: 'Aplicativo', desc: 'Apps mobile (PWA e nativo) quando seus clientes precisam do seu produto na palma da mão.', tag: 'Mobile', from: 'R$ 4.500', time: '~8 semanas', href: '/servicos/aplicativo', accent: 'svc-teal' },
             ].map((s, i) => (
               <RevealOnScroll key={s.title} delay={i * 60}>
                 <a href={s.href} className={`svc-card svc-card--${s.accent}`}>
@@ -102,7 +102,14 @@ export default function Home() {
                   </div>
                   <h3 className="svc-title">{s.title}</h3>
                   <p className="svc-desc">{s.desc}</p>
-                  <div className="svc-arrow"><ArrowRight size={16} strokeWidth={2} /></div>
+                  <div className="svc-footer">
+                    <div className="svc-price">
+                      <span className="svc-from">a partir de</span>
+                      <span className="svc-val">{s.from}</span>
+                      <span className="svc-time">{s.time}</span>
+                    </div>
+                    <span className="svc-cta">Ver detalhes <ArrowRight size={14} strokeWidth={2.5} /></span>
+                  </div>
                 </a>
               </RevealOnScroll>
             ))}
