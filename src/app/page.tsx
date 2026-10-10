@@ -1,5 +1,5 @@
 import './site.css';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Globe, Megaphone, ShoppingBag, Settings, Bot, Smartphone } from 'lucide-react';
 import ServiceWindow from '@/components/ServiceWindow';
 import BudgetSection from '@/components/BudgetSection';
 import ProjectsSection from '@/components/ProjectsSection';
@@ -73,109 +73,37 @@ export default function Home() {
         </div>
       </div>
 
-      {/* TESTIMONIALS */}
-      <section className="testi-section">
-        <div className="testi-inner">
+      {/* SERVICES */}
+      <section className="svc-section">
+        <div className="svc-inner">
           <RevealOnScroll>
-            <div className="testi-header">
-              <div className="sec-eyebrow">Avaliações no Google</div>
+            <div className="svc-header">
+              <div className="sec-eyebrow">O que fazemos</div>
               <div className="projects-title-row">
-                <h2 className="sec-h2">Quem já contratou<br /><span className="sec-h2-muted">conta como foi.</span></h2>
-                <p className="sec-sub">Opiniões reais de clientes que confiaram na Webfun para seus projetos.</p>
+                <h2 className="sec-h2">Do site ao sistema,<br /><em>do app à automação.</em></h2>
+                <a href="/servicos" className="svc-all-link">Ver todos os serviços <ArrowRight size={14} strokeWidth={2.5} /></a>
               </div>
             </div>
           </RevealOnScroll>
-
-          <RevealOnScroll delay={80}>
-            <div className="testi-google-card">
-              <div className="testi-google-top">
-                <svg className="testi-google-g" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                  <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
-                  <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
-                  <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
-                  <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
-                  <path fill="none" d="M0 0h48v48H0z"/>
-                </svg>
-                <div className="testi-google-rating">
-                  <span className="testi-google-num">4,8</span>
-                  <div>
-                    <div className="testi-google-stars">★★★★★</div>
-                    <div className="testi-google-count">5 avaliações no Google</div>
-                  </div>
-                </div>
-              </div>
-              <div className="testi-google-divider" />
-              <a href="https://maps.app.goo.gl/webfun" target="_blank" rel="noopener" className="testi-google-link">
-                Ver no Google <span>↗</span>
-              </a>
-            </div>
-          </RevealOnScroll>
-
-          <div className="testi-grid">
+          <div className="svc-grid">
             {[
-              {
-                quote: 'Atendimento excelente, entrega rápida e resultado acima do esperado. Recomendo para quem busca qualidade.',
-                name: 'Flávia Sussenbach',
-                role: 'Site institucional',
-                init: 'FS',
-                color: '#1a73e8',
-                date: 'agosto de 2024',
-              },
-              {
-                quote: 'Foi muito bom ver o trabalho começar a aparecer no Google para buscas importantes do negócio. O resultado fez diferença na nossa presença online.',
-                name: 'João Kühl',
-                role: 'Site + SEO',
-                init: 'JK',
-                color: '#34a853',
-                date: 'março de 2024',
-              },
-              {
-                quote: 'Atendimento rápido e transparente do início ao fim. Tudo foi explicado com clareza e o resultado ficou do jeito que precisávamos.',
-                name: 'Jean Mielke',
-                role: 'Site institucional',
-                init: 'JM',
-                color: '#ea4335',
-                date: 'outubro de 2023',
-              },
-              {
-                quote: 'Perfeito, muito obrigada por todo o trabalho. Nós gostamos muito do resultado!',
-                name: 'Karen Hames',
-                role: 'Loja virtual',
-                init: 'KH',
-                color: '#1a73e8',
-                date: 'junho de 2024',
-              },
-              {
-                quote: 'Testei a calculadora e parece perfeita! Obrigada pelo ótimo trabalho.',
-                name: 'Nicole Zanellato',
-                role: 'Sistema web',
-                init: 'NZ',
-                color: '#34a853',
-                date: 'setembro de 2024',
-              },
-            ].map((t, i) => (
-              <RevealOnScroll key={t.name} delay={i * 80}>
-                <div className="testi-card">
-                  <div className="testi-card-top">
-                    <div className="testi-av" style={{ background: t.color }}>{t.init}</div>
-                    <div className="testi-author-info">
-                      <div className="testi-name">{t.name}</div>
-                      <div className="testi-role">{t.role}</div>
-                    </div>
-                    <svg className="testi-card-g" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                      <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
-                      <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
-                      <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
-                      <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
-                      <path fill="none" d="M0 0h48v48H0z"/>
-                    </svg>
+              { icon: <Globe size={22} strokeWidth={1.8} />, title: 'Site', desc: 'Presença profissional que comunica seus diferenciais e converte visitantes em clientes.', tag: 'Mais popular', href: '/servicos/site-institucional', accent: 'svc-blue' },
+              { icon: <ShoppingBag size={22} strokeWidth={1.8} />, title: 'Loja virtual', desc: 'E-commerce completo com catálogo, checkout e integração com os principais meios de pagamento.', tag: 'E-commerce', href: '/servicos/loja-virtual', accent: 'svc-green' },
+              { icon: <Megaphone size={22} strokeWidth={1.8} />, title: 'Landing page', desc: 'Uma página focada em converter o tráfego que você já está pagando em campanhas e lançamentos.', tag: 'Alta conversão', href: '/servicos/landing-page', accent: 'svc-acid' },
+              { icon: <Settings size={22} strokeWidth={1.8} />, title: 'Sistemas', desc: 'Plataformas sob medida para quando uma solução pronta não resolve o seu processo.', tag: 'Sob medida', href: '/servicos/sistema-sob-medida', accent: 'svc-purple' },
+              { icon: <Bot size={22} strokeWidth={1.8} />, title: 'Automação & IA', desc: 'Fluxos automáticos e inteligência artificial integrados ao seu negócio para reduzir trabalho manual.', tag: 'IA', href: '/servicos/automacao-ia', accent: 'svc-orange' },
+              { icon: <Smartphone size={22} strokeWidth={1.8} />, title: 'Aplicativo', desc: 'Apps mobile (PWA e nativo) quando seus clientes precisam do seu produto na palma da mão.', tag: 'Mobile', href: '/servicos/aplicativo', accent: 'svc-teal' },
+            ].map((s, i) => (
+              <RevealOnScroll key={s.title} delay={i * 60}>
+                <a href={s.href} className={`svc-card svc-card--${s.accent}`}>
+                  <div className="svc-card-top">
+                    <div className="svc-icon">{s.icon}</div>
+                    <span className="svc-tag">{s.tag}</span>
                   </div>
-                  <div className="testi-meta">
-                    <span className="testi-stars">★★★★★</span>
-                    <span className="testi-date">{t.date}</span>
-                  </div>
-                  <p className="testi-text">{t.quote}</p>
-                </div>
+                  <h3 className="svc-title">{s.title}</h3>
+                  <p className="svc-desc">{s.desc}</p>
+                  <div className="svc-arrow"><ArrowRight size={16} strokeWidth={2} /></div>
+                </a>
               </RevealOnScroll>
             ))}
           </div>
@@ -238,6 +166,80 @@ export default function Home() {
               </div>
             </RevealOnScroll>
           ))}
+        </div>
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section className="testi-section">
+        <div className="testi-inner">
+          <RevealOnScroll>
+            <div className="testi-header">
+              <div className="sec-eyebrow">Avaliações no Google</div>
+              <div className="projects-title-row">
+                <h2 className="sec-h2">Quem já contratou<br /><span className="sec-h2-muted">conta como foi.</span></h2>
+                <p className="sec-sub">Opiniões reais de clientes que confiaram na Webfun para seus projetos.</p>
+              </div>
+            </div>
+          </RevealOnScroll>
+
+          <RevealOnScroll delay={80}>
+            <div className="testi-google-card">
+              <div className="testi-google-top">
+                <svg className="testi-google-g" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+                  <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+                  <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+                  <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+                  <path fill="none" d="M0 0h48v48H0z"/>
+                </svg>
+                <div className="testi-google-rating">
+                  <span className="testi-google-num">4,8</span>
+                  <div>
+                    <div className="testi-google-stars">★★★★★</div>
+                    <div className="testi-google-count">5 avaliações no Google</div>
+                  </div>
+                </div>
+              </div>
+              <div className="testi-google-divider" />
+              <a href="https://maps.app.goo.gl/webfun" target="_blank" rel="noopener" className="testi-google-link">
+                Ver no Google <span>↗</span>
+              </a>
+            </div>
+          </RevealOnScroll>
+
+          <div className="testi-grid">
+            {[
+              { quote: 'Atendimento excelente, entrega rápida e resultado acima do esperado. Recomendo para quem busca qualidade.', name: 'Flávia Sussenbach', role: 'Site + SEO', init: 'FS', color: '#1a73e8', date: 'agosto de 2024' },
+              { quote: 'Foi muito bom ver o trabalho começar a aparecer no Google para buscas importantes do negócio. O resultado fez diferença na nossa presença online.', name: 'João Kühl', role: 'Site + SEO', init: 'JK', color: '#34a853', date: 'março de 2024' },
+              { quote: 'Atendimento rápido e transparente do início ao fim. Tudo foi explicado com clareza e o resultado ficou do jeito que precisávamos.', name: 'Jean Mielke', role: 'Site', init: 'JM', color: '#ea4335', date: 'outubro de 2023' },
+              { quote: 'Perfeito, muito obrigada por todo o trabalho. Nós gostamos muito do resultado!', name: 'Karen Hames', role: 'Loja virtual', init: 'KH', color: '#1a73e8', date: 'junho de 2024' },
+              { quote: 'Testei a calculadora e parece perfeita! Obrigada pelo ótimo trabalho.', name: 'Nicole Zanellato', role: 'Sistema web', init: 'NZ', color: '#34a853', date: 'setembro de 2024' },
+            ].map((t, i) => (
+              <RevealOnScroll key={t.name} delay={i * 80}>
+                <div className="testi-card">
+                  <div className="testi-card-top">
+                    <div className="testi-av" style={{ background: t.color }}>{t.init}</div>
+                    <div className="testi-author-info">
+                      <div className="testi-name">{t.name}</div>
+                      <div className="testi-role">{t.role}</div>
+                    </div>
+                    <svg className="testi-card-g" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                      <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+                      <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+                      <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+                      <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+                      <path fill="none" d="M0 0h48v48H0z"/>
+                    </svg>
+                  </div>
+                  <div className="testi-meta">
+                    <span className="testi-stars">★★★★★</span>
+                    <span className="testi-date">{t.date}</span>
+                  </div>
+                  <p className="testi-text">{t.quote}</p>
+                </div>
+              </RevealOnScroll>
+            ))}
+          </div>
         </div>
       </section>
 
