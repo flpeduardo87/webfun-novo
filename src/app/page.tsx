@@ -1,6 +1,6 @@
 import './site.css';
 import { ArrowRight } from 'lucide-react';
-import HeroPhoto from '@/components/HeroPhoto';
+import ServiceWindow from '@/components/ServiceWindow';
 import BudgetSection from '@/components/BudgetSection';
 import ProjectsSection from '@/components/ProjectsSection';
 import FAQSection from '@/components/FAQSection';
@@ -56,7 +56,7 @@ export default function Home() {
               </div>
             </div>
 
-            <HeroPhoto />
+            <ServiceWindow />
           </div>
         </div>
       </section>
