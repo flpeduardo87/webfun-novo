@@ -862,63 +862,92 @@
 .testi-inner {
   max-width: 1280px; margin: 0 auto; padding-inline: 44px;
 }
-.testi-header { margin-bottom: 56px; }
+.testi-header { margin-bottom: 48px; }
+.sec-h2-muted { color: var(--muted); font-style: normal; }
+
+/* Google aggregate card */
+.testi-google-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 28px 32px;
+  margin-bottom: 32px;
+  max-width: 440px;
+}
+.testi-google-top {
+  display: flex; align-items: center; gap: 18px;
+}
+.testi-google-g {
+  width: 44px; height: 44px; flex-shrink: 0;
+}
+.testi-google-rating {
+  display: flex; align-items: center; gap: 14px;
+}
+.testi-google-num {
+  font-size: 42px; font-weight: 800; font-family: var(--font-display);
+  color: var(--ink); line-height: 1;
+}
+.testi-google-stars {
+  font-size: 18px; color: #f59e0b; letter-spacing: 1px; margin-bottom: 3px;
+}
+.testi-google-count {
+  font-size: 12.5px; color: var(--muted);
+}
+.testi-google-divider {
+  height: 1px; background: var(--line); margin: 20px 0;
+}
+.testi-google-link {
+  font-size: 14px; font-weight: 700; color: var(--ink);
+  text-decoration: none; display: inline-flex; align-items: center; gap: 4px;
+}
+.testi-google-link:hover { color: var(--acid); }
+
+/* Review cards grid */
 .testi-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
 }
 .testi-card {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 20px;
-  padding: 32px 30px 28px;
-  display: flex; flex-direction: column; gap: 0;
+  padding: 24px 24px 22px;
+  display: flex; flex-direction: column;
 }
-.testi-quote {
-  font-size: 40px; line-height: 1;
-  color: var(--acid);
-  font-family: Georgia, serif;
-  margin-bottom: 16px;
-}
-.testi-stars {
-  font-size: 16px;
-  color: #f59e0b;
-  letter-spacing: 2px;
-  margin-bottom: 16px;
-}
-/* wide card: the RevealOnScroll wrapper is the grid item, so span goes on it */
-.testi-wide-wrap {
-  grid-column: 1 / -1;
-}
-.testi-card-wide {
-  flex-direction: row;
-  gap: 40px;
-  align-items: center;
-}
-.testi-card-wide .testi-text { margin-bottom: 0; flex: 1; font-size: 16px; }
-.testi-card-wide .testi-author { border-top: none; padding-top: 0; flex-shrink: 0; flex-direction: column; align-items: flex-start; gap: 8px; }
-.testi-text {
-  font-size: 14.5px; color: var(--ink);
-  line-height: 1.72; flex: 1;
-  margin-bottom: 28px;
-}
-.testi-author {
+.testi-card-top {
   display: flex; align-items: center; gap: 12px;
-  padding-top: 20px;
-  border-top: 1px solid var(--line);
+  margin-bottom: 14px;
 }
 .testi-av {
   width: 40px; height: 40px; border-radius: 50%;
-  font-size: 13px; font-weight: 800;
+  font-size: 13px; font-weight: 800; color: #fff;
   display: grid; place-items: center;
   flex-shrink: 0;
 }
+.testi-author-info { flex: 1; min-width: 0; }
 .testi-name {
   font-size: 13.5px; font-weight: 700; color: var(--ink);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 .testi-role {
-  font-size: 12px; color: var(--muted); margin-top: 1px;
+  font-size: 11.5px; color: var(--muted); margin-top: 1px;
+}
+.testi-card-g {
+  width: 22px; height: 22px; flex-shrink: 0;
+}
+.testi-meta {
+  display: flex; align-items: center; gap: 10px; margin-bottom: 12px;
+}
+.testi-stars {
+  font-size: 14px; color: #f59e0b; letter-spacing: 1px;
+}
+.testi-date {
+  font-size: 11.5px; color: var(--muted);
+}
+.testi-text {
+  font-size: 13.5px; color: var(--ink);
+  line-height: 1.72; flex: 1;
 }
 
 /* ── FAQ ── */
@@ -1217,22 +1246,8 @@
   .num-card { border-right: none; border-bottom: 1px solid rgba(255,255,255,.08); }
   .num-card:nth-child(2n) { border-right: none; }
   .testi-inner { padding-inline: 20px; }
-  .testi-grid {
-    display: flex; flex-direction: column; gap: 0;
-  }
-  .testi-grid > div {
-    position: sticky;
-    margin-bottom: 12px;
-  }
-  .testi-grid > div:nth-child(1) { top: 64px; }
-  .testi-grid > div:nth-child(2) { top: calc(64px + 14px); }
-  .testi-grid > div:nth-child(3) { top: calc(64px + 28px); }
-  .testi-grid > div:nth-child(4) { top: calc(64px + 42px); }
-  .testi-grid > div:nth-child(5) { top: calc(64px + 56px); }
-  .testi-wide-wrap { grid-column: unset; }
-  .testi-card-wide { flex-direction: column; gap: 0; align-items: flex-start; }
-  .testi-card-wide .testi-text { font-size: 14.5px; margin-bottom: 28px; }
-  .testi-card-wide .testi-author { border-top: 1px solid var(--line); padding-top: 20px; }
+  .testi-google-card { max-width: 100%; }
+  .testi-grid { grid-template-columns: 1fr; gap: 12px; }
   .faq-inner { grid-template-columns: 1fr; gap: 40px; padding-inline: 20px; }
   .faq-header { position: static; }
   .budget-inner { grid-template-columns: 1fr; gap: 48px; padding-inline: 20px; }
