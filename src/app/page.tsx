@@ -24,9 +24,9 @@ export default function Home() {
             <div className="hero-copy">
               <p className="eyebrow"><span className="eyebrow-stars">★★★★★</span> 4.8 · +50 projetos entregues</p>
               <h1 className="hero-h1">
-                <span className="row">Seu site aparece</span>
-                <span className="row">no <span className="stamp">Google.</span></span>
-                <span className="row">Seu cliente chega.</span>
+                <span className="row">Seu negócio</span>
+                <span className="row">merece <span className="stamp">mais</span></span>
+                <span className="row">do que um site.</span>
               </h1>
               <p className="hero-sub">
                 A Webfun cria sites, lojas e sistemas que{' '}
