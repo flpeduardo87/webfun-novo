@@ -41,7 +41,7 @@ export default function Home() {
                     Quero meu site funcionando<ArrowRight size={15} strokeWidth={2} />
                   </a>
                 </span>
-                <a href="/projetos" className="btn-g">Ver projetos</a>
+                <a href="/projetos" className="btn-g">Ver projetos <ArrowRight size={14} strokeWidth={2.5} /></a>
               </div>
               <div className="proof">
                 <div className="proof-avs">

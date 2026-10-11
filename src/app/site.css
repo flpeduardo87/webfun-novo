@@ -351,13 +351,13 @@
   font-size: 16px; font-style: normal; flex-shrink: 0; padding: 11px;
 }
 .btn-g {
-  height: 50px; padding: 0 22px;
-  border: 1.5px solid var(--line); border-radius: 999px;
-  font-size: 14px; font-weight: 600; color: var(--muted);
-  text-decoration: none; display: inline-flex; align-items: center;
-  transition: color .18s, border-color .18s;
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 13px; font-weight: 700; color: var(--ink);
+  background: var(--bg2); border: 1px solid var(--line); border-radius: 999px;
+  padding: 9px 18px; white-space: nowrap; text-decoration: none;
+  transition: background .2s, color .2s, border-color .2s;
 }
-.btn-g:hover { color: var(--ink); border-color: var(--ink); }
+.btn-g:hover { background: var(--acid); color: var(--acid-fg); border-color: var(--acid); }
 .proof { display: flex; align-items: center; gap: 12px; }
 .proof-avs { display: flex; }
 .av {
