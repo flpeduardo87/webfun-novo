@@ -182,13 +182,13 @@ export default function ServiceWindow() {
             </div>
             <div className="prod-grid">
               {[
-                { cls: 'c1', name: 'Tênis Runner', price: 'R$129,00' },
-                { cls: 'c2', name: 'Bolsa Couro', price: 'R$249,00' },
-                { cls: 'c3', name: 'Kit Natural', price: 'R$89,00' },
-                { cls: 'c4', name: 'Colar Prata', price: 'R$349,00' },
+                { img: '/prod-tenis.webp', name: 'Tênis Runner', price: 'R$129,00' },
+                { img: '/prod-bolsa.png',  name: 'Bolsa Couro',  price: 'R$249,00' },
+                { img: '/prod-kit.png',    name: 'Kit Natural',  price: 'R$89,00'  },
+                { img: '/prod-colar.png',  name: 'Colar Prata',  price: 'R$349,00' },
               ].map((p) => (
                 <div key={p.name} className="prod">
-                  <div className={`prod-thumb ${p.cls}`} />
+                  <img src={p.img} alt={p.name} className="prod-thumb" />
                   <div className="prod-info">
                     <div className="pname">{p.name}</div>
                     <div className="pprice">{p.price}</div>
