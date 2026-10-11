@@ -45,9 +45,9 @@ export default function Home() {
               </div>
               <div className="proof">
                 <div className="proof-avs">
-                  <img className="av" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente" />
-                  <img className="av" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente" />
-                  <img className="av" src="https://randomuser.me/api/portraits/men/67.jpg" alt="Cliente" />
+                  <img className="av" src="/joao.jpg" alt="João" />
+                  <img className="av" src="/flavia.jpg" alt="Flávia" />
+                  <img className="av" src="/jean.jpg" alt="Jean" />
                 </div>
                 <div className="proof-txt">
                   <strong>+50 projetos entregues</strong>
@@ -216,16 +216,19 @@ export default function Home() {
 
           <div className="testi-grid">
             {[
-              { quote: 'Atendimento excelente, entrega rápida e resultado acima do esperado. Recomendo para quem busca qualidade.', name: 'Flávia Sussenbach', role: 'Site + SEO', init: 'FS', color: '#1a73e8', date: 'agosto de 2024' },
-              { quote: 'Foi muito bom ver o trabalho começar a aparecer no Google para buscas importantes do negócio. O resultado fez diferença na nossa presença online.', name: 'João Kühl', role: 'Site + SEO', init: 'JK', color: '#34a853', date: 'março de 2024' },
-              { quote: 'Atendimento rápido e transparente do início ao fim. Tudo foi explicado com clareza e o resultado ficou do jeito que precisávamos.', name: 'Jean Mielke', role: 'Site', init: 'JM', color: '#ea4335', date: 'outubro de 2023' },
-              { quote: 'Perfeito, muito obrigada por todo o trabalho. Nós gostamos muito do resultado!', name: 'Karen Hames', role: 'Loja virtual', init: 'KH', color: '#1a73e8', date: 'junho de 2024' },
-              { quote: 'Testei a calculadora e parece perfeita! Obrigada pelo ótimo trabalho.', name: 'Nicole Zanellato', role: 'Sistema web', init: 'NZ', color: '#34a853', date: 'setembro de 2024' },
+              { quote: 'Atendimento excelente, entrega rápida e resultado acima do esperado. Recomendo para quem busca qualidade.', name: 'Flávia Sussenbach', role: 'Site + SEO', photo: '/flavia.jpg', init: 'FS', color: '#1a73e8', date: 'agosto de 2024' },
+              { quote: 'Foi muito bom ver o trabalho começar a aparecer no Google para buscas importantes do negócio. O resultado fez diferença na nossa presença online.', name: 'João Krul', role: 'Site + SEO', photo: '/joao.jpg', init: 'JK', color: '#34a853', date: 'março de 2024' },
+              { quote: 'Atendimento rápido e transparente do início ao fim. Tudo foi explicado com clareza e o resultado ficou do jeito que precisávamos.', name: 'Jean Mielke', role: 'Site', photo: '/jean.jpg', init: 'JM', color: '#ea4335', date: 'outubro de 2023' },
+              { quote: 'Perfeito, muito obrigada por todo o trabalho. Nós gostamos muito do resultado!', name: 'Karen Hames', role: 'Loja virtual', photo: '', init: 'KH', color: '#1a73e8', date: 'junho de 2024' },
+              { quote: 'Testei a calculadora e parece perfeita! Obrigada pelo ótimo trabalho.', name: 'Nicole Zanellato', role: 'Sistema web', photo: '', init: 'NZ', color: '#34a853', date: 'setembro de 2024' },
             ].map((t, i) => (
               <RevealOnScroll key={t.name} delay={i * 80}>
                 <div className="testi-card">
                   <div className="testi-card-top">
-                    <div className="testi-av" style={{ background: t.color }}>{t.init}</div>
+                    {t.photo
+                      ? <img className="testi-av" src={t.photo} alt={t.name} />
+                      : <div className="testi-av" style={{ background: t.color }}>{t.init}</div>
+                    }
                     <div className="testi-author-info">
                       <div className="testi-name">{t.name}</div>
                       <div className="testi-role">{t.role}</div>
