@@ -488,9 +488,9 @@
   border-radius: 999px; font-size: 11px; font-weight: 800;
   display: flex; align-items: center; gap: 5px;
 }
-.prod-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+.prod-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
 .prod { background: var(--win-2); border: 1px solid rgba(255,255,255,.07); border-radius: 14px; overflow: hidden; }
-.prod-thumb { height: 90px; width: 100%; object-fit: cover; border-radius: 8px; display: block; }
+.prod-thumb { height: 72px; width: 100%; object-fit: cover; border-radius: 8px; display: block; }
 .prod-info { padding: 10px; }
 .prod-info .pname { font-size: 11.5px; font-weight: 700; color: #fff; margin-bottom: 2px; }
 .prod-info .pprice { font-size: 13px; font-weight: 800; color: var(--acid); font-variant-numeric: tabular-nums; margin-bottom: 8px; }

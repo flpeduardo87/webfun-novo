@@ -186,6 +186,8 @@ export default function ServiceWindow() {
                 { img: '/prod-bolsa.png',  name: 'Bolsa Couro',  price: 'R$249,00' },
                 { img: '/prod-kit.png',    name: 'Kit Natural',  price: 'R$89,00'  },
                 { img: '/prod-colar.png',  name: 'Colar Prata',  price: 'R$349,00' },
+                { img: '/prod-bolsa.png',  name: 'Mochila Bege', price: 'R$189,00' },
+                { img: '/prod-kit.png',    name: 'Sérum Facial', price: 'R$149,00' },
               ].map((p) => (
                 <div key={p.name} className="prod">
                   <img src={p.img} alt={p.name} className="prod-thumb" />
