@@ -38,7 +38,7 @@ export default function FAQSection() {
         <div className="faq-header">
           <div className="sec-eyebrow">Dúvidas frequentes</div>
           <div className="projects-title-row">
-            <h2 className="sec-h2">Perguntas que<br />todo mundo <em>faz.</em></h2>
+            <h2 className="sec-h2">Perguntas que<br /><em>todo mundo faz.</em></h2>
             <p className="sec-sub">Respondemos as dúvidas mais comuns antes do primeiro contato.</p>
           </div>
         </div>

@@ -183,7 +183,7 @@ export default function Home() {
             <div className="testi-header">
               <div className="sec-eyebrow">Avaliações no Google</div>
               <div className="projects-title-row">
-                <h2 className="sec-h2">Quem já contratou<br /><span className="sec-h2-muted">conta como foi.</span></h2>
+                <h2 className="sec-h2">Quem já contratou<br /><em>conta como foi.</em></h2>
                 <p className="sec-sub">Opiniões reais de clientes que confiaram na Webfun para seus projetos.</p>
               </div>
             </div>
