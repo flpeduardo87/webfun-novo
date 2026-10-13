@@ -3,7 +3,6 @@ import { Plus_Jakarta_Sans, Manrope } from "next/font/google";
 import "./globals.css";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Analytics from "@/components/Analytics";
-import CustomCursor from "@/components/CustomCursor";
 import SmoothScroll from "@/components/SmoothScroll";
 
 const display = Plus_Jakarta_Sans({
@@ -63,7 +62,6 @@ export default function RootLayout({
       <body className={`${display.variable} ${body.variable}`}>
         {children}
         <WhatsAppButton />
-        <CustomCursor />
         <SmoothScroll />
       </body>
     </html>
