@@ -665,7 +665,9 @@
   font-weight: 800; letter-spacing: -.045em; line-height: .96;
   color: var(--ink);
 }
-.sec-h2 em { font-style: normal; color: var(--acid); }
+.sec-h2 em { font-style: normal; color: var(--ink); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .sec-h2 em { color: var(--acid); } }
+:root[data-theme="dark"] .sec-h2 em { color: var(--acid); }
 .sec-sub {
   font-size: 14.5px; color: var(--muted); line-height: 1.68;
   max-width: 480px;
@@ -1306,7 +1308,9 @@
   font-weight: 800; letter-spacing: -.04em; line-height: 1.0;
   color: var(--ink); margin-bottom: 20px;
 }
-.budget-h2 em { font-style: normal; color: var(--acid); }
+.budget-h2 em { font-style: normal; color: var(--ink); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .budget-h2 em { color: var(--acid); } }
+:root[data-theme="dark"] .budget-h2 em { color: var(--acid); }
 .budget-note { font-size: 14.5px; color: var(--muted); line-height: 1.7; max-width: 340px; }
 .budget-price-label { font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted2); margin-bottom: 8px; }
 .budget-price-val { font-family: var(--font-display); font-size: clamp(42px, 4vw, 64px); font-weight: 800; letter-spacing: -.05em; color: var(--ink); line-height: 1; font-variant-numeric: tabular-nums; }
